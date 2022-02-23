@@ -15,16 +15,23 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.practice.test1.domen.Playlist;
 import com.practice.test1.service.PlaylistService;
+import com.practice.test1.service.VideoOrderService;
+import com.practice.test1.service.VideoService;
 
 @RestController
 @RequestMapping("api/playlists")
 public class PlaylistController {
 	
 	private PlaylistService playlistService;
+	private VideoOrderService videoOrderService;
+	private VideoService videoService;
 
-	public PlaylistController(PlaylistService playlistService) {
+	public PlaylistController(PlaylistService playlistService, VideoOrderService videoOrderService,
+			VideoService videoService) {
 		super();
 		this.playlistService = playlistService;
+		this.videoOrderService = videoOrderService;
+		this.videoService = videoService;
 	}
 	
 	@PostMapping()
@@ -62,5 +69,10 @@ public class PlaylistController {
 	public ResponseEntity<String> removeCategory(@PathVariable("playlistId") long playlistId, @PathVariable("categoryId") long categoryId) {
 		playlistService.RemoveCategory(playlistId, categoryId);
 		return new ResponseEntity<String>("Category removed from playlist.", HttpStatus.OK);
+	}
+	
+	@PutMapping("/{playlistId}/videos/{videoId}")
+	public ResponseEntity<Playlist> addVideoToPlaylist(@PathVariable("playlistId") long playlistId, @PathVariable("videoId") long videoId){
+		return new ResponseEntity<Playlist>(videoOrderService.addVideoToPlaylist(playlistId, videoService.getVideoById(videoId)), HttpStatus.OK);
 	}
 }

@@ -1,8 +1,11 @@
 package com.practice.test1.domen;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -32,6 +36,9 @@ public class Video {
 			inverseJoinColumns = @JoinColumn(name = "category_id")
 	)
 	private Set<Category> categories = new HashSet<>();
+	
+	@OneToMany(mappedBy = "video", cascade = CascadeType.ALL)
+	private List<VideoOrder> videoOrders = new ArrayList<>();
 	
 	public void addCategory(Category category) {
 		if(!categories.contains(category))

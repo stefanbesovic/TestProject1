@@ -1,9 +1,12 @@
 package com.practice.test1.domen;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,6 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -34,6 +38,11 @@ public class Playlist {
 			inverseJoinColumns = @JoinColumn(name = "category_id")
 	)
 	private Set<Category> categories = new HashSet<>();
+	
+	@OneToMany(mappedBy = "playlist", cascade = CascadeType.ALL)
+	@JsonIgnore
+	private List<VideoOrder> videos = new ArrayList<>();
+	
 	
 	public void addCategory(Category category) {
 		categories.add(category);

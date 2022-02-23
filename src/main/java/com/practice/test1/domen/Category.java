@@ -49,6 +49,4 @@ public class Category {
 	public int hashCode() {
 		return Objects.hash(id, name);
 	}
-	
-	
 }
