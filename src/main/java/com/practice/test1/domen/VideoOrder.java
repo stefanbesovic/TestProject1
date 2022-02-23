@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 public class VideoOrder {
 	@EmbeddedId
 	private VideoOrderId videoOrderId = new VideoOrderId();
-	
+	 
 	@ManyToOne
 	@MapsId("playlistId")
 	@JoinColumn(name = "playlist_id")

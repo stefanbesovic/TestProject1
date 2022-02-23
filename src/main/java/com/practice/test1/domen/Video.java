@@ -37,7 +37,8 @@ public class Video {
 	)
 	private Set<Category> categories = new HashSet<>();
 	
-	@OneToMany(mappedBy = "video", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "video", cascade = CascadeType.ALL, orphanRemoval = true)
+	@JsonIgnore
 	private List<VideoOrder> videoOrders = new ArrayList<>();
 	
 	public void addCategory(Category category) {

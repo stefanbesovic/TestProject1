@@ -75,4 +75,10 @@ public class PlaylistController {
 	public ResponseEntity<Playlist> addVideoToPlaylist(@PathVariable("playlistId") long playlistId, @PathVariable("videoId") long videoId){
 		return new ResponseEntity<Playlist>(videoOrderService.addVideoToPlaylist(playlistId, videoService.getVideoById(videoId)), HttpStatus.OK);
 	}
+	
+	@DeleteMapping("/{playlistId}/videos/{videoId}")
+	public ResponseEntity<String> RemoveVideoFromPlaylist(@PathVariable("playlistId") long playlistId, @PathVariable("videoId") long videoId){
+		videoOrderService.RemoveVideoFromPlaylist(playlistId, videoService.getVideoById(videoId));
+		return new ResponseEntity<String>("Video removed from playlist.", HttpStatus.OK);
+	}
 }

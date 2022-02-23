@@ -39,10 +39,9 @@ public class Playlist {
 	)
 	private Set<Category> categories = new HashSet<>();
 	
-	@OneToMany(mappedBy = "playlist", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "playlist", cascade = CascadeType.ALL, orphanRemoval = true)
 	@JsonIgnore
 	private List<VideoOrder> videos = new ArrayList<>();
-	
 	
 	public void addCategory(Category category) {
 		categories.add(category);
@@ -68,6 +67,4 @@ public class Playlist {
 	public int hashCode() {
 		return Objects.hash(id, name);
 	}
-	
-	
 }
