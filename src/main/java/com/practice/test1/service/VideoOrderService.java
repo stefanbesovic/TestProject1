@@ -1,12 +1,14 @@
 package com.practice.test1.service;
 
+import java.util.List;
+
 import com.practice.test1.domen.Playlist;
 import com.practice.test1.domen.Video;
 
 public interface VideoOrderService {
 
-	void sortVideos(Playlist playlist);
+	List<Video> sortVideos(Playlist playlist);
 	Playlist addVideoToPlaylist(long playlistId, Video video);
-	void RemoveVideoFromPlaylist(long playlistId, Video video);
-	void ChangeIndexOfVideoInPlaylist(long playlistId, Video video, long newPlace);
+	void removeVideoFromPlaylist(long playlistId, Video video);
+	public void changeIndexOfVideoInPlaylist(long playlistId, Video video, int newPosition);
 }

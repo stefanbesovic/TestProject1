@@ -1,6 +1,10 @@
 package com.practice.test1.service.implementation;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
@@ -26,9 +30,12 @@ public class VideoOrderServiceImplementation implements VideoOrderService{
 	}
 
 	@Override
-	public void sortVideos(Playlist playlist) {
-		// TODO Auto-generated method stub
-		
+	public List<Video> sortVideos(Playlist playlist) {
+		Collections.sort(playlist.getVideos(), (x, y) -> x.getPosition() - y.getPosition());
+		playlistRepository.save(playlist);
+		return playlist.getVideos().stream()
+				.map(x -> x.getVideo())
+				.collect(Collectors.toList());
 	}
 
 	@Override
@@ -47,7 +54,7 @@ public class VideoOrderServiceImplementation implements VideoOrderService{
 	}
 
 	@Override
-	public void RemoveVideoFromPlaylist(long playlistId, Video video) {
+	public void removeVideoFromPlaylist(long playlistId, Video video) {
 		int index = 0;
 		Playlist playlist = playlistRepository.findById(playlistId).orElse(null);
 		if(playlist == null) {
@@ -72,9 +79,48 @@ public class VideoOrderServiceImplementation implements VideoOrderService{
 	}
 
 	@Override
-	public void ChangeIndexOfVideoInPlaylist(long playlistId, Video video, long newPlace) {
-		// TODO Auto-generated method stub
-		
+	public void changeIndexOfVideoInPlaylist(long playlistId, Video video, int newPosition) {
+		int rangeFrom = 0;
+        int rangeTo = 0;
+        int directionValue = 0;
+        
+        Playlist playlist = playlistRepository.findById(playlistId).orElse(null);
+        if(playlist == null) {
+        	return;
+        }
+        
+        VideoOrder order = playlist.getVideos().stream().filter(x -> x.getVideo().equals(video)).findAny().orElse(null);
+        
+        if(order == null){
+        	return;
+        }
+        
+        int currentPosition = order.getPosition();
+        
+        if(currentPosition > newPosition) {
+            rangeFrom = newPosition;
+            rangeTo = currentPosition;
+            directionValue = 1;
+        }else if (currentPosition < newPosition) {
+            rangeFrom = currentPosition + 1;
+            rangeTo = newPosition + 1;
+            directionValue = -1;
+        }else {
+            return;
+        }
+
+        final int rangeF = rangeFrom;
+        final int rangeT = rangeTo;
+        final int dir = directionValue;
+        
+        playlist.getVideos().stream()
+            .filter(x -> x.getPosition() >= rangeF && x.getPosition() < rangeT)
+            .forEach(x -> x.setPosition(x.getPosition() + dir));
+        
+        order.setPosition(newPosition);
+        Collections.sort(playlist.getVideos(), (x, y) -> x.getPosition() - y.getPosition());
+    
+        playlistRepository.save(playlist);
 	}
 
 }

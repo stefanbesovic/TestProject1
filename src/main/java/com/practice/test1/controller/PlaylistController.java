@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.practice.test1.domen.Playlist;
+import com.practice.test1.domen.Video;
+import com.practice.test1.repository.PlaylistRepository;
 import com.practice.test1.service.PlaylistService;
 import com.practice.test1.service.VideoOrderService;
 import com.practice.test1.service.VideoService;
@@ -77,8 +79,22 @@ public class PlaylistController {
 	}
 	
 	@DeleteMapping("/{playlistId}/videos/{videoId}")
-	public ResponseEntity<String> RemoveVideoFromPlaylist(@PathVariable("playlistId") long playlistId, @PathVariable("videoId") long videoId){
-		videoOrderService.RemoveVideoFromPlaylist(playlistId, videoService.getVideoById(videoId));
+	public ResponseEntity<String> removeVideoFromPlaylist(@PathVariable("playlistId") long playlistId, @PathVariable("videoId") long videoId){
+		videoOrderService.removeVideoFromPlaylist(playlistId, videoService.getVideoById(videoId));
 		return new ResponseEntity<String>("Video removed from playlist.", HttpStatus.OK);
+	}
+	
+	@GetMapping("/{playlistId}/sort")
+	public List<Video> sortVideosInPlaylist(@PathVariable("playlistId") long playlistId) {
+		return videoOrderService.sortVideos(playlistService.getPlaylistById(playlistId));
+	}
+	
+	@PutMapping("/{playlistId}/videos/{videoId}/{newPosition}")
+	public ResponseEntity<String> changePositionOfVideoInPlaylist(@PathVariable("playlistId") long playlistId,
+															@PathVariable("videoId") long videoId, 
+															@PathVariable("newPosition") int newPosition) {
+		videoOrderService.changeIndexOfVideoInPlaylist(playlistId, videoService.getVideoById(videoId), newPosition);
+		
+		return new ResponseEntity<String>("Index changed successfully.", HttpStatus.OK);
 	}
 }
