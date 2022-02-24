@@ -16,7 +16,6 @@ public class ChannelServiceImplementation implements ChannelService{
 	private final ChannelRepository channelRepository;
 	
 	public ChannelServiceImplementation(ChannelRepository channelRepository) {
-		super();
 		this.channelRepository = channelRepository;
 	}
 
@@ -25,7 +24,7 @@ public class ChannelServiceImplementation implements ChannelService{
 		if(!channelRepository.existsById(channel.getId())) {
 			return channelRepository.save(channel);
 		}else {
-			throw new DuplicateKeyException(String.format("Could not save channel. Channel with same ID already exists."));
+			throw new DuplicateKeyException("Could not save channel. Channel with same ID already exists.");
 		}
 	}
 
@@ -37,13 +36,12 @@ public class ChannelServiceImplementation implements ChannelService{
 	@Override
 	public Channel getChannelById(long id) {
 		return channelRepository.findById(id)
-				.orElseThrow(() -> new NoSuchElementException(String.format("Could not get. Channel not found: %d", id)));
+				.orElseThrow(() -> new NoSuchElementException(String.format("Channel not found: %d", id)));
 	}
 
 	@Override
 	public Channel updateChannel(Channel channel, long id) {
-		Channel existing = channelRepository.findById(id)
-				.orElseThrow(() -> new NoSuchElementException(String.format("Could not update. Channel not found: %d", id)));
+		Channel existing = getChannelById(id);
 		existing.setName(channel.getName());
 		channelRepository.save(existing);
 		return existing;
@@ -51,9 +49,7 @@ public class ChannelServiceImplementation implements ChannelService{
 
 	@Override
 	public void deleteChannel(long id) {
-		channelRepository.findById(id)
-				.orElseThrow(() -> new NoSuchElementException(String.format("Could not delete. Channel not found: %d", id)));
+		getChannelById(id);
 		channelRepository.deleteById(id);
 	}
-
 }

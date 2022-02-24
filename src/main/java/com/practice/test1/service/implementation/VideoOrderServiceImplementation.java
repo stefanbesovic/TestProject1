@@ -1,8 +1,9 @@
 package com.practice.test1.service.implementation;
 
-import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
@@ -10,7 +11,6 @@ import org.springframework.stereotype.Service;
 import com.practice.test1.domen.Playlist;
 import com.practice.test1.domen.Video;
 import com.practice.test1.domen.VideoOrder;
-import com.practice.test1.repository.PlaylistRepository;
 import com.practice.test1.service.PlaylistService;
 import com.practice.test1.service.VideoOrderService;
 
@@ -20,25 +20,21 @@ public class VideoOrderServiceImplementation implements VideoOrderService{
 	private final PlaylistService playlistService;
 	
 	public VideoOrderServiceImplementation(PlaylistService playlistService) {
-		super();
 		this.playlistService = playlistService;
 	}
 
 	@Override
 	public List<Video> sortVideos(Playlist playlist) {
-		Collections.sort(playlist.getVideos(), (x, y) -> x.getPosition() - y.getPosition());
+		playlist.getVideos().sort(Comparator.comparingInt(VideoOrder::getPosition));
 		return playlist.getVideos().stream()
-				.map(x -> x.getVideo())
+				.map(VideoOrder::getVideo)
 				.collect(Collectors.toList());
 	}
 
 	@Override
 	public Playlist addVideoToPlaylist(long playlistId, Video video) {
 		Playlist playlist = playlistService.getPlaylistById(playlistId);
-		VideoOrder videoOrder = new VideoOrder();
-		videoOrder.setPlaylist(playlist);
-		videoOrder.setVideo(video);
-		videoOrder.setPosition(playlist.getVideos().size() + 1);
+		VideoOrder videoOrder = new VideoOrder(playlist, video, playlist.getVideos().size() + 1);
 		playlist.getVideos().add(videoOrder);
 		return playlistService.updatePlaylist(playlist, playlistId);
 	}
@@ -54,42 +50,41 @@ public class VideoOrderServiceImplementation implements VideoOrderService{
 				break;
 			}
 		}
-		final int i = index;
+		AtomicInteger i = new AtomicInteger(index);
 		playlist.getVideos()
 				.stream()
-				.filter(x -> x.getPosition() >= i)
+				.filter(x -> x.getPosition() >= i.get())
 				.forEach(x -> x.setPosition(x.getPosition() - 1));
 		playlistService.updatePlaylist(playlist, playlistId);
 	}
 
 	@Override
 	public void changeIndexOfVideoInPlaylist(long playlistId, Video video, int newPosition) {
-		int rangeFrom = 0;
-        int rangeTo = 0;
-        int directionValue = 0;
+		int rangeFrom;
+        int rangeTo;
+        int directionValue;
 		Playlist playlist = playlistService.getPlaylistById(playlistId);
         VideoOrder order = playlist.getVideos().stream().filter(x -> x.getVideo().equals(video)).findAny()
 				.orElseThrow(() -> new NoSuchElementException(String.format("Can't change index of video in playlist. Video not found: %d", video.getId())));
         int currentPosition = order.getPosition();
+		if(currentPosition == newPosition) return;
         if(currentPosition > newPosition) {
             rangeFrom = newPosition;
             rangeTo = currentPosition;
             directionValue = 1;
-        }else if (currentPosition < newPosition) {
+        }else {
             rangeFrom = currentPosition + 1;
             rangeTo = newPosition + 1;
             directionValue = -1;
-        }else {
-            return;
         }
-        final int rangeF = rangeFrom;
-        final int rangeT = rangeTo;
-        final int dir = directionValue;
+		AtomicInteger rangeF = new AtomicInteger(rangeFrom);
+		AtomicInteger rangeT = new AtomicInteger(rangeTo);
+		AtomicInteger dir = new AtomicInteger(directionValue);
         playlist.getVideos().stream()
-            .filter(x -> x.getPosition() >= rangeF && x.getPosition() < rangeT)
-            .forEach(x -> x.setPosition(x.getPosition() + dir));
+            .filter(x -> x.getPosition() >= rangeF.get() && x.getPosition() < rangeT.get())
+            .forEach(x -> x.setPosition(x.getPosition() + dir.get()));
         order.setPosition(newPosition);
-        Collections.sort(playlist.getVideos(), (x, y) -> x.getPosition() - y.getPosition());
+        playlist.getVideos().sort(Comparator.comparingInt(VideoOrder::getPosition));
         playlistService.updatePlaylist(playlist, playlistId);
 	}
 }

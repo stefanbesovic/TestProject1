@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import com.practice.test1.domen.Category;
 import com.practice.test1.domen.Video;
-import com.practice.test1.repository.CategoryRepository;
 import com.practice.test1.repository.VideoRepository;
 import com.practice.test1.service.CategoryService;
 import com.practice.test1.service.VideoService;
@@ -20,7 +19,6 @@ public class VideoServiceImplementation implements VideoService {
 	private final CategoryService categoryService;
 	
 	public VideoServiceImplementation(VideoRepository videoRepository, CategoryService categoryService) {
-		super();
 		this.videoRepository = videoRepository;
 		this.categoryService = categoryService;
 	}
@@ -30,14 +28,14 @@ public class VideoServiceImplementation implements VideoService {
 		if(!videoRepository.existsById(video.getId())) {
 			return videoRepository.save(video);
 		}else {
-			throw new DuplicateKeyException(String.format("Could not save video. Video with same ID already exists."));
+			throw new DuplicateKeyException("Could not save video. Video with same ID already exists.");
 		}
 	}
 
 	@Override
 	public Video getVideoById(long id) {
 		return videoRepository.findById(id)
-				.orElseThrow(() -> new NoSuchElementException(String.format("Could not get. Video not found: %d", id)));
+				.orElseThrow(() -> new NoSuchElementException(String.format("Video not found: %d", id)));
 	}
 
 	@Override
@@ -47,8 +45,7 @@ public class VideoServiceImplementation implements VideoService {
 
 	@Override
 	public Video updateVideo(Video video, long id) {
-		Video existing = videoRepository.findById(id)
-				.orElseThrow(() -> new NoSuchElementException(String.format("Could not update. Video not found: %d", id)));
+		Video existing = getVideoById(id);
 		existing.setName(video.getName());
 		videoRepository.save(existing);
 		return existing;
@@ -56,8 +53,7 @@ public class VideoServiceImplementation implements VideoService {
 
 	@Override
 	public void deleteVideo(long id) {
-		videoRepository.findById(id)
-				.orElseThrow(() -> new NoSuchElementException(String.format("Could not delete. Video not found: %d", id)));
+		getVideoById(id);
 		videoRepository.deleteById(id);
 	}
 	
@@ -80,8 +76,6 @@ public class VideoServiceImplementation implements VideoService {
 		if(video.getCategories().contains(category)) {
 			video.removeCategory(category);
 			videoRepository.save(video);
-		}else {
-			return;
 		}
 	}
 }

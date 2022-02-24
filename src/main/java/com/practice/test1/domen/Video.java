@@ -1,9 +1,6 @@
 package com.practice.test1.domen;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -19,10 +16,12 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
 @Data
 @NoArgsConstructor
+@ToString
 public class Video {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,8 +43,21 @@ public class Video {
 		if(!categories.contains(category))
 			categories.add(category);
 	}
-	
+
 	public void removeCategory(Category category) {
 		categories.remove(category);
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (!(o instanceof Video)) return false;
+		Video video = (Video) o;
+		return id == video.id && Objects.equals(name, video.name);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
 	}
 }

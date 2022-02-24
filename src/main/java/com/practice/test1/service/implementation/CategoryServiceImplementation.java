@@ -16,7 +16,6 @@ public class CategoryServiceImplementation implements CategoryService {
 	private final CategoryRepository categoryRepository;
 	
 	public CategoryServiceImplementation(CategoryRepository categoryRepository) {
-		super();
 		this.categoryRepository = categoryRepository;
 	}
 
@@ -25,8 +24,7 @@ public class CategoryServiceImplementation implements CategoryService {
 		if(!categoryRepository.existsById(category.getId())) {
 			return categoryRepository.save(category);
 		}else {
-			//da li koristiti ovo ili nesto drugo ?
-			throw new DuplicateKeyException(String.format("Could not save category. Category with same ID already exists."));
+			throw new DuplicateKeyException("Could not save category. Category with same ID already exists.");
 		}
 	}
 
@@ -38,13 +36,12 @@ public class CategoryServiceImplementation implements CategoryService {
 	@Override
 	public Category getCategoryById(long id) {
 		return categoryRepository.findById(id)
-				.orElseThrow(() -> new NoSuchElementException(String.format("Could not get. Category not found: %d", id)));
+				.orElseThrow(() -> new NoSuchElementException(String.format("Category not found: %d", id)));
 	}
 
 	@Override
 	public Category updateCategory(Category category, long id) {
-		Category existing = categoryRepository.findById(id)
-				.orElseThrow(() -> new NoSuchElementException(String.format("Could not update. Category not found: %d", id)));
+		Category existing = getCategoryById(id);
 		existing.setName(category.getName());
 		categoryRepository.save(existing);
 		return existing;
@@ -52,8 +49,7 @@ public class CategoryServiceImplementation implements CategoryService {
 
 	@Override
 	public void deleteCategory(long id) {
-		categoryRepository.findById(id)
-				.orElseThrow(() -> new NoSuchElementException(String.format("Could not delete. Category not found: %d", id)));
+		getCategoryById(id);
 		categoryRepository.deleteById(id);
 	}
 }

@@ -22,10 +22,9 @@ public class PlaylistServiceImplementation implements PlaylistService {
 	private final CategoryService categoryService;
 	private final UserService userService;
 	
-	public PlaylistServiceImplementation(PlaylistRepository playlistRepository, CategoryService categoryRepository, UserService userService) {
-		super();
+	public PlaylistServiceImplementation(PlaylistRepository playlistRepository, CategoryService categoryService, UserService userService) {
 		this.playlistRepository = playlistRepository;
-		this.categoryService = categoryRepository;
+		this.categoryService = categoryService;
 		this.userService = userService;
 	}
 	
@@ -34,14 +33,14 @@ public class PlaylistServiceImplementation implements PlaylistService {
 		if(!playlistRepository.existsById(playlist.getId())) {
 			return playlistRepository.save(playlist);
 		}else {
-			throw new DuplicateKeyException(String.format("Could not save playlist. Playlist with same ID already exists."));
+			throw new DuplicateKeyException("Could not save playlist. Playlist with same ID already exists.");
 		}
 	}
 
 	@Override
 	public Playlist getPlaylistById(long id) {
 		return playlistRepository.findById(id)
-				.orElseThrow(() -> new NoSuchElementException(String.format("Could not get. Playlist not found: %d", id)));
+				.orElseThrow(() -> new NoSuchElementException(String.format("Playlist not found: %d", id)));
 	}
 
 	@Override
@@ -51,8 +50,7 @@ public class PlaylistServiceImplementation implements PlaylistService {
 
 	@Override
 	public Playlist updatePlaylist(Playlist playlist, long id) {
-		Playlist existing = playlistRepository.findById(id)
-				.orElseThrow(() -> new NoSuchElementException(String.format("Could not update. Playlist not found: %d", id)));
+		Playlist existing = getPlaylistById(id);
 		existing.setName(playlist.getName());
 		playlistRepository.save(existing);
 		return existing;
@@ -60,8 +58,7 @@ public class PlaylistServiceImplementation implements PlaylistService {
 
 	@Override
 	public void deletePlaylist(long id) {
-		playlistRepository.findById(id)
-				.orElseThrow(() -> new NoSuchElementException(String.format("Could not delete. Playlist not found: %d", id)));
+		getPlaylistById(id);
 		playlistRepository.deleteById(id);
 	}
 	
@@ -84,9 +81,7 @@ public class PlaylistServiceImplementation implements PlaylistService {
 		if(playlist.getCategories().contains(category)) {
 			playlist.removeCategory(category);
 			playlistRepository.save(playlist);	
-		}else {
-			return;
-		}		
+		}
 	}
 	
 	@Override

@@ -45,8 +45,4 @@ public class Channel {
 	public int hashCode() {
 		return Objects.hash(id, name);
 	}
-	
-	
-	
-	//private List<Playlist> playlists = new ArrayList<>();
 }

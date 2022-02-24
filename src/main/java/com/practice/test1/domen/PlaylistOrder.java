@@ -9,6 +9,8 @@ import javax.persistence.MapsId;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Objects;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -28,4 +30,23 @@ public class PlaylistOrder {
 	private Playlist playlist;
 	
 	private int position;
+
+	public PlaylistOrder(Channel channel, Playlist playlist, int position) {
+		this.channel = channel;
+		this.playlist = playlist;
+		this.position = position;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (!(o instanceof PlaylistOrder)) return false;
+		PlaylistOrder that = (PlaylistOrder) o;
+		return Objects.equals(playlistOrderId, that.playlistOrderId);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(playlistOrderId);
+	}
 }

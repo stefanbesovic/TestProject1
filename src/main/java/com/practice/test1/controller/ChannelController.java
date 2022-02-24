@@ -2,8 +2,6 @@ package com.practice.test1.controller;
 
 import java.util.List;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,15 +26,14 @@ public class ChannelController {
 	private final PlaylistOrderService playlistOrderService;
 	
 	public ChannelController(ChannelService channelService, PlaylistService playlistService, PlaylistOrderService playlistOrderService) {
-		super();
 		this.channelService = channelService;
 		this.playlistService = playlistService;
 		this.playlistOrderService = playlistOrderService;
 	}
 
 	@PostMapping()
-	public ResponseEntity<Channel> saveChannel(@RequestBody Channel channel) {
-		return new ResponseEntity<Channel>(channelService.saveChannel(channel), HttpStatus.CREATED);
+	public Channel saveChannel(@RequestBody Channel channel) {
+		return channelService.saveChannel(channel);
 	}
 	
 	@GetMapping()
@@ -45,30 +42,28 @@ public class ChannelController {
 	}
 	
 	@GetMapping("{id}")
-	public ResponseEntity<Channel> getChannelById(@PathVariable("id") long id) {
-		return new ResponseEntity<Channel>(channelService.getChannelById(id), HttpStatus.OK);
+	public Channel getChannelById(@PathVariable("id") long id) {
+		return channelService.getChannelById(id);
 	}
 	
 	@PutMapping("{id}")
-	public ResponseEntity<Channel> updateChannel(@PathVariable("id") long id, @RequestBody Channel channel) {
-		return new ResponseEntity<Channel>(channelService.updateChannel(channel, id), HttpStatus.OK);
+	public Channel updateChannel(@PathVariable("id") long id, @RequestBody Channel channel) {
+		return channelService.updateChannel(channel, id);
 	}
 	
 	@DeleteMapping("{id}")
-	public ResponseEntity<String> DeleteChannel(@PathVariable("id") long id) {
+	public void DeleteChannel(@PathVariable("id") long id) {
 		channelService.deleteChannel(id);
-		return new ResponseEntity<String>("Channel deleted successfully!", HttpStatus.OK);
 	}
 	
 	@PutMapping("/{channelId}/playlists/{playlistId}")
-	public ResponseEntity<Channel> addPlaylistToChannel(@PathVariable("channelId") long channelId, @PathVariable("playlistId") long playlistId){
-		return new ResponseEntity<Channel>(playlistOrderService.addPlaylistToChannel(channelId, playlistService.getPlaylistById(playlistId)), HttpStatus.OK);
+	public Channel addPlaylistToChannel(@PathVariable("channelId") long channelId, @PathVariable("playlistId") long playlistId){
+		return playlistOrderService.addPlaylistToChannel(channelId, playlistService.getPlaylistById(playlistId));
 	}
 	
 	@DeleteMapping("/{channelId}/playlists/{playlistId}")
-	public ResponseEntity<String> removePlaylistFromChannel(@PathVariable("channelId") long channelId, @PathVariable("playlistId") long playlistId){
+	public void removePlaylistFromChannel(@PathVariable("channelId") long channelId, @PathVariable("playlistId") long playlistId){
 		playlistOrderService.removePlaylistFromChannel(channelId, playlistService.getPlaylistById(playlistId));
-		return new ResponseEntity<String>("Playlist removed from channel.", HttpStatus.OK);
 	}
 	
 	@GetMapping("/{channelId}/sort")
@@ -77,10 +72,9 @@ public class ChannelController {
 	}
 	
 	@PutMapping("/{channelId}/playlists/{playlistId}/{newPosition}")
-	public ResponseEntity<String> changePositionOfVideoInPlaylist(@PathVariable("channelId") long channelId,
+	public void changePositionOfVideoInPlaylist(@PathVariable("channelId") long channelId,
 															@PathVariable("playlistId") long playlistId, 
 															@PathVariable("newPosition") int newPosition) {
 		playlistOrderService.changeIndexOfPlaylistInChannel(channelId, playlistService.getPlaylistById(playlistId), newPosition);
-		return new ResponseEntity<String>("Index changed successfully.", HttpStatus.OK);
 	}
 }

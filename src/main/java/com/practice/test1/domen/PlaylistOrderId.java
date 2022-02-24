@@ -18,6 +18,7 @@ public class PlaylistOrderId implements Serializable{
 	public int hashCode() {
 		return Objects.hash(channelId, playlistId);
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

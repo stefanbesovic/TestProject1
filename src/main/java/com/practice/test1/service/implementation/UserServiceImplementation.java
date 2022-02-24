@@ -2,15 +2,12 @@ package com.practice.test1.service.implementation;
 
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Set;
 
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 
-import com.practice.test1.domen.Playlist;
 import com.practice.test1.domen.User;
 import com.practice.test1.repository.UserRepository;
-import com.practice.test1.service.PlaylistService;
 import com.practice.test1.service.UserService;
 
 @Service
@@ -19,7 +16,6 @@ public class UserServiceImplementation implements UserService {
 	private final UserRepository userRepository;
 	
 	public UserServiceImplementation(UserRepository userRepository) {
-		super();
 		this.userRepository = userRepository;
 	}
 
@@ -28,7 +24,7 @@ public class UserServiceImplementation implements UserService {
 		if(!userRepository.existsById(user.getId())) {
 			return userRepository.save(user);
 		}else {
-			throw new DuplicateKeyException(String.format("Could not save user. User with same ID already exists."));
+			throw new DuplicateKeyException("Could not save user. User with same ID already exists.");
 		}
 	}
 
@@ -40,13 +36,12 @@ public class UserServiceImplementation implements UserService {
 	@Override
 	public User getUserById(long id) {
 		return userRepository.findById(id)
-				.orElseThrow(() -> new NoSuchElementException(String.format("Could not get. User not found: %d", id)));
+				.orElseThrow(() -> new NoSuchElementException(String.format("User not found: %d", id)));
 	}
 
 	@Override
 	public User updateUser(User user, long id) {
-		User existing = userRepository.findById(id)
-				.orElseThrow(() -> new NoSuchElementException(String.format("Could not update. User not found: %d", id)));
+		User existing = getUserById(id);
 		existing.setName(user.getName());
 		userRepository.save(existing);
 		return existing;
@@ -54,8 +49,7 @@ public class UserServiceImplementation implements UserService {
 
 	@Override
 	public void deleteUser(long id) {
-		userRepository.findById(id)
-				.orElseThrow(() -> new NoSuchElementException(String.format("Could not delete. User not found: %d", id)));
+		getUserById(id);
 		userRepository.deleteById(id);
 	}
 }
