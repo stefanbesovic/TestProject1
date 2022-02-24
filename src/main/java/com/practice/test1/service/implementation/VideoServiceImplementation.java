@@ -1,25 +1,28 @@
 package com.practice.test1.service.implementation;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 
 import com.practice.test1.domen.Category;
 import com.practice.test1.domen.Video;
 import com.practice.test1.repository.CategoryRepository;
 import com.practice.test1.repository.VideoRepository;
+import com.practice.test1.service.CategoryService;
 import com.practice.test1.service.VideoService;
 
 @Service
 public class VideoServiceImplementation implements VideoService {
 
-	private VideoRepository videoRepository;
-	private CategoryRepository categoryRepository;
+	private final VideoRepository videoRepository;
+	private final CategoryService categoryService;
 	
-	public VideoServiceImplementation(VideoRepository videoRepository, CategoryRepository categoryRepository) {
+	public VideoServiceImplementation(VideoRepository videoRepository, CategoryService categoryService) {
 		super();
 		this.videoRepository = videoRepository;
-		this.categoryRepository = categoryRepository;
+		this.categoryService = categoryService;
 	}
 	
 	@Override
@@ -27,13 +30,14 @@ public class VideoServiceImplementation implements VideoService {
 		if(!videoRepository.existsById(video.getId())) {
 			return videoRepository.save(video);
 		}else {
-			return null;
+			throw new DuplicateKeyException(String.format("Could not save video. Video with same ID already exists."));
 		}
 	}
 
 	@Override
 	public Video getVideoById(long id) {
-		return videoRepository.findById(id).orElse(null);
+		return videoRepository.findById(id)
+				.orElseThrow(() -> new NoSuchElementException(String.format("Could not get. Video not found: %d", id)));
 	}
 
 	@Override
@@ -43,10 +47,8 @@ public class VideoServiceImplementation implements VideoService {
 
 	@Override
 	public Video updateVideo(Video video, long id) {
-		Video existing = videoRepository.findById(id).orElse(null);
-		if(existing.equals(null)) {
-			return null;
-		}
+		Video existing = videoRepository.findById(id)
+				.orElseThrow(() -> new NoSuchElementException(String.format("Could not update. Video not found: %d", id)));
 		existing.setName(video.getName());
 		videoRepository.save(existing);
 		return existing;
@@ -54,23 +56,15 @@ public class VideoServiceImplementation implements VideoService {
 
 	@Override
 	public void deleteVideo(long id) {
-		Video exists = videoRepository.findById(id).orElse(null);
-		if(exists.equals(null)) {
-			return;
-		}
+		videoRepository.findById(id)
+				.orElseThrow(() -> new NoSuchElementException(String.format("Could not delete. Video not found: %d", id)));
 		videoRepository.deleteById(id);
 	}
 	
 	@Override
 	public Video addCategory(long videoId, long categoryId) {
-		Video video = videoRepository.findById(videoId).get();
-		Category category = categoryRepository.findById(categoryId).get();
-		if(video.equals(null)) {
-			return null;
-		}
-		if(category.equals(null)) {
-			return null;
-		}
+		Video video = getVideoById(videoId);
+		Category category = categoryService.getCategoryById(categoryId);
 		if(!video.getCategories().contains(category)) {
 			video.addCategory(category);
 		}else {
@@ -81,19 +75,13 @@ public class VideoServiceImplementation implements VideoService {
 
 	@Override
 	public void RemoveCategory(long videoId, long categoryId) {
-		Video video = videoRepository.findById(videoId).get();
-		Category category = categoryRepository.findById(categoryId).get();
-		if(video.equals(null)) {
-			return;
-		}
-		if(category.equals(null)) {
-			return;
-		}
+		Video video = getVideoById(videoId);
+		Category category = categoryService.getCategoryById(categoryId);
 		if(video.getCategories().contains(category)) {
 			video.removeCategory(category);
-			videoRepository.save(video);	
+			videoRepository.save(video);
 		}else {
 			return;
-		}	
+		}
 	}
 }

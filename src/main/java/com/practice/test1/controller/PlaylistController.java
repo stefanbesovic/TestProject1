@@ -1,6 +1,7 @@
 package com.practice.test1.controller;
 
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.practice.test1.domen.Playlist;
 import com.practice.test1.domen.Video;
-import com.practice.test1.repository.PlaylistRepository;
 import com.practice.test1.service.PlaylistService;
 import com.practice.test1.service.VideoOrderService;
 import com.practice.test1.service.VideoService;
@@ -24,9 +24,9 @@ import com.practice.test1.service.VideoService;
 @RequestMapping("api/playlists")
 public class PlaylistController {
 	
-	private PlaylistService playlistService;
-	private VideoOrderService videoOrderService;
-	private VideoService videoService;
+	private final PlaylistService playlistService;
+	private final VideoOrderService videoOrderService;
+	private final VideoService videoService;
 
 	public PlaylistController(PlaylistService playlistService, VideoOrderService videoOrderService,
 			VideoService videoService) {
@@ -94,7 +94,16 @@ public class PlaylistController {
 															@PathVariable("videoId") long videoId, 
 															@PathVariable("newPosition") int newPosition) {
 		videoOrderService.changeIndexOfVideoInPlaylist(playlistId, videoService.getVideoById(videoId), newPosition);
-		
 		return new ResponseEntity<String>("Index changed successfully.", HttpStatus.OK);
+	}
+	
+	@PutMapping("/{playlistId}/user/{userId}")
+	public ResponseEntity<Set<Playlist>> addPlaylistToUser(@PathVariable("playlistId") long playlistId, @PathVariable("userId") long userId){
+		return new ResponseEntity<Set<Playlist>>(playlistService.addPlaylistToUser(playlistId, userId), HttpStatus.OK);
+	}
+	
+	@DeleteMapping("/{playlistId}/user")
+	public ResponseEntity<Playlist> removePlaylistFromUser(@PathVariable("playlistId") long playlistId){
+		return new ResponseEntity<Playlist>(playlistService.removePlaylistFromUser(playlistId), HttpStatus.OK);
 	}
 }

@@ -14,6 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -29,7 +30,6 @@ public class Playlist {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String name;
-	
 	@JsonIgnore
 	@ManyToMany
 	@JoinTable(
@@ -38,10 +38,15 @@ public class Playlist {
 			inverseJoinColumns = @JoinColumn(name = "category_id")
 	)
 	private Set<Category> categories = new HashSet<>();
-	
 	@OneToMany(mappedBy = "playlist", cascade = CascadeType.ALL, orphanRemoval = true)
 	@JsonIgnore
 	private List<VideoOrder> videos = new ArrayList<>();
+	@OneToMany(mappedBy = "playlist", cascade = CascadeType.ALL, orphanRemoval = true)
+	@JsonIgnore
+	private List<PlaylistOrder> playlistOrders = new ArrayList<>();
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "user_id", referencedColumnName = "id")
+	private User user;
 	
 	public void addCategory(Category category) {
 		categories.add(category);

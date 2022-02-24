@@ -1,11 +1,16 @@
 package com.practice.test1.domen;
 
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,7 +24,10 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String name;
-	
+	@JsonIgnore
+	@OneToMany(mappedBy = "user")
+	private Set<Playlist> playlists = new HashSet<>();
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -31,9 +39,9 @@ public class User {
 		User other = (User) obj;
 		return id == other.id && Objects.equals(name, other.name);
 	}
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(id, name);
 	}
-	
 }

@@ -12,19 +12,20 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
-public class VideoOrder {
+public class PlaylistOrder {
+	
 	@EmbeddedId
-	private VideoOrderId videoOrderId = new VideoOrderId();
+	private PlaylistOrderId playlistOrderId = new PlaylistOrderId();
 	 
+	@ManyToOne
+	@MapsId("channelId")
+	@JoinColumn(name = "channel_id")
+	private Channel channel;
+	
 	@ManyToOne
 	@MapsId("playlistId")
 	@JoinColumn(name = "playlist_id")
 	private Playlist playlist;
-	
-	@ManyToOne
-	@MapsId("videoId")
-	@JoinColumn(name = "video_id")
-	private Video video;
 	
 	private int position;
 }

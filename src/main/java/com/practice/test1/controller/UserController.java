@@ -1,6 +1,7 @@
 package com.practice.test1.controller;
 
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.practice.test1.domen.Playlist;
 import com.practice.test1.domen.User;
 import com.practice.test1.service.UserService;
 
@@ -20,7 +22,7 @@ import com.practice.test1.service.UserService;
 @RequestMapping("api/users")
 public class UserController {
 	
-	private UserService userService;
+	private final UserService userService;
 	
 	public UserController(UserService userService) {
 		super();
@@ -45,13 +47,11 @@ public class UserController {
 	@PutMapping("{id}")
 	public ResponseEntity<User> updateUser(@PathVariable("id") long id, @RequestBody User user) {
 		return new ResponseEntity<User>(userService.updateUser(user, id), HttpStatus.OK);
-		
 	}
 	
 	@DeleteMapping("{id}")
-	public ResponseEntity<String> DeleteUser(@PathVariable("id") long id) {
+	public ResponseEntity<String> deleteUser(@PathVariable("id") long id) {
 		userService.deleteUser(id);
-		
 		return new ResponseEntity<String>("User deleted successfully!", HttpStatus.OK);
 	}
 }

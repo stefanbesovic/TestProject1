@@ -36,7 +36,6 @@ public class Video {
 			inverseJoinColumns = @JoinColumn(name = "category_id")
 	)
 	private Set<Category> categories = new HashSet<>();
-	
 	@OneToMany(mappedBy = "video", cascade = CascadeType.ALL, orphanRemoval = true)
 	@JsonIgnore
 	private List<VideoOrder> videoOrders = new ArrayList<>();
@@ -49,5 +48,4 @@ public class Video {
 	public void removeCategory(Category category) {
 		categories.remove(category);
 	}
-	
 }

@@ -20,7 +20,7 @@ import com.practice.test1.service.VideoService;
 @RequestMapping("api/videos")
 public class VideoController {
 
-	private VideoService videoService;
+	private final VideoService videoService;
 
 	public VideoController(VideoService videoService) {
 		super();

@@ -9,21 +9,22 @@ import lombok.Data;
 
 @Embeddable
 @Data
-public class VideoOrderId implements Serializable{
+public class PlaylistOrderId implements Serializable{
+	
 	private long playlistId;
-	private long videoId;
+	private long channelId;
 	
 	@Override
 	public int hashCode() {
-		return Objects.hash(playlistId, videoId);
+		return Objects.hash(channelId, playlistId);
 	}
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (!(obj instanceof VideoOrderId))
+		if (!(obj instanceof PlaylistOrderId))
 			return false;
-		VideoOrderId other = (VideoOrderId) obj;
-		return playlistId == other.playlistId && videoId == other.videoId;
+		PlaylistOrderId other = (PlaylistOrderId) obj;
+		return channelId == other.channelId && playlistId == other.playlistId;
 	}
 }

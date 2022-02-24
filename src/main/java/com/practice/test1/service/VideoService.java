@@ -6,7 +6,6 @@ import com.practice.test1.domen.Category;
 import com.practice.test1.domen.Video;
 
 public interface VideoService {
-
 	Video saveVideo(Video video);
 	Video getVideoById(long id);
 	List<Video> getAllVideos();

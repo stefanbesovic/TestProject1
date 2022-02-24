@@ -19,8 +19,8 @@ import com.practice.test1.service.CategoryService;
 @RestController
 @RequestMapping("api/categories")
 public class CategoryController {
-
-	private CategoryService categoryService;
+	
+	private final CategoryService categoryService;
 
 	public CategoryController(CategoryService categoryService) {
 		super();
@@ -52,5 +52,4 @@ public class CategoryController {
 		categoryService.deleteCategory(id);
 		return new ResponseEntity<String>("Category deleted successfully!", HttpStatus.OK);
 	}
-	
 }
