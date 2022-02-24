@@ -26,7 +26,6 @@ public class PlaylistOrderServiceImplementation implements PlaylistOrderService{
 	@Override
 	public List<Playlist> sortPlaylists(Channel channel) {
 		Collections.sort(channel.getPlaylists(), (x, y) -> x.getPosition() - y.getPosition());
-		channelService.updateChannel(channel, channel.getId());
 		return channel.getPlaylists().stream()
 				.map(x -> x.getPlaylist())
 				.collect(Collectors.toList());

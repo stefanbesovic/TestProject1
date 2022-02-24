@@ -27,7 +27,6 @@ public class VideoOrderServiceImplementation implements VideoOrderService{
 	@Override
 	public List<Video> sortVideos(Playlist playlist) {
 		Collections.sort(playlist.getVideos(), (x, y) -> x.getPosition() - y.getPosition());
-		playlistService.updatePlaylist(playlist, playlist.getId());
 		return playlist.getVideos().stream()
 				.map(x -> x.getVideo())
 				.collect(Collectors.toList());
