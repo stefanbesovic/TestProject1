@@ -26,7 +26,7 @@ public class PlaylistOrderServiceImplementation implements PlaylistOrderService{
 	@Override
 	public List<Playlist> sortPlaylists(Channel channel) {
 		Collections.sort(channel.getPlaylists(), (x, y) -> x.getPosition() - y.getPosition());
-		channelService.saveChannel(channel);
+		channelService.updateChannel(channel, channel.getId());
 		return channel.getPlaylists().stream()
 				.map(x -> x.getPlaylist())
 				.collect(Collectors.toList());
@@ -40,7 +40,7 @@ public class PlaylistOrderServiceImplementation implements PlaylistOrderService{
 		playlistOrder.setPlaylist(playlist);
 		playlistOrder.setPosition(channel.getPlaylists().size() + 1);
 		channel.getPlaylists().add(playlistOrder);
-		return channelService.saveChannel(channel);
+		return channelService.updateChannel(channel, channelId);
 	}
 
 	@Override
@@ -59,7 +59,7 @@ public class PlaylistOrderServiceImplementation implements PlaylistOrderService{
 				.stream()
 				.filter(x -> x.getPosition() >= i)
 				.forEach(x -> x.setPosition(x.getPosition() - 1));
-		channelService.saveChannel(channel);
+		channelService.updateChannel(channel, channelId);
 	}
 
 	@Override
@@ -90,6 +90,6 @@ public class PlaylistOrderServiceImplementation implements PlaylistOrderService{
             .forEach(x -> x.setPosition(x.getPosition() + dir));
         order.setPosition(newPosition);
         Collections.sort(channel.getPlaylists(), (x, y) -> x.getPosition() - y.getPosition());
-        channelService.saveChannel(channel);
+        channelService.updateChannel(channel, channelId);
 	}
 }

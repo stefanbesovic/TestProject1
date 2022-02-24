@@ -27,7 +27,7 @@ public class VideoOrderServiceImplementation implements VideoOrderService{
 	@Override
 	public List<Video> sortVideos(Playlist playlist) {
 		Collections.sort(playlist.getVideos(), (x, y) -> x.getPosition() - y.getPosition());
-		playlistService.savePlaylist(playlist);
+		playlistService.updatePlaylist(playlist, playlist.getId());
 		return playlist.getVideos().stream()
 				.map(x -> x.getVideo())
 				.collect(Collectors.toList());
@@ -41,7 +41,7 @@ public class VideoOrderServiceImplementation implements VideoOrderService{
 		videoOrder.setVideo(video);
 		videoOrder.setPosition(playlist.getVideos().size() + 1);
 		playlist.getVideos().add(videoOrder);
-		return playlistService.savePlaylist(playlist);
+		return playlistService.updatePlaylist(playlist, playlistId);
 	}
 
 	@Override
@@ -60,7 +60,7 @@ public class VideoOrderServiceImplementation implements VideoOrderService{
 				.stream()
 				.filter(x -> x.getPosition() >= i)
 				.forEach(x -> x.setPosition(x.getPosition() - 1));
-		playlistService.savePlaylist(playlist);
+		playlistService.updatePlaylist(playlist, playlistId);
 	}
 
 	@Override
@@ -91,6 +91,6 @@ public class VideoOrderServiceImplementation implements VideoOrderService{
             .forEach(x -> x.setPosition(x.getPosition() + dir));
         order.setPosition(newPosition);
         Collections.sort(playlist.getVideos(), (x, y) -> x.getPosition() - y.getPosition());
-        playlistService.savePlaylist(playlist);
+        playlistService.updatePlaylist(playlist, playlistId);
 	}
 }
