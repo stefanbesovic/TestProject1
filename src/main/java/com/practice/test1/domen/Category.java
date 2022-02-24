@@ -5,9 +5,12 @@ import java.util.Objects;
 import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -26,11 +29,21 @@ public class Category {
 	private String name;
 
 	@JsonIgnore
-	@ManyToMany(mappedBy = "categories")
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(
+			name = "video_categories",
+			joinColumns = @JoinColumn(name = "category_id"),
+			inverseJoinColumns = @JoinColumn(name = "video_id")
+	)
 	private Set<Video> videos = new HashSet<>();
 	
 	@JsonIgnore
-	@ManyToMany(mappedBy = "categories")
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(
+			name = "playlist_categories",
+			joinColumns = @JoinColumn(name = "category_id"),
+			inverseJoinColumns = @JoinColumn(name = "playlist_id")
+	)
 	private Set<Playlist> playlists = new HashSet<>();
 
 	@Override
