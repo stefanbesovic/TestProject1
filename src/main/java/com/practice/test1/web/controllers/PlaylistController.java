@@ -2,7 +2,10 @@ package com.practice.test1.web.controllers;
 
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
+import com.practice.test1.web.dto.playlist.PlaylistDto;
+import com.practice.test1.web.dto.playlist.PlaylistMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,23 +32,26 @@ public class PlaylistController {
 	private final VideoService videoService;
 	
 	@PostMapping()
-	public Playlist savePlaylist(@RequestBody Playlist playlist) {
-		return playlistService.savePlaylist(playlist);
+	public Playlist savePlaylist(@RequestBody PlaylistDto playlistDto) {
+		return playlistService.savePlaylist(PlaylistMapper.INSTANCE.fromDto(playlistDto));
 	}
 	
 	@GetMapping()
-	public List<Playlist> getAllPlaylists() {
-		return playlistService.getAllPlaylists();
+	public List<PlaylistDto> getAllPlaylists() {
+		return playlistService.getAllPlaylists()
+				.stream()
+				.map(playlist -> PlaylistMapper.INSTANCE.toDto(playlist))
+				.collect(Collectors.toList());
 	}
 	
 	@GetMapping("{id}")
-	public Playlist getPlaylistById(@PathVariable("id") long id) {
-		return playlistService.getPlaylistById(id);
+	public PlaylistDto getPlaylistById(@PathVariable("id") long id) {
+		return PlaylistMapper.INSTANCE.toDto(playlistService.getPlaylistById(id));
 	}
 	
 	@PutMapping("{id}")
-	public Playlist updatePlaylist(@RequestBody Playlist playlist, @PathVariable("id") long id) {
-		return playlistService.updatePlaylist(playlist, id);
+	public Playlist updatePlaylist(@RequestBody PlaylistDto playlistDto, @PathVariable("id") long id) {
+		return playlistService.updatePlaylist(PlaylistMapper.INSTANCE.fromDto(playlistDto), id);
 	}
 	
 	@DeleteMapping("{id}")

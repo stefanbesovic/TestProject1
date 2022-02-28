@@ -1,0 +1,5 @@
+2022-02-28 10:50:33,442 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 3404 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-02-28 10:50:33,448 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-02-28 10:50:33,449 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-02-28 10:50:43,753 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 11.06 seconds (JVM running for 12.935)
+2022-02-28 10:50:57,765 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-2] Category with id 0 saved to repository.

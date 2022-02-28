@@ -1,7 +1,10 @@
 package com.practice.test1.web.controllers;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
+import com.practice.test1.web.dto.channel.ChannelDto;
+import com.practice.test1.web.dto.channel.ChannelMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,23 +31,25 @@ public class ChannelController {
 	private final PlaylistOrderService playlistOrderService;
 
 	@PostMapping()
-	public Channel saveChannel(@RequestBody Channel channel) {
-		return channelService.saveChannel(channel);
+	public Channel saveChannel(@RequestBody ChannelDto channelDto) {
+		return channelService.saveChannel(ChannelMapper.INSTANCE.fromDto(channelDto));
 	}
 	
 	@GetMapping()
-	public List<Channel> getAllChannels() {
-		return channelService.getAllChannels();
+	public List<ChannelDto> getAllChannels() {
+		return channelService.getAllChannels()
+				.stream().map(channel -> ChannelMapper.INSTANCE.toDto(channel))
+				.collect(Collectors.toList());
 	}
 	
 	@GetMapping("{id}")
-	public Channel getChannelById(@PathVariable("id") long id) {
-		return channelService.getChannelById(id);
+	public ChannelDto getChannelById(@PathVariable("id") long id) {
+		return ChannelMapper.INSTANCE.toDto(channelService.getChannelById(id));
 	}
 	
 	@PutMapping("{id}")
-	public Channel updateChannel(@PathVariable("id") long id, @RequestBody Channel channel) {
-		return channelService.updateChannel(channel, id);
+	public Channel updateChannel(@PathVariable("id") long id, @RequestBody ChannelDto channelDto) {
+		return channelService.updateChannel(ChannelMapper.INSTANCE.fromDto(channelDto), id);
 	}
 	
 	@DeleteMapping("{id}")

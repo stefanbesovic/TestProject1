@@ -1,7 +1,10 @@
 package com.practice.test1.web.controllers;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
+import com.practice.test1.web.dto.video.VideoDto;
+import com.practice.test1.web.dto.video.VideoMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,23 +26,26 @@ public class VideoController {
 	private final VideoService videoService;
 
 	@PostMapping()
-	public Video saveVideo(@RequestBody Video video) {
-		return videoService.saveVideo(video);
+	public Video saveVideo(@RequestBody VideoDto videoDto) {
+		return videoService.saveVideo(VideoMapper.INSTANCE.fromDto(videoDto));
 	}
 	
 	@GetMapping()
-	public List<Video> getAllVideos() {
-		return videoService.getAllVideos();
+	public List<VideoDto> getAllVideos() {
+		return videoService.getAllVideos()
+				.stream()
+				.map(video -> VideoMapper.INSTANCE.toDto(video))
+				.collect(Collectors.toList());
 	}
 	
 	@GetMapping("{id}")
-	public Video getVideoById(@PathVariable("id") long id) {
-		return videoService.getVideoById(id);
+	public VideoDto getVideoById(@PathVariable("id") long id) {
+		return VideoMapper.INSTANCE.toDto(videoService.getVideoById(id));
 	}
 	
 	@PutMapping("{id}")
-	public Video updateVideo(@RequestBody Video video, @PathVariable("id") long id) {
-		return videoService.updateVideo(video, id);
+	public Video updateVideo(@RequestBody VideoDto videoDto, @PathVariable("id") long id) {
+		return videoService.updateVideo(VideoMapper.INSTANCE.fromDto(videoDto), id);
 	}
 	
 	@DeleteMapping("{id}")

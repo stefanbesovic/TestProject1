@@ -7,6 +7,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.practice.test1.entities.Channel;
@@ -20,9 +22,11 @@ import com.practice.test1.services.PlaylistOrderService;
 public class PlaylistOrderServiceImplementation implements PlaylistOrderService{
 	
 	private final ChannelService channelService;
+	private static final Logger log = LoggerFactory.getLogger(PlaylistOrderServiceImplementation.class);
 
 	@Override
 	public List<Playlist> sortPlaylists(Channel channel) {
+		log.info("Sorting playlists in channel with id {}.", channel.getId());
 		channel.getPlaylists().sort(Comparator.comparingInt(PlaylistOrder::getPosition));
 		return channel.getPlaylists().stream()
 				.map(PlaylistOrder::getPlaylist)
@@ -34,15 +38,18 @@ public class PlaylistOrderServiceImplementation implements PlaylistOrderService{
 		Channel channel = channelService.getChannelById(channelId);
 		PlaylistOrder playlistOrder = new PlaylistOrder(channel, playlist, channel.getPlaylists().size() + 1);
 		channel.getPlaylists().add(playlistOrder);
+		log.info("Adding video {} to playlist {}.", playlist.getId(), channel.getId());
 		return channelService.updateChannel(channel, channelId);
 	}
 
 	@Override
 	public void removePlaylistFromChannel(long channelId, Playlist playlist) {
+		log.info("Removing video {} from playlist {}", playlist.getId(), channelId);
 		int index = 0;
 		Channel channel = channelService.getChannelById(channelId);
 		for(PlaylistOrder o : channel.getPlaylists()) {
 			if(o.getPlaylist().equals(playlist)) {
+				log.debug("Found the playlist in channel.");
 				index = o.getPosition();
 				channel.getPlaylists().remove(index - 1);
 				break;
@@ -58,6 +65,7 @@ public class PlaylistOrderServiceImplementation implements PlaylistOrderService{
 
 	@Override
 	public void changeIndexOfPlaylistInChannel(long channelId, Playlist playlist, int newPosition) {
+		log.info("Changing position of playlist {} in channel {}.", playlist.getId(), channelId);
 		int rangeFrom ;
         int rangeTo;
         int directionValue;
@@ -65,13 +73,18 @@ public class PlaylistOrderServiceImplementation implements PlaylistOrderService{
         PlaylistOrder order = channel.getPlaylists().stream().filter(x -> x.getPlaylist().equals(playlist)).findAny()
         		.orElseThrow(() -> new NoSuchElementException(String.format("Can't change index of playlist in channel. Playlist not found: %d", playlist.getId())));
         int currentPosition = order.getPosition();
-		if(currentPosition == newPosition) return;
+		if(currentPosition == newPosition) {
+			log.debug("Current position of playlist is same as the new position.");
+			return;
+		}
         if(currentPosition > newPosition) {
-            rangeFrom = newPosition;
+			log.debug("Moving playlists to right.");
+			rangeFrom = newPosition;
             rangeTo = currentPosition;
             directionValue = 1;
         }else {
-            rangeFrom = currentPosition + 1;
+			log.debug("Moving playlists to left.");
+			rangeFrom = currentPosition + 1;
             rangeTo = newPosition + 1;
             directionValue = -1;
         }
@@ -83,6 +96,7 @@ public class PlaylistOrderServiceImplementation implements PlaylistOrderService{
             .forEach(x -> x.setPosition(x.getPosition() + dir.get()));
         order.setPosition(newPosition);
         channel.getPlaylists().sort(Comparator.comparingInt(PlaylistOrder::getPosition));
-        channelService.updateChannel(channel, channelId);
+		log.info("Position of playlist {} has changed from {} to {}.", playlist.getId(), currentPosition, newPosition);
+		channelService.updateChannel(channel, channelId);
 	}
 }
