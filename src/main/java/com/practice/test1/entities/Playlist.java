@@ -20,8 +20,7 @@ import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @Data
@@ -48,6 +47,15 @@ public class Playlist {
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "user_id", referencedColumnName = "id")
 	private User user;
+
+	public Playlist(long id, String name) {
+		this.id = id;
+		this.name = name;
+		categories = new HashSet<>();
+		videos = new ArrayList<>();
+		playlistOrders = new ArrayList<>();
+		user = null;
+	}
 	
 	public void addCategory(Category category) {
 		categories.add(category);
@@ -72,5 +80,13 @@ public class Playlist {
 	@Override
 	public int hashCode() {
 		return Objects.hash(id, name);
+	}
+
+	@Override
+	public String toString() {
+		return "Playlist{" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				'}';
 	}
 }

@@ -15,6 +15,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
 @Data
@@ -41,8 +42,17 @@ public class Channel {
 		Channel other = (Channel) obj;
 		return id == other.id && Objects.equals(name, other.name);
 	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id, name);
+	}
+
+	@Override
+	public String toString() {
+		return "Channel{" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				'}';
 	}
 }

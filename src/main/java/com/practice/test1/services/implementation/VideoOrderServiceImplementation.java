@@ -95,7 +95,7 @@ public class VideoOrderServiceImplementation implements VideoOrderService{
             .filter(x -> x.getPosition() >= rangeF.get() && x.getPosition() < rangeT.get())
             .forEach(x -> x.setPosition(x.getPosition() + dir.get()));
         order.setPosition(newPosition);
-        playlist.getVideos().sort(Comparator.comparingInt(VideoOrder::getPosition));
+        //playlist.getVideos().sort(Comparator.comparingInt(VideoOrder::getPosition));
 		log.info("Position of video {} has changed from {} to {}.", video.getId(), currentPosition, newPosition);
         playlistService.updatePlaylist(playlist, playlistId);
 	}

@@ -6,16 +6,15 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.MapsId;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.Objects;
 
 @Entity
 @Data
 @NoArgsConstructor
-@ToString
+@AllArgsConstructor
+@Builder
 public class VideoOrder {
 	@EmbeddedId
 	private VideoOrderId videoOrderId = new VideoOrderId();
@@ -49,5 +48,14 @@ public class VideoOrder {
 	@Override
 	public int hashCode() {
 		return Objects.hash(videoOrderId);
+	}
+
+	@Override
+	public String toString() {
+		return "VideoOrder{" +
+				"playlist=" + playlist.getId() +
+				", video=" + video.getId() +
+				", position=" + position +
+				'}';
 	}
 }

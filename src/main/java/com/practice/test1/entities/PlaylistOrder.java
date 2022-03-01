@@ -8,6 +8,7 @@ import javax.persistence.MapsId;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.Objects;
 
@@ -48,5 +49,14 @@ public class PlaylistOrder {
 	@Override
 	public int hashCode() {
 		return Objects.hash(playlistOrderId);
+	}
+
+	@Override
+	public String toString() {
+		return "PlaylistOrder{" +
+				"channel=" + channel.getId() +
+				", playlist=" + playlist.getId() +
+				", position=" + position +
+				'}';
 	}
 }
