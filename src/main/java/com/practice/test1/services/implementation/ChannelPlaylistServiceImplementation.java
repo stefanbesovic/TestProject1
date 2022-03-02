@@ -13,31 +13,31 @@ import org.springframework.stereotype.Service;
 
 import com.practice.test1.entities.Channel;
 import com.practice.test1.entities.Playlist;
-import com.practice.test1.entities.PlaylistOrder;
+import com.practice.test1.entities.ChannelPlaylist;
 import com.practice.test1.services.ChannelService;
-import com.practice.test1.services.PlaylistOrderService;
+import com.practice.test1.services.ChannelPlaylistService;
 
 @RequiredArgsConstructor
 @Service
-public class PlaylistOrderServiceImplementation implements PlaylistOrderService{
+public class ChannelPlaylistServiceImplementation implements ChannelPlaylistService {
 	
 	private final ChannelService channelService;
-	private static final Logger log = LoggerFactory.getLogger(PlaylistOrderServiceImplementation.class);
+	private static final Logger log = LoggerFactory.getLogger(ChannelPlaylistServiceImplementation.class);
 
 	@Override
 	public List<Playlist> sortPlaylists(Channel channel) {
 		log.info("Sorting playlists in channel with id {}.", channel.getId());
-		channel.getPlaylists().sort(Comparator.comparingInt(PlaylistOrder::getPosition));
+		channel.getPlaylists().sort(Comparator.comparingInt(ChannelPlaylist::getPosition));
 		return channel.getPlaylists().stream()
-				.map(PlaylistOrder::getPlaylist)
+				.map(ChannelPlaylist::getPlaylist)
 				.collect(Collectors.toList());
 	}
 
 	@Override
 	public Channel addPlaylistToChannel(long channelId, Playlist playlist) {
 		Channel channel = channelService.getChannelById(channelId);
-		PlaylistOrder playlistOrder = new PlaylistOrder(channel, playlist, channel.getPlaylists().size() + 1);
-		channel.getPlaylists().add(playlistOrder);
+		ChannelPlaylist channelPlaylist = new ChannelPlaylist(channel, playlist, channel.getPlaylists().size() + 1);
+		channel.getPlaylists().add(channelPlaylist);
 		log.info("Adding video {} to playlist {}.", playlist.getId(), channel.getId());
 		return channelService.updateChannel(channel, channelId);
 	}
@@ -47,7 +47,7 @@ public class PlaylistOrderServiceImplementation implements PlaylistOrderService{
 		log.info("Removing video {} from playlist {}", playlist.getId(), channelId);
 		int index = 0;
 		Channel channel = channelService.getChannelById(channelId);
-		for(PlaylistOrder o : channel.getPlaylists()) {
+		for(ChannelPlaylist o : channel.getPlaylists()) {
 			if(o.getPlaylist().equals(playlist)) {
 				log.debug("Found the playlist in channel.");
 				index = o.getPosition();
@@ -70,9 +70,11 @@ public class PlaylistOrderServiceImplementation implements PlaylistOrderService{
         int rangeTo;
         int directionValue;
         Channel channel = channelService.getChannelById(channelId);
-        PlaylistOrder order = channel.getPlaylists().stream().filter(x -> x.getPlaylist().equals(playlist)).findAny()
+        ChannelPlaylist order = channel.getPlaylists().stream().filter(x -> x.getPlaylist().equals(playlist)).findAny()
         		.orElseThrow(() -> new NoSuchElementException(String.format("Can't change index of playlist in channel. Playlist not found: %d", playlist.getId())));
         int currentPosition = order.getPosition();
+		if(newPosition > channel.getPlaylists().size())
+			throw new IndexOutOfBoundsException(String.format("Position out of bounds. Position %d - Actual channel size %d", newPosition, channel.getPlaylists().size()));
 		if(currentPosition == newPosition) {
 			log.debug("Current position of playlist is same as the new position.");
 			return;
@@ -95,7 +97,7 @@ public class PlaylistOrderServiceImplementation implements PlaylistOrderService{
             .filter(x -> x.getPosition() >= rangeF.get() && x.getPosition() < rangeT.get())
             .forEach(x -> x.setPosition(x.getPosition() + dir.get()));
         order.setPosition(newPosition);
-        channel.getPlaylists().sort(Comparator.comparingInt(PlaylistOrder::getPosition));
+       // channel.getPlaylists().sort(Comparator.comparingInt(ChannelPlaylist::getPosition));
 		log.info("Position of playlist {} has changed from {} to {}.", playlist.getId(), currentPosition, newPosition);
 		channelService.updateChannel(channel, channelId);
 	}

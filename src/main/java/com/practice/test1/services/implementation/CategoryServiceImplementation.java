@@ -23,6 +23,8 @@ public class CategoryServiceImplementation implements CategoryService {
 
 	@Override
 	public Category saveCategory(Category category) {
+		if(category == null)
+			throw new NullPointerException("Can't save. Category is null.");
 		if(!categoryRepository.existsById(category.getId())) {
 			log.info("Category with id {} saved to repository.", category.getId());
 			return categoryRepository.save(category);

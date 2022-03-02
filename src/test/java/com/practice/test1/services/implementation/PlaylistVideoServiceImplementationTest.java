@@ -2,15 +2,12 @@ package com.practice.test1.services.implementation;
 
 import com.practice.test1.entities.Playlist;
 import com.practice.test1.entities.Video;
-import com.practice.test1.entities.VideoOrder;
+import com.practice.test1.entities.PlaylistVideo;
 import com.practice.test1.services.PlaylistService;
-import com.practice.test1.services.VideoOrderService;
+import com.practice.test1.services.PlaylistVideoService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.NoSuchElementException;
@@ -20,19 +17,17 @@ import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-@SpringBootTest
 @AutoConfigureTestDatabase
 @Transactional
-@DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
-class VideoOrderServiceImplementationTest {
+class PlaylistVideoServiceImplementationTest {
 
     private PlaylistService playlistService;
-    private VideoOrderService testService;
+    private PlaylistVideoService testService;
 
     @BeforeEach
     void setUp() {
         playlistService = mock(PlaylistService.class);
-        testService = new VideoOrderServiceImplementation(playlistService);
+        testService = new PlaylistVideoServiceImplementation(playlistService);
     }
 
     @Test
@@ -50,9 +45,9 @@ class VideoOrderServiceImplementationTest {
         Video v2 = Video.builder()
                 .name("Video2")
                 .build();
-        playlist.getVideos().add(new VideoOrder(playlist, v, 1));
-        playlist.getVideos().add(new VideoOrder(playlist, v1, 2));
-        playlist.getVideos().add(new VideoOrder(playlist, v2, 3));
+        playlist.getVideos().add(new PlaylistVideo(playlist, v, 1));
+        playlist.getVideos().add(new PlaylistVideo(playlist, v1, 2));
+        playlist.getVideos().add(new PlaylistVideo(playlist, v2, 3));
 
         //when
         when(playlistService.getPlaylistById(anyLong())).thenReturn(playlist);
@@ -81,9 +76,9 @@ class VideoOrderServiceImplementationTest {
         Video v2 = Video.builder()
                 .name("Video2")
                 .build();
-        playlist.getVideos().add(new VideoOrder(playlist, v, 1));
-        playlist.getVideos().add(new VideoOrder(playlist, v1, 2));
-        playlist.getVideos().add(new VideoOrder(playlist, v2, 3));
+        playlist.getVideos().add(new PlaylistVideo(playlist, v, 1));
+        playlist.getVideos().add(new PlaylistVideo(playlist, v1, 2));
+        playlist.getVideos().add(new PlaylistVideo(playlist, v2, 3));
 
         //when
         when(playlistService.getPlaylistById(anyLong())).thenReturn(playlist);
@@ -112,9 +107,9 @@ class VideoOrderServiceImplementationTest {
         Video v2 = Video.builder()
                 .name("Video2")
                 .build();
-        playlist.getVideos().add(new VideoOrder(playlist, v, 1));
-        playlist.getVideos().add(new VideoOrder(playlist, v1, 2));
-        playlist.getVideos().add(new VideoOrder(playlist, v2, 3));
+        playlist.getVideos().add(new PlaylistVideo(playlist, v, 1));
+        playlist.getVideos().add(new PlaylistVideo(playlist, v1, 2));
+        playlist.getVideos().add(new PlaylistVideo(playlist, v2, 3));
         Video v3 = Video.builder()
                 .name("Video3")
                 .build();
@@ -147,9 +142,9 @@ class VideoOrderServiceImplementationTest {
         Video v2 = Video.builder()
                 .name("Video2")
                 .build();
-        playlist.getVideos().add(new VideoOrder(playlist, v, 1));
-        playlist.getVideos().add(new VideoOrder(playlist, v1, 2));
-        playlist.getVideos().add(new VideoOrder(playlist, v2, 3));
+        playlist.getVideos().add(new PlaylistVideo(playlist, v, 1));
+        playlist.getVideos().add(new PlaylistVideo(playlist, v1, 2));
+        playlist.getVideos().add(new PlaylistVideo(playlist, v2, 3));
 
         //when
         when(playlistService.getPlaylistById(anyLong())).thenReturn(playlist);
@@ -178,9 +173,9 @@ class VideoOrderServiceImplementationTest {
         Video v2 = Video.builder()
                 .name("Video2")
                 .build();
-        playlist.getVideos().add(new VideoOrder(playlist, v, 1));
-        playlist.getVideos().add(new VideoOrder(playlist, v1, 2));
-        playlist.getVideos().add(new VideoOrder(playlist, v2, 3));
+        playlist.getVideos().add(new PlaylistVideo(playlist, v, 1));
+        playlist.getVideos().add(new PlaylistVideo(playlist, v1, 2));
+        playlist.getVideos().add(new PlaylistVideo(playlist, v2, 3));
 
         //when
         when(playlistService.getPlaylistById(anyLong())).thenReturn(playlist);
@@ -209,9 +204,9 @@ class VideoOrderServiceImplementationTest {
         Video v2 = Video.builder()
                 .name("Video2")
                 .build();
-        playlist.getVideos().add(new VideoOrder(playlist, v, 3));
-        playlist.getVideos().add(new VideoOrder(playlist, v1, 1));
-        playlist.getVideos().add(new VideoOrder(playlist, v2, 2));
+        playlist.getVideos().add(new PlaylistVideo(playlist, v, 3));
+        playlist.getVideos().add(new PlaylistVideo(playlist, v1, 1));
+        playlist.getVideos().add(new PlaylistVideo(playlist, v2, 2));
 
         //when
         testService.sortVideos(playlist);
@@ -238,7 +233,6 @@ class VideoOrderServiceImplementationTest {
         when(playlistService.getPlaylistById(anyLong())).thenReturn(playlist);
         testService.addVideoToPlaylist(playlist.getId(), v);
 
-
         //then
         assertNotNull(playlist.getVideos());
         assertFalse(playlist.getVideos().isEmpty());
@@ -254,7 +248,7 @@ class VideoOrderServiceImplementationTest {
         Video v = Video.builder()
                 .name("Video")
                 .build();
-        playlist.getVideos().add(new VideoOrder(playlist, v, 1));
+        playlist.getVideos().add(new PlaylistVideo(playlist, v, 1));
 
         //when
         when(playlistService.getPlaylistById(anyLong())).thenReturn(playlist);
@@ -274,7 +268,7 @@ class VideoOrderServiceImplementationTest {
         Video v = Video.builder()
                 .name("Video")
                 .build();
-        playlist.getVideos().add(new VideoOrder(playlist, v, 1));
+        playlist.getVideos().add(new PlaylistVideo(playlist, v, 1));
         Video v1 = Video.builder()
                 .name("Video1")
                 .build();

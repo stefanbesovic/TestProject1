@@ -6,7 +6,7 @@
 2022-03-02 08:34:41,592 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 08:34:41,592 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 08:34:43,538 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.042 seconds (JVM running for 13.817)
-2022-03-02 08:34:43,579 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 08:34:43,579 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
 2022-03-02 08:40:11,822 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 13872 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 08:40:11,827 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 08:40:11,829 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
@@ -15,9 +15,9 @@
 2022-03-02 08:40:22,565 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 08:40:22,572 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 08:40:24,957 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.584 seconds (JVM running for 16.672)
-2022-03-02 08:40:25,043 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
-2022-03-02 08:40:25,050 DEBUG com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Moving videos to left.
-2022-03-02 08:40:25,050 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Position of video 0 has changed from 1 to 3.
+2022-03-02 08:40:25,043 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 08:40:25,050 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Moving videos to left.
+2022-03-02 08:40:25,050 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Position of video 0 has changed from 1 to 3.
 2022-03-02 09:11:46,165 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 10472 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:11:46,169 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:11:46,169 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
@@ -26,7 +26,7 @@
 2022-03-02 09:11:55,103 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:11:55,104 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:11:57,134 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.162 seconds (JVM running for 15.253)
-2022-03-02 09:11:57,211 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:11:57,211 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
 2022-03-02 09:13:21,708 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 19380 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:13:21,711 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:13:21,711 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
@@ -35,7 +35,7 @@
 2022-03-02 09:13:33,356 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:13:33,356 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:13:36,074 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.837 seconds (JVM running for 17.448)
-2022-03-02 09:13:36,125 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:13:36,125 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
 2022-03-02 09:14:32,606 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 17828 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:14:32,606 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:14:32,610 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
@@ -44,14 +44,14 @@
 2022-03-02 09:14:41,257 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:14:41,259 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:14:43,519 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.43 seconds (JVM running for 15.301)
-2022-03-02 09:14:43,603 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:14:43,603 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
 2022-03-02 09:14:43,770 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 17828 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:14:43,770 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:14:43,770 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:14:45,661 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 1.996 seconds (JVM running for 17.443)
-2022-03-02 09:14:45,671 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
-2022-03-02 09:14:45,671 DEBUG com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Moving videos to left.
-2022-03-02 09:14:45,675 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Position of video 0 has changed from 1 to 3.
+2022-03-02 09:14:45,671 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:14:45,671 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Moving videos to left.
+2022-03-02 09:14:45,675 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Position of video 0 has changed from 1 to 3.
 2022-03-02 09:24:58,509 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 4124 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:24:58,513 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:24:58,514 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
@@ -60,7 +60,7 @@
 2022-03-02 09:25:11,421 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:25:11,421 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:25:13,374 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.053 seconds (JVM running for 18.507)
-2022-03-02 09:25:13,454 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:25:13,454 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
 2022-03-02 09:27:21,892 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 18860 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:27:21,895 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:27:21,895 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
@@ -69,25 +69,25 @@
 2022-03-02 09:27:32,615 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:27:32,615 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:27:34,766 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.242 seconds (JVM running for 16.355)
-2022-03-02 09:27:34,858 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:27:34,858 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
 2022-03-02 09:27:35,062 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 18860 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:27:35,062 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:27:35,064 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:27:36,879 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 1.954 seconds (JVM running for 18.468)
-2022-03-02 09:27:36,892 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:27:36,892 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
 2022-03-02 09:27:37,000 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 18860 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:27:37,004 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:27:37,005 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:27:38,763 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 1.841 seconds (JVM running for 20.351)
-2022-03-02 09:27:38,773 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
-2022-03-02 09:27:38,773 DEBUG com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Current position of video is same as the new position.
+2022-03-02 09:27:38,773 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:27:38,773 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Current position of video is same as the new position.
 2022-03-02 09:27:38,927 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 18860 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:27:38,927 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:27:38,928 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:27:40,819 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.022 seconds (JVM running for 22.406)
-2022-03-02 09:27:40,831 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
-2022-03-02 09:27:40,832 DEBUG com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Moving videos to left.
-2022-03-02 09:27:40,833 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Position of video 0 has changed from 1 to 3.
+2022-03-02 09:27:40,831 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:27:40,832 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Moving videos to left.
+2022-03-02 09:27:40,833 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Position of video 0 has changed from 1 to 3.
 2022-03-02 09:32:10,761 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 19412 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:32:10,767 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:32:10,769 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
@@ -96,25 +96,25 @@
 2022-03-02 09:32:22,276 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:32:22,277 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:32:25,482 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 3.361 seconds (JVM running for 18.927)
-2022-03-02 09:32:26,220 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:32:26,220 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
 2022-03-02 09:32:26,383 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 19412 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:32:26,391 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:32:26,391 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:32:29,228 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.94 seconds (JVM running for 22.673)
-2022-03-02 09:32:29,241 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:32:29,241 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
 2022-03-02 09:32:29,429 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 19412 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:32:29,429 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:32:29,429 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:32:32,899 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 3.613 seconds (JVM running for 26.35)
-2022-03-02 09:32:32,917 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
-2022-03-02 09:32:32,917 DEBUG com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Current position of video is same as the new position.
+2022-03-02 09:32:32,917 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:32:32,917 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Current position of video is same as the new position.
 2022-03-02 09:32:33,076 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 19412 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:32:33,078 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:32:33,079 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:32:36,242 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 3.298 seconds (JVM running for 29.69)
-2022-03-02 09:32:36,258 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
-2022-03-02 09:32:36,266 DEBUG com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Moving videos to left.
-2022-03-02 09:32:36,266 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Position of video 0 has changed from 1 to 3.
+2022-03-02 09:32:36,258 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:32:36,266 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Moving videos to left.
+2022-03-02 09:32:36,266 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Position of video 0 has changed from 1 to 3.
 2022-03-02 09:33:13,563 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 14768 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:33:13,566 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:33:13,566 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
@@ -123,25 +123,25 @@
 2022-03-02 09:33:25,039 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:33:25,039 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:33:27,776 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.848 seconds (JVM running for 17.945)
-2022-03-02 09:33:28,227 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:33:28,227 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
 2022-03-02 09:33:28,382 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 14768 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:33:28,382 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:33:28,382 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:33:30,378 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.088 seconds (JVM running for 20.541)
-2022-03-02 09:33:30,391 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:33:30,391 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
 2022-03-02 09:33:30,533 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 14768 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:33:30,534 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:33:30,534 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:33:32,749 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.325 seconds (JVM running for 22.912)
-2022-03-02 09:33:32,759 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
-2022-03-02 09:33:32,760 DEBUG com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Current position of video is same as the new position.
+2022-03-02 09:33:32,759 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:33:32,760 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Current position of video is same as the new position.
 2022-03-02 09:33:32,863 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 14768 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:33:32,863 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:33:32,865 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:33:34,460 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 1.683 seconds (JVM running for 24.625)
-2022-03-02 09:33:34,471 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
-2022-03-02 09:33:34,471 DEBUG com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Moving videos to left.
-2022-03-02 09:33:34,473 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Position of video 0 has changed from 1 to 3.
+2022-03-02 09:33:34,471 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:33:34,471 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Moving videos to left.
+2022-03-02 09:33:34,473 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Position of video 0 has changed from 1 to 3.
 2022-03-02 09:36:04,796 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 1324 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:36:04,803 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:36:04,804 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
@@ -150,32 +150,32 @@
 2022-03-02 09:36:14,655 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:36:14,655 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:36:17,006 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.469 seconds (JVM running for 16.254)
-2022-03-02 09:36:17,475 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:36:17,475 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
 2022-03-02 09:36:17,638 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 1324 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:36:17,638 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:36:17,638 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:36:19,768 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.236 seconds (JVM running for 19.022)
-2022-03-02 09:36:19,787 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:36:19,787 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
 2022-03-02 09:36:19,935 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 1324 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:36:19,936 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:36:19,937 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:36:21,895 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.076 seconds (JVM running for 21.146)
-2022-03-02 09:36:21,907 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
-2022-03-02 09:36:21,909 DEBUG com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Current position of video is same as the new position.
+2022-03-02 09:36:21,907 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:36:21,909 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Current position of video is same as the new position.
 2022-03-02 09:36:22,017 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 1324 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:36:22,018 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:36:22,019 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:36:24,236 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.305 seconds (JVM running for 23.486)
-2022-03-02 09:36:24,246 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
-2022-03-02 09:36:24,246 DEBUG com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Moving videos to left.
-2022-03-02 09:36:24,248 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Position of video 0 has changed from 1 to 3.
+2022-03-02 09:36:24,246 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:36:24,246 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Moving videos to left.
+2022-03-02 09:36:24,248 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Position of video 0 has changed from 1 to 3.
 2022-03-02 09:36:24,400 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 1324 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:36:24,401 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:36:24,402 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:36:26,044 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 1.772 seconds (JVM running for 25.292)
-2022-03-02 09:36:26,053 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
-2022-03-02 09:36:26,053 DEBUG com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Moving videos to right.
-2022-03-02 09:36:26,054 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Position of video 0 has changed from 3 to 1.
+2022-03-02 09:36:26,053 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:36:26,053 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Moving videos to right.
+2022-03-02 09:36:26,054 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Position of video 0 has changed from 3 to 1.
 2022-03-02 09:41:07,474 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7944 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:41:07,475 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:41:07,476 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
@@ -184,7 +184,7 @@
 2022-03-02 09:41:16,332 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:41:16,332 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:41:18,353 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.12 seconds (JVM running for 14.863)
-2022-03-02 09:41:18,768 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Sorting videos in playlist with id 0.
+2022-03-02 09:41:18,768 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Sorting videos in playlist with id 0.
 2022-03-02 09:45:27,089 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7912 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:45:27,097 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:45:27,098 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
@@ -193,7 +193,7 @@
 2022-03-02 09:45:38,442 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:45:38,443 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:45:40,677 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.321 seconds (JVM running for 18.575)
-2022-03-02 09:45:41,167 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Adding video 0 to playlist 0.
+2022-03-02 09:45:41,167 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Adding video 0 to playlist 0.
 2022-03-02 09:47:37,991 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 3660 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:47:37,994 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:47:37,995 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
@@ -202,7 +202,7 @@
 2022-03-02 09:47:47,146 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:47:47,147 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:47:49,230 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.184 seconds (JVM running for 15.328)
-2022-03-02 09:47:49,739 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Adding video 0 to playlist 0.
+2022-03-02 09:47:49,739 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Adding video 0 to playlist 0.
 2022-03-02 09:57:02,033 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 11768 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:57:02,039 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:57:02,040 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
@@ -211,8 +211,8 @@
 2022-03-02 09:57:12,190 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:57:12,190 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:57:14,177 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.088 seconds (JVM running for 16.851)
-2022-03-02 09:57:14,658 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Removing video 0 from playlist 0
-2022-03-02 09:57:14,664 DEBUG com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Found the video in playlist
+2022-03-02 09:57:14,658 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 09:57:14,664 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Found the video in playlist
 2022-03-02 09:57:59,822 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 19844 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:57:59,826 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:57:59,827 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
@@ -221,8 +221,8 @@
 2022-03-02 09:58:09,819 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:58:09,826 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:58:12,139 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.416 seconds (JVM running for 17.157)
-2022-03-02 09:58:12,975 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Removing video 0 from playlist 0
-2022-03-02 09:58:13,004 DEBUG com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Found the video in playlist
+2022-03-02 09:58:12,975 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 09:58:13,004 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Found the video in playlist
 2022-03-02 09:58:42,644 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 14776 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:58:42,653 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:58:42,655 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
@@ -231,48 +231,48 @@
 2022-03-02 09:58:54,779 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:58:54,779 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:58:56,730 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.06 seconds (JVM running for 17.876)
-2022-03-02 09:58:57,192 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Sorting videos in playlist with id 0.
+2022-03-02 09:58:57,192 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Sorting videos in playlist with id 0.
 2022-03-02 09:58:57,337 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 14776 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:58:57,337 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:58:57,339 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:58:59,382 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.131 seconds (JVM running for 20.523)
-2022-03-02 09:58:59,454 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:58:59,454 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
 2022-03-02 09:58:59,624 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 14776 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:58:59,625 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:58:59,625 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:59:01,335 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 1.837 seconds (JVM running for 22.477)
-2022-03-02 09:59:01,345 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Removing video 0 from playlist 0
-2022-03-02 09:59:01,345 DEBUG com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Found the video in playlist
+2022-03-02 09:59:01,345 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 09:59:01,345 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Found the video in playlist
 2022-03-02 09:59:01,446 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 14776 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:59:01,446 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:59:01,447 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:59:03,073 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 1.709 seconds (JVM running for 24.217)
-2022-03-02 09:59:03,087 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:59:03,087 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
 2022-03-02 09:59:03,222 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 14776 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:59:03,223 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:59:03,224 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:59:04,878 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 1.755 seconds (JVM running for 26.022)
-2022-03-02 09:59:04,887 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
-2022-03-02 09:59:04,887 DEBUG com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Current position of video is same as the new position.
+2022-03-02 09:59:04,887 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:59:04,887 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Current position of video is same as the new position.
 2022-03-02 09:59:04,980 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 14776 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:59:04,980 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:59:04,982 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:59:06,298 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 1.389 seconds (JVM running for 27.439)
-2022-03-02 09:59:06,304 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
-2022-03-02 09:59:06,307 DEBUG com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Moving videos to left.
-2022-03-02 09:59:06,307 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Position of video 0 has changed from 1 to 3.
+2022-03-02 09:59:06,304 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:59:06,307 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Moving videos to left.
+2022-03-02 09:59:06,307 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Position of video 0 has changed from 1 to 3.
 2022-03-02 09:59:06,393 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 14776 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:59:06,396 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:59:06,396 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:59:07,729 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 1.402 seconds (JVM running for 28.87)
-2022-03-02 09:59:07,736 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Adding video 0 to playlist 0.
+2022-03-02 09:59:07,736 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Adding video 0 to playlist 0.
 2022-03-02 09:59:07,828 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 14776 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 09:59:07,829 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 09:59:07,829 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 09:59:10,360 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.606 seconds (JVM running for 31.501)
-2022-03-02 09:59:10,370 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
-2022-03-02 09:59:10,373 DEBUG com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Moving videos to right.
-2022-03-02 09:59:10,373 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Position of video 0 has changed from 3 to 1.
+2022-03-02 09:59:10,370 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 09:59:10,373 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Moving videos to right.
+2022-03-02 09:59:10,373 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Position of video 0 has changed from 3 to 1.
 2022-03-02 10:02:13,360 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7972 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 10:02:13,362 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 10:02:13,362 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
@@ -281,50 +281,298 @@
 2022-03-02 10:02:21,555 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 10:02:21,555 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 10:02:23,799 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.364 seconds (JVM running for 14.718)
-2022-03-02 10:02:24,226 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Sorting videos in playlist with id 0.
+2022-03-02 10:02:24,226 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Sorting videos in playlist with id 0.
 2022-03-02 10:02:24,394 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7972 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 10:02:24,398 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 10:02:24,398 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 10:02:26,261 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 1.965 seconds (JVM running for 17.182)
-2022-03-02 10:02:26,300 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 10:02:26,300 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
 2022-03-02 10:02:26,451 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7972 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 10:02:26,452 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 10:02:26,452 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 10:02:28,439 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.103 seconds (JVM running for 19.36)
-2022-03-02 10:02:28,451 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Removing video 0 from playlist 0
-2022-03-02 10:02:28,451 DEBUG com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Found the video in playlist
+2022-03-02 10:02:28,451 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 10:02:28,451 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Found the video in playlist
 2022-03-02 10:02:28,552 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7972 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 10:02:28,553 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 10:02:28,554 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 10:02:30,129 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 1.653 seconds (JVM running for 21.048)
-2022-03-02 10:02:30,138 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 10:02:30,138 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
 2022-03-02 10:02:30,248 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7972 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 10:02:30,249 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 10:02:30,250 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 10:02:31,934 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 1.767 seconds (JVM running for 22.853)
-2022-03-02 10:02:31,945 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
-2022-03-02 10:02:31,946 DEBUG com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Current position of video is same as the new position.
+2022-03-02 10:02:31,945 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 10:02:31,946 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Current position of video is same as the new position.
 2022-03-02 10:02:32,083 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7972 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 10:02:32,083 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 10:02:32,083 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 10:02:34,195 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.229 seconds (JVM running for 25.114)
-2022-03-02 10:02:34,203 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
-2022-03-02 10:02:34,204 DEBUG com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Moving videos to left.
-2022-03-02 10:02:34,205 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Position of video 0 has changed from 1 to 3.
+2022-03-02 10:02:34,203 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 10:02:34,204 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Moving videos to left.
+2022-03-02 10:02:34,205 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Position of video 0 has changed from 1 to 3.
 2022-03-02 10:02:34,303 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7972 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 10:02:34,303 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 10:02:34,304 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 10:02:35,786 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 1.561 seconds (JVM running for 26.705)
-2022-03-02 10:02:35,805 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Adding video 0 to playlist 0.
+2022-03-02 10:02:35,805 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Adding video 0 to playlist 0.
 2022-03-02 10:02:35,890 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7972 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 10:02:35,891 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 10:02:35,891 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 10:02:37,618 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 1.799 seconds (JVM running for 28.539)
-2022-03-02 10:02:37,632 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Changing position of video 0 in playlist 0.
-2022-03-02 10:02:37,637 DEBUG com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Moving videos to right.
-2022-03-02 10:02:37,637 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Position of video 0 has changed from 3 to 1.
+2022-03-02 10:02:37,632 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 10:02:37,637 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Moving videos to right.
+2022-03-02 10:02:37,637 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Position of video 0 has changed from 3 to 1.
 2022-03-02 10:02:37,799 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoOrderServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7972 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
 2022-03-02 10:02:37,807 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-03-02 10:02:37,808 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-03-02 10:02:39,690 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoOrderServiceImplementationTest in 2.032 seconds (JVM running for 30.614)
-2022-03-02 10:02:39,703 INFO com.practice.test1.services.implementation.VideoOrderServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 10:02:39,703 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 11:38:07,381 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Sorting videos in playlist with id 0.
+2022-03-02 11:38:07,483 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 11:38:07,504 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 11:38:07,505 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Found the video in playlist
+2022-03-02 11:38:07,514 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 11:38:07,522 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 11:38:07,523 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Current position of video is same as the new position.
+2022-03-02 11:38:07,533 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 11:38:07,534 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Moving videos to left.
+2022-03-02 11:38:07,535 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Position of video 0 has changed from 1 to 3.
+2022-03-02 11:38:07,546 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Adding video 0 to playlist 0.
+2022-03-02 11:38:07,556 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 11:38:07,557 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Moving videos to right.
+2022-03-02 11:38:07,558 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Position of video 0 has changed from 3 to 1.
+2022-03-02 11:38:07,567 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 11:38:56,992 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Sorting videos in playlist with id 0.
+2022-03-02 11:38:57,142 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 11:38:57,167 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 11:38:57,168 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Found the video in playlist
+2022-03-02 11:38:57,179 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 11:38:57,190 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 11:38:57,191 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Current position of video is same as the new position.
+2022-03-02 11:38:57,205 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 11:38:57,205 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Moving videos to left.
+2022-03-02 11:38:57,210 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Position of video 0 has changed from 1 to 3.
+2022-03-02 11:38:57,223 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Adding video 0 to playlist 0.
+2022-03-02 11:38:57,237 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 11:38:57,240 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Moving videos to right.
+2022-03-02 11:38:57,241 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Position of video 0 has changed from 3 to 1.
+2022-03-02 11:38:57,252 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 11:48:31,419 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 6580 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-02 11:48:31,428 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-02 11:48:31,429 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-02 11:48:41,857 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 11.531 seconds (JVM running for 13.393)
+2022-03-02 11:49:49,396 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [http-nio-8080-exec-9] Adding video 1 to playlist 1.
+2022-03-02 12:25:13,007 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 6580 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-02 12:25:13,007 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-02 12:25:13,008 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-02 12:25:17,811 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 6580 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-02 12:25:17,812 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-02 12:25:17,813 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-02 12:25:20,768 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 3.189 seconds (JVM running for 2212.305)
+2022-03-02 12:25:27,367 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:25:27,400 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to right.
+2022-03-02 12:25:27,403 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 2 to 1.
+2022-03-02 12:25:27,464 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 12:25:27,465 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Found the playlist in channel.
+2022-03-02 12:25:27,480 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Adding video 0 to playlist 0.
+2022-03-02 12:25:27,493 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 12:25:27,504 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:25:27,506 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Current position of playlist is same as the new position.
+2022-03-02 12:25:27,515 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:25:27,520 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to left.
+2022-03-02 12:25:27,521 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 1 to 3.
+2022-03-02 12:25:27,534 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Sorting playlists in channel with id 0.
+2022-03-02 12:25:27,555 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:25:27,557 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to right.
+2022-03-02 12:25:27,558 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 2 to 1.
+2022-03-02 12:25:27,579 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:25:27,581 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to left.
+2022-03-02 12:25:27,581 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 2 to 4.
+2022-03-02 12:27:04,659 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 6580 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-02 12:27:04,660 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-02 12:27:04,660 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-02 12:27:09,671 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 6580 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-02 12:27:09,671 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-02 12:27:09,672 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-02 12:27:11,795 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 2.261 seconds (JVM running for 2323.332)
+2022-03-02 12:27:13,009 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:27:13,022 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to right.
+2022-03-02 12:27:13,024 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 2 to 1.
+2022-03-02 12:27:13,051 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 12:27:13,051 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Found the playlist in channel.
+2022-03-02 12:27:13,059 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Adding video 0 to playlist 0.
+2022-03-02 12:27:13,065 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 12:27:13,072 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:27:13,073 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Current position of playlist is same as the new position.
+2022-03-02 12:27:13,078 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:27:13,080 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to left.
+2022-03-02 12:27:13,080 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 1 to 3.
+2022-03-02 12:27:13,084 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Sorting playlists in channel with id 0.
+2022-03-02 12:27:13,094 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:27:13,095 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to right.
+2022-03-02 12:27:13,095 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 2 to 1.
+2022-03-02 12:27:13,106 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:27:13,107 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to left.
+2022-03-02 12:27:13,107 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 2 to 4.
+2022-03-02 12:32:59,373 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:32:59,409 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to right.
+2022-03-02 12:32:59,413 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 2 to 1.
+2022-03-02 12:32:59,495 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 12:32:59,497 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Found the playlist in channel.
+2022-03-02 12:32:59,511 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Adding video 0 to playlist 0.
+2022-03-02 12:32:59,524 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 12:32:59,542 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:32:59,544 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Current position of playlist is same as the new position.
+2022-03-02 12:32:59,557 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:32:59,560 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to left.
+2022-03-02 12:32:59,561 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 1 to 3.
+2022-03-02 12:32:59,575 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Sorting playlists in channel with id 0.
+2022-03-02 12:32:59,591 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:32:59,593 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to right.
+2022-03-02 12:32:59,594 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 2 to 1.
+2022-03-02 12:32:59,612 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:34:15,644 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:34:15,673 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to right.
+2022-03-02 12:34:15,682 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 2 to 1.
+2022-03-02 12:34:15,757 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 12:34:15,759 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Found the playlist in channel.
+2022-03-02 12:34:15,772 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Adding video 0 to playlist 0.
+2022-03-02 12:34:15,792 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 12:34:15,801 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:34:15,803 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Current position of playlist is same as the new position.
+2022-03-02 12:34:15,811 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:34:15,813 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to left.
+2022-03-02 12:34:15,814 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 1 to 3.
+2022-03-02 12:34:15,822 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Sorting playlists in channel with id 0.
+2022-03-02 12:34:15,836 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:34:15,836 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to right.
+2022-03-02 12:34:15,838 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 2 to 1.
+2022-03-02 12:34:15,856 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:35:51,460 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:35:51,492 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to right.
+2022-03-02 12:35:51,495 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 2 to 1.
+2022-03-02 12:35:51,573 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 12:35:51,575 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Found the playlist in channel.
+2022-03-02 12:35:51,596 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Adding video 0 to playlist 0.
+2022-03-02 12:35:51,608 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 12:35:51,623 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:35:51,626 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Current position of playlist is same as the new position.
+2022-03-02 12:35:51,643 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:35:51,646 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to left.
+2022-03-02 12:35:51,647 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 1 to 3.
+2022-03-02 12:35:51,662 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Sorting playlists in channel with id 0.
+2022-03-02 12:35:51,681 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:35:51,684 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to right.
+2022-03-02 12:35:51,685 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 2 to 1.
+2022-03-02 12:35:51,707 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:37:46,374 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:37:46,415 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to right.
+2022-03-02 12:37:46,421 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 2 to 1.
+2022-03-02 12:37:46,502 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 12:37:46,504 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Found the playlist in channel.
+2022-03-02 12:37:46,521 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Adding video 0 to playlist 0.
+2022-03-02 12:37:46,538 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 12:37:46,555 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:37:46,555 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Current position of playlist is same as the new position.
+2022-03-02 12:37:46,570 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:37:46,572 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to left.
+2022-03-02 12:37:46,574 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 1 to 3.
+2022-03-02 12:37:46,585 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Sorting playlists in channel with id 0.
+2022-03-02 12:37:46,601 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:37:46,612 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:38:51,129 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:38:51,159 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to right.
+2022-03-02 12:38:51,163 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 3 to 1.
+2022-03-02 12:39:06,421 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:39:06,439 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to right.
+2022-03-02 12:39:06,442 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 3 to 1.
+2022-03-02 12:39:06,466 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 12:39:06,467 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Found the playlist in channel.
+2022-03-02 12:39:06,474 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Adding video 0 to playlist 0.
+2022-03-02 12:39:06,482 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 12:39:06,490 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:39:06,491 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Current position of playlist is same as the new position.
+2022-03-02 12:39:06,497 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:39:06,499 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to left.
+2022-03-02 12:39:06,499 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 1 to 3.
+2022-03-02 12:39:06,504 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Sorting playlists in channel with id 0.
+2022-03-02 12:39:06,513 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 12:39:06,520 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 13:24:18,895 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 13:24:18,913 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to right.
+2022-03-02 13:24:18,916 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 3 to 1.
+2022-03-02 13:24:18,944 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 13:24:18,946 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Found the playlist in channel.
+2022-03-02 13:24:18,954 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Adding video 0 to playlist 0.
+2022-03-02 13:24:18,966 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 13:24:18,973 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 13:24:18,975 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Current position of playlist is same as the new position.
+2022-03-02 13:24:18,981 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 13:24:18,982 DEBUG com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Moving playlists to left.
+2022-03-02 13:24:18,982 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Position of playlist 0 has changed from 1 to 3.
+2022-03-02 13:24:18,987 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Sorting playlists in channel with id 0.
+2022-03-02 13:24:18,997 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 13:24:19,006 INFO com.practice.test1.services.implementation.ChannelPlaylistServiceImplementation [main] Changing position of playlist 0 in channel 0.
+2022-03-02 13:25:05,604 INFO org.springframework.boot.StartupInfoLogger [main] Starting SpringTest1ApplicationTests using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7248 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-02 13:25:05,611 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-02 13:25:05,613 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-02 13:25:20,061 INFO org.springframework.boot.StartupInfoLogger [main] Started SpringTest1ApplicationTests in 15.132 seconds (JVM running for 18.663)
+2022-03-02 13:25:42,112 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Sorting videos in playlist with id 0.
+2022-03-02 13:25:42,270 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 13:25:42,313 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 13:25:42,315 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Found the video in playlist
+2022-03-02 13:25:42,332 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 13:25:42,344 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 13:25:42,346 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Current position of video is same as the new position.
+2022-03-02 13:25:42,355 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 13:25:42,358 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Moving videos to left.
+2022-03-02 13:25:42,362 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Position of video 0 has changed from 1 to 3.
+2022-03-02 13:25:42,374 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Adding video 0 to playlist 0.
+2022-03-02 13:25:42,383 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Changing position of video 0 in playlist 0.
+2022-03-02 13:25:42,383 DEBUG com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Moving videos to right.
+2022-03-02 13:25:42,391 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Position of video 0 has changed from 3 to 1.
+2022-03-02 13:25:42,403 INFO com.practice.test1.services.implementation.PlaylistVideoServiceImplementation [main] Removing video 0 from playlist 0
+2022-03-02 14:47:03,430 INFO org.springframework.boot.StartupInfoLogger [main] Starting CategoryServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 676 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-02 14:47:03,431 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-02 14:47:03,432 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-02 14:47:06,636 INFO org.springframework.boot.StartupInfoLogger [main] Started CategoryServiceImplementationTest in 3.622 seconds (JVM running for 5.143)
+2022-03-02 14:47:06,988 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [main] Category with id 0 saved to repository.
+2022-03-02 14:48:01,913 INFO org.springframework.boot.StartupInfoLogger [main] Starting CategoryServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7444 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-02 14:48:01,915 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-02 14:48:01,915 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-02 14:48:06,499 INFO org.springframework.boot.StartupInfoLogger [main] Started CategoryServiceImplementationTest in 4.885 seconds (JVM running for 6.429)
+2022-03-02 14:48:06,863 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [main] Category with id 0 saved to repository.
+2022-03-02 14:55:05,506 INFO org.springframework.boot.StartupInfoLogger [main] Starting CategoryServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7068 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-02 14:55:05,509 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-02 14:55:05,509 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-02 14:55:10,212 INFO org.springframework.boot.StartupInfoLogger [main] Started CategoryServiceImplementationTest in 5.16 seconds (JVM running for 6.788)
+2022-03-02 14:55:10,621 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [main] Category with id 0 saved to repository.
+2022-03-02 14:55:24,380 INFO org.springframework.boot.StartupInfoLogger [main] Starting CategoryServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7912 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-02 14:55:24,382 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-02 14:55:24,382 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-02 14:55:29,007 INFO org.springframework.boot.StartupInfoLogger [main] Started CategoryServiceImplementationTest in 4.964 seconds (JVM running for 6.45)
+2022-03-02 14:55:29,416 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [main] Category with id 0 saved to repository.
+2022-03-02 14:56:38,032 INFO org.springframework.boot.StartupInfoLogger [main] Starting CategoryServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 17524 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-02 14:56:38,034 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-02 14:56:38,034 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-02 14:56:42,661 INFO org.springframework.boot.StartupInfoLogger [main] Started CategoryServiceImplementationTest in 4.964 seconds (JVM running for 6.607)
+2022-03-02 14:56:43,114 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [main] Category with id 0 saved to repository.
+2022-03-02 16:03:39,789 INFO org.springframework.boot.StartupInfoLogger [main] Starting CategoryServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 8524 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-02 16:03:39,790 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-02 16:03:39,790 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-02 16:03:45,847 INFO org.springframework.boot.StartupInfoLogger [main] Started CategoryServiceImplementationTest in 6.468 seconds (JVM running for 8.297)
+2022-03-02 16:03:46,340 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [main] Category with id 0 saved to repository.
+2022-03-02 16:05:47,390 INFO org.springframework.boot.StartupInfoLogger [main] Starting CategoryServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 2744 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-02 16:05:47,391 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-02 16:05:47,391 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-02 16:05:53,617 INFO org.springframework.boot.StartupInfoLogger [main] Started CategoryServiceImplementationTest in 6.579 seconds (JVM running for 8.257)
+2022-03-02 16:07:44,198 INFO org.springframework.boot.StartupInfoLogger [main] Starting CategoryServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 6268 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-02 16:07:44,199 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-02 16:07:44,200 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-02 16:07:51,733 INFO org.springframework.boot.StartupInfoLogger [main] Started CategoryServiceImplementationTest in 7.883 seconds (JVM running for 9.717)
+2022-03-02 16:08:31,610 INFO org.springframework.boot.StartupInfoLogger [main] Starting CategoryServiceImplementationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 8248 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-02 16:08:31,611 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-02 16:08:31,611 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-02 16:08:36,819 INFO org.springframework.boot.StartupInfoLogger [main] Started CategoryServiceImplementationTest in 5.556 seconds (JVM running for 7.146)
+2022-03-02 16:08:37,228 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [main] Category with id 0 saved to repository.

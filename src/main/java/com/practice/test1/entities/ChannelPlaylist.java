@@ -8,17 +8,16 @@ import javax.persistence.MapsId;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import java.util.Objects;
 
 @Entity
 @Data
 @NoArgsConstructor
-public class PlaylistOrder {
+public class ChannelPlaylist {
 	
 	@EmbeddedId
-	private PlaylistOrderId playlistOrderId = new PlaylistOrderId();
+	private ChannelPlaylistId channelPlaylistId = new ChannelPlaylistId();
 	 
 	@ManyToOne
 	@MapsId("channelId")
@@ -32,7 +31,7 @@ public class PlaylistOrder {
 	
 	private int position;
 
-	public PlaylistOrder(Channel channel, Playlist playlist, int position) {
+	public ChannelPlaylist(Channel channel, Playlist playlist, int position) {
 		this.channel = channel;
 		this.playlist = playlist;
 		this.position = position;
@@ -41,14 +40,14 @@ public class PlaylistOrder {
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
-		if (!(o instanceof PlaylistOrder)) return false;
-		PlaylistOrder that = (PlaylistOrder) o;
-		return Objects.equals(playlistOrderId, that.playlistOrderId);
+		if (!(o instanceof ChannelPlaylist)) return false;
+		ChannelPlaylist that = (ChannelPlaylist) o;
+		return Objects.equals(channelPlaylistId, that.channelPlaylistId);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(playlistOrderId);
+		return Objects.hash(channelPlaylistId);
 	}
 
 	@Override

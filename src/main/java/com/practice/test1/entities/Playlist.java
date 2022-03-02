@@ -40,10 +40,10 @@ public class Playlist {
 	private Set<Category> categories = new HashSet<>();
 	@OneToMany(mappedBy = "playlist", cascade = CascadeType.ALL, orphanRemoval = true)
 	@JsonIgnore
-	private List<VideoOrder> videos = new ArrayList<>();
+	private List<PlaylistVideo> videos = new ArrayList<>();
 	@OneToMany(mappedBy = "playlist", cascade = CascadeType.ALL, orphanRemoval = true)
 	@JsonIgnore
-	private List<PlaylistOrder> playlistOrders = new ArrayList<>();
+	private List<ChannelPlaylist> channelPlaylists = new ArrayList<>();
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "user_id", referencedColumnName = "id")
 	private User user;
@@ -53,7 +53,7 @@ public class Playlist {
 		this.name = name;
 		categories = new HashSet<>();
 		videos = new ArrayList<>();
-		playlistOrders = new ArrayList<>();
+		channelPlaylists = new ArrayList<>();
 		user = null;
 	}
 	

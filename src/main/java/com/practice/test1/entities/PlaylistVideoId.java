@@ -9,7 +9,7 @@ import lombok.Data;
 
 @Embeddable
 @Data
-public class VideoOrderId implements Serializable{
+public class PlaylistVideoId implements Serializable{
 	private long playlistId;
 	private long videoId;
 	
@@ -22,9 +22,9 @@ public class VideoOrderId implements Serializable{
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (!(obj instanceof VideoOrderId))
+		if (!(obj instanceof PlaylistVideoId))
 			return false;
-		VideoOrderId other = (VideoOrderId) obj;
+		PlaylistVideoId other = (PlaylistVideoId) obj;
 		return playlistId == other.playlistId && videoId == other.videoId;
 	}
 }

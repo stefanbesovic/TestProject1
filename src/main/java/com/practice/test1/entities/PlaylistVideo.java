@@ -15,9 +15,9 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class VideoOrder {
+public class PlaylistVideo {
 	@EmbeddedId
-	private VideoOrderId videoOrderId = new VideoOrderId();
+	private PlaylistVideoId playlistVideoId = new PlaylistVideoId();
 	 
 	@ManyToOne
 	@MapsId("playlistId")
@@ -31,7 +31,7 @@ public class VideoOrder {
 	
 	private int position;
 
-	public VideoOrder(Playlist playlist, Video video, int position) {
+	public PlaylistVideo(Playlist playlist, Video video, int position) {
 		this.playlist = playlist;
 		this.video = video;
 		this.position = position;
@@ -40,14 +40,14 @@ public class VideoOrder {
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
-		if (!(o instanceof VideoOrder)) return false;
-		VideoOrder that = (VideoOrder) o;
-		return Objects.equals(videoOrderId, that.videoOrderId);
+		if (!(o instanceof PlaylistVideo)) return false;
+		PlaylistVideo that = (PlaylistVideo) o;
+		return Objects.equals(playlistVideoId, that.playlistVideoId);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(videoOrderId);
+		return Objects.hash(playlistVideoId);
 	}
 
 	@Override

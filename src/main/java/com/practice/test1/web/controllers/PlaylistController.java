@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import com.practice.test1.services.PlaylistVideoService;
 import com.practice.test1.web.dto.playlist.PlaylistDto;
 import com.practice.test1.web.dto.playlist.PlaylistMapper;
 import lombok.RequiredArgsConstructor;
@@ -19,7 +20,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.practice.test1.entities.Playlist;
 import com.practice.test1.entities.Video;
 import com.practice.test1.services.PlaylistService;
-import com.practice.test1.services.VideoOrderService;
 import com.practice.test1.services.VideoService;
 
 @RequiredArgsConstructor
@@ -28,7 +28,7 @@ import com.practice.test1.services.VideoService;
 public class PlaylistController {
 	
 	private final PlaylistService playlistService;
-	private final VideoOrderService videoOrderService;
+	private final PlaylistVideoService playlistVideoService;
 	private final VideoService videoService;
 	
 	@PostMapping()
@@ -71,24 +71,24 @@ public class PlaylistController {
 	
 	@PutMapping("/{playlistId}/videos/{videoId}")
 	public Playlist addVideoToPlaylist(@PathVariable("playlistId") long playlistId, @PathVariable("videoId") long videoId){
-		return videoOrderService.addVideoToPlaylist(playlistId, videoService.getVideoById(videoId));
+		return playlistVideoService.addVideoToPlaylist(playlistId, videoService.getVideoById(videoId));
 	}
 	
 	@DeleteMapping("/{playlistId}/videos/{videoId}")
 	public void removeVideoFromPlaylist(@PathVariable("playlistId") long playlistId, @PathVariable("videoId") long videoId){
-		videoOrderService.removeVideoFromPlaylist(playlistId, videoService.getVideoById(videoId));
+		playlistVideoService.removeVideoFromPlaylist(playlistId, videoService.getVideoById(videoId));
 	}
 	
 	@GetMapping("/{playlistId}/sort")
 	public List<Video> sortVideosInPlaylist(@PathVariable("playlistId") long playlistId) {
-		return videoOrderService.sortVideos(playlistService.getPlaylistById(playlistId));
+		return playlistVideoService.sortVideos(playlistService.getPlaylistById(playlistId));
 	}
 	
 	@PutMapping("/{playlistId}/videos/{videoId}/{newPosition}")
 	public void changePositionOfVideoInPlaylist(@PathVariable("playlistId") long playlistId,
 															@PathVariable("videoId") long videoId, 
 															@PathVariable("newPosition") int newPosition) {
-		videoOrderService.changeIndexOfVideoInPlaylist(playlistId, videoService.getVideoById(videoId), newPosition);
+		playlistVideoService.changeIndexOfVideoInPlaylist(playlistId, videoService.getVideoById(videoId), newPosition);
 	}
 	
 	@PutMapping("/{playlistId}/user/{userId}")

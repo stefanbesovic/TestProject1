@@ -5,7 +5,7 @@ import java.util.List;
 import com.practice.test1.entities.Playlist;
 import com.practice.test1.entities.Video;
 
-public interface VideoOrderService {
+public interface PlaylistVideoService {
 	List<Video> sortVideos(Playlist playlist);
 	Playlist addVideoToPlaylist(long playlistId, Video video);
 	void removeVideoFromPlaylist(long playlistId, Video video);

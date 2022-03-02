@@ -15,7 +15,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 @Entity
 @Data
@@ -29,7 +28,7 @@ public class Channel {
 	
 	@OneToMany(mappedBy = "channel", cascade = CascadeType.ALL, orphanRemoval = true)
 	@JsonIgnore
-	private List<PlaylistOrder> playlists = new ArrayList<>();
+	private List<ChannelPlaylist> playlists = new ArrayList<>();
 	
 	@Override
 	public boolean equals(Object obj) {

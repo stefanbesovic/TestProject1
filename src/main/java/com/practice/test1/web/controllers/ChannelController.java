@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.practice.test1.entities.Channel;
 import com.practice.test1.entities.Playlist;
 import com.practice.test1.services.ChannelService;
-import com.practice.test1.services.PlaylistOrderService;
+import com.practice.test1.services.ChannelPlaylistService;
 import com.practice.test1.services.PlaylistService;
 
 @RequiredArgsConstructor
@@ -28,7 +28,7 @@ public class ChannelController {
 	
 	private final ChannelService channelService;
 	private final PlaylistService playlistService;
-	private final PlaylistOrderService playlistOrderService;
+	private final ChannelPlaylistService channelPlaylistService;
 
 	@PostMapping()
 	public Channel saveChannel(@RequestBody ChannelDto channelDto) {
@@ -59,23 +59,23 @@ public class ChannelController {
 	
 	@PutMapping("/{channelId}/playlists/{playlistId}")
 	public Channel addPlaylistToChannel(@PathVariable("channelId") long channelId, @PathVariable("playlistId") long playlistId){
-		return playlistOrderService.addPlaylistToChannel(channelId, playlistService.getPlaylistById(playlistId));
+		return channelPlaylistService.addPlaylistToChannel(channelId, playlistService.getPlaylistById(playlistId));
 	}
 	
 	@DeleteMapping("/{channelId}/playlists/{playlistId}")
 	public void removePlaylistFromChannel(@PathVariable("channelId") long channelId, @PathVariable("playlistId") long playlistId){
-		playlistOrderService.removePlaylistFromChannel(channelId, playlistService.getPlaylistById(playlistId));
+		channelPlaylistService.removePlaylistFromChannel(channelId, playlistService.getPlaylistById(playlistId));
 	}
 	
 	@GetMapping("/{channelId}/sort")
 	public List<Playlist> sortPlaylistsInChannel(@PathVariable("channelId") long channelId) {
-		return playlistOrderService.sortPlaylists(channelService.getChannelById(channelId));
+		return channelPlaylistService.sortPlaylists(channelService.getChannelById(channelId));
 	}
 	
 	@PutMapping("/{channelId}/playlists/{playlistId}/{newPosition}")
 	public void changePositionOfVideoInPlaylist(@PathVariable("channelId") long channelId,
 															@PathVariable("playlistId") long playlistId, 
 															@PathVariable("newPosition") int newPosition) {
-		playlistOrderService.changeIndexOfPlaylistInChannel(channelId, playlistService.getPlaylistById(playlistId), newPosition);
+		channelPlaylistService.changeIndexOfPlaylistInChannel(channelId, playlistService.getPlaylistById(playlistId), newPosition);
 	}
 }

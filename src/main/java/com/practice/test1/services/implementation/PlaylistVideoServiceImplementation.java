@@ -13,31 +13,31 @@ import org.springframework.stereotype.Service;
 
 import com.practice.test1.entities.Playlist;
 import com.practice.test1.entities.Video;
-import com.practice.test1.entities.VideoOrder;
+import com.practice.test1.entities.PlaylistVideo;
 import com.practice.test1.services.PlaylistService;
-import com.practice.test1.services.VideoOrderService;
+import com.practice.test1.services.PlaylistVideoService;
 
 @RequiredArgsConstructor
 @Service
-public class VideoOrderServiceImplementation implements VideoOrderService{
+public class PlaylistVideoServiceImplementation implements PlaylistVideoService {
 
 	private final PlaylistService playlistService;
-	private static final Logger log = LoggerFactory.getLogger(VideoOrderServiceImplementation.class);
+	private static final Logger log = LoggerFactory.getLogger(PlaylistVideoServiceImplementation.class);
 
 	@Override
 	public List<Video> sortVideos(Playlist playlist) {
 		log.info("Sorting videos in playlist with id {}.", playlist.getId());
-		playlist.getVideos().sort(Comparator.comparingInt(VideoOrder::getPosition));
+		playlist.getVideos().sort(Comparator.comparingInt(PlaylistVideo::getPosition));
 		return playlist.getVideos().stream()
-				.map(VideoOrder::getVideo)
+				.map(PlaylistVideo::getVideo)
 				.collect(Collectors.toList());
 	}
 
 	@Override
 	public Playlist addVideoToPlaylist(long playlistId, Video video) {
 		Playlist playlist = playlistService.getPlaylistById(playlistId);
-		VideoOrder videoOrder = new VideoOrder(playlist, video, playlist.getVideos().size() + 1);
-		playlist.getVideos().add(videoOrder);
+		PlaylistVideo playlistVideo = new PlaylistVideo(playlist, video, playlist.getVideos().size() + 1);
+		playlist.getVideos().add(playlistVideo);
 		log.info("Adding video {} to playlist {}.", video.getId(), playlist.getId());
 		return playlistService.updatePlaylist(playlist, playlistId);
 	}
@@ -47,7 +47,7 @@ public class VideoOrderServiceImplementation implements VideoOrderService{
 		log.info("Removing video {} from playlist {}", video.getId(), playlistId);
 		int index = 0;
 		Playlist playlist = playlistService.getPlaylistById(playlistId);
-		for(VideoOrder o : playlist.getVideos()) {
+		for(PlaylistVideo o : playlist.getVideos()) {
 			if(o.getVideo().equals(video)) {
 				log.debug("Found the video in playlist");
 				index = o.getPosition();
@@ -70,7 +70,7 @@ public class VideoOrderServiceImplementation implements VideoOrderService{
         int rangeTo;
         int directionValue;
 		Playlist playlist = playlistService.getPlaylistById(playlistId);
-        VideoOrder order = playlist.getVideos().stream().filter(x -> x.getVideo().equals(video)).findAny()
+        PlaylistVideo order = playlist.getVideos().stream().filter(x -> x.getVideo().equals(video)).findAny()
 				.orElseThrow(() -> new NoSuchElementException(String.format("Can't change index of video in playlist. Video not found: %d", video.getId())));
         int currentPosition = order.getPosition();
 		if(newPosition > playlist.getVideos().size())
