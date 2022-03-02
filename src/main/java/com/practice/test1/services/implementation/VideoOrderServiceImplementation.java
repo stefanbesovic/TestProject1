@@ -73,6 +73,8 @@ public class VideoOrderServiceImplementation implements VideoOrderService{
         VideoOrder order = playlist.getVideos().stream().filter(x -> x.getVideo().equals(video)).findAny()
 				.orElseThrow(() -> new NoSuchElementException(String.format("Can't change index of video in playlist. Video not found: %d", video.getId())));
         int currentPosition = order.getPosition();
+		if(newPosition > playlist.getVideos().size())
+			throw new IndexOutOfBoundsException(String.format("Position out of bounds. Position %d - Actual playlist size %d", newPosition, playlist.getVideos().size()));
 		if(currentPosition == newPosition) {
 			log.debug("Current position of video is same as the new position.");
 			return;
