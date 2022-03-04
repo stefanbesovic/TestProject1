@@ -41,7 +41,9 @@ public class UserServiceImplementation implements UserService {
 	public User updateUser(User user, long id) {
 		User existing = getUserById(id);
 		existing.setName(user.getName());
+
 		userRepository.save(existing);
+
 		return existing;
 	}
 

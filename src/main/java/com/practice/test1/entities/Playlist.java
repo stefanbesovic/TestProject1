@@ -29,7 +29,9 @@ public class Playlist {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+
 	private String name;
+
 	@JsonIgnore
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(
@@ -38,12 +40,15 @@ public class Playlist {
 			inverseJoinColumns = @JoinColumn(name = "category_id")
 	)
 	private Set<Category> categories = new HashSet<>();
+
 	@OneToMany(mappedBy = "playlist", cascade = CascadeType.ALL, orphanRemoval = true)
 	@JsonIgnore
 	private List<PlaylistVideo> videos = new ArrayList<>();
+
 	@OneToMany(mappedBy = "playlist", cascade = CascadeType.ALL, orphanRemoval = true)
 	@JsonIgnore
 	private List<ChannelPlaylist> channelPlaylists = new ArrayList<>();
+
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "user_id", referencedColumnName = "id")
 	private User user;

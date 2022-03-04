@@ -25,6 +25,7 @@ public class CategoryServiceImplementation implements CategoryService {
 	public Category saveCategory(Category category) {
 		if(category == null)
 			throw new NullPointerException("Can't save. Category is null.");
+
 		if(!categoryRepository.existsById(category.getId())) {
 			log.info("Category with id {} saved to repository.", category.getId());
 			return categoryRepository.save(category);
@@ -37,6 +38,7 @@ public class CategoryServiceImplementation implements CategoryService {
 	@Override
 	public List<Category> getAllCategories() {
 		log.info("Getting all categories.");
+
 		return categoryRepository.findAll();
 	}
 
@@ -50,14 +52,18 @@ public class CategoryServiceImplementation implements CategoryService {
 	public Category updateCategory(Category category, long id) {
 		Category existing = getCategoryById(id);
 		existing.setName(category.getName());
+
 		categoryRepository.save(existing);
+
 		log.info("Updating category with id {}", id);
+
 		return existing;
 	}
 
 	@Override
 	public void deleteCategory(long id) {
-		log.info("Deleting category with id {}.", id);
+		log.info("Deleting category with id {}.", id)
+		;
 		getCategoryById(id);
 		categoryRepository.deleteById(id);
 	}

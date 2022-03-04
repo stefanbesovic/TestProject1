@@ -41,7 +41,9 @@ public class ChannelServiceImplementation implements ChannelService{
 	public Channel updateChannel(Channel channel, long id) {
 		Channel existing = getChannelById(id);
 		existing.setName(channel.getName());
+
 		channelRepository.save(existing);
+
 		return existing;
 	}
 

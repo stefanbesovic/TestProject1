@@ -24,6 +24,7 @@ public class Channel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+
 	private String name;
 	
 	@OneToMany(mappedBy = "channel", cascade = CascadeType.ALL, orphanRemoval = true)

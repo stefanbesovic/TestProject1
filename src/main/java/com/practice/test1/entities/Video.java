@@ -25,6 +25,7 @@ public class Video {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+
 	private String name;
 	@JsonIgnore
 	@ManyToMany
@@ -34,6 +35,7 @@ public class Video {
 			inverseJoinColumns = @JoinColumn(name = "category_id")
 	)
 	private Set<Category> categories = new HashSet<>();
+
 	@OneToMany(mappedBy = "video", cascade = CascadeType.ALL, orphanRemoval = true)
 	@JsonIgnore
 	private List<PlaylistVideo> playlistVideos = new ArrayList<>();

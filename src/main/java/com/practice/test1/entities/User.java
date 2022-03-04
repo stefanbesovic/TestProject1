@@ -24,7 +24,9 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+
 	private String name;
+
 	@JsonIgnore
 	@OneToMany(mappedBy = "user")
 	private Set<Playlist> playlists = new HashSet<>();

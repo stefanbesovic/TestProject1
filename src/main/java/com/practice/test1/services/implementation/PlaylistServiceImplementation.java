@@ -51,7 +51,9 @@ public class PlaylistServiceImplementation implements PlaylistService {
 	public Playlist updatePlaylist(Playlist playlist, long id) {
 		Playlist existing = getPlaylistById(id);
 		existing.setName(playlist.getName());
+
 		playlistRepository.save(existing);
+
 		return existing;
 	}
 
@@ -64,26 +66,34 @@ public class PlaylistServiceImplementation implements PlaylistService {
 	@Override
 	public Playlist addCategory(long playlistId, long categoryId) {
 		log.debug("Adding category {} to playlist {}.", categoryId, playlistId);
+
 		Playlist playlist = getPlaylistById(playlistId);
 		Category category = categoryService.getCategoryById(categoryId);
+
 		if(!playlist.getCategories().contains(category)) {
 			playlist.addCategory(category);
 		}else {
 			log.debug("Can't add category {} because it doesn't exist.");
 			return playlist;
 		}
+
 		log.info("Category {} added to playlist {}.", categoryId, playlistId);
+
 		return playlistRepository.save(playlist);
 	}
 	
 	@Override
 	public void RemoveCategory(long playlistId, long categoryId) {
 		log.debug("Removing category {} from playlist {}.", categoryId, playlistId);
+
 		Playlist playlist = getPlaylistById(playlistId);
 		Category category = categoryService.getCategoryById(categoryId);
+
 		if(playlist.getCategories().contains(category)) {
 			playlist.removeCategory(category);
+
 			log.info("Category {} removed from playlist {}.", categoryId, playlistId);
+
 			playlistRepository.save(playlist);	
 		}
 	}
@@ -91,21 +101,29 @@ public class PlaylistServiceImplementation implements PlaylistService {
 	@Override
 	public Set<Playlist> addPlaylistToUser(long playlistId, long userId) {
 		log.debug("Adding playlist {} to user {}.", playlistId, userId);
+
 		User user = userService.getUserById(userId);
 		Playlist playlist = getPlaylistById(playlistId);
 		playlist.setUser(user);
+
 		playlistRepository.save(playlist);
+
 		log.info("Playlist {} added to user {}.", playlistId, userId);
+
 		return user.getPlaylists();
 	}
 
 	@Override
 	public Playlist removePlaylistFromUser(long playlistId) {
 		log.debug("Removing playlist {} from user.", playlistId);
+
 		Playlist playlist = getPlaylistById(playlistId);
 		playlist.setUser(null);
+
 		playlistRepository.save(playlist);
+
 		log.info("Playlist {} removed from user.", playlistId);
+
 		return playlist;
 	}
 }
