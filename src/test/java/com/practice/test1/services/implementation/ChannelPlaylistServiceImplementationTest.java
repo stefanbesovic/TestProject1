@@ -235,7 +235,7 @@ class ChannelPlaylistServiceImplementationTest {
 
     @Test
     void givenPlaylistAndPlaylist_whenRemovePlaylistFromPlaylistWherePlaylistIsNotInPlaylist_thenReturnIntactPlaylist() {
-//given
+        //given
         Channel channel = new Channel();
         channel.setName("Channel1");
         Playlist v = new Playlist();

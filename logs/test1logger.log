@@ -1,24 +1,120 @@
-2022-03-04 09:51:38,833 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 3860 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-04 09:51:38,850 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-04 09:51:38,851 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2022-03-04 09:51:50,797 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 12.726 seconds (JVM running for 15.378)
-2022-03-04 10:06:25,712 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 14948 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-04 10:06:25,712 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-04 10:06:25,721 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-04 10:06:35,398 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 10.744 seconds (JVM running for 13.132)
-2022-03-04 10:07:19,687 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 10540 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-04 10:07:19,693 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-04 10:07:19,694 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-04 10:07:28,574 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 9.481 seconds (JVM running for 12.086)
-2022-03-04 10:08:08,865 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 19932 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-04 10:08:08,868 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-04 10:08:08,869 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-04 10:08:18,139 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 10.122 seconds (JVM running for 13.262)
-2022-03-04 11:20:37,391 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 676 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-04 11:20:37,393 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-04 11:20:37,394 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-04 11:20:46,007 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 9.72 seconds (JVM running for 12.862)
-2022-03-04 13:00:10,211 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 8284 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-04 13:00:10,211 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-04 13:00:10,213 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-04 13:00:14,612 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 4.696 seconds (JVM running for 6.047)
+2022-03-07 09:33:04,390 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 3580 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 09:33:04,399 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 09:33:04,399 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 09:33:25,810 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 23.072 seconds (JVM running for 28.044)
+2022-03-07 09:34:09,404 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 5932 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 09:34:09,408 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 09:34:09,410 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 09:34:26,695 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 18.746 seconds (JVM running for 23.691)
+2022-03-07 09:40:51,267 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 18308 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 09:40:51,275 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 09:40:51,275 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 09:41:07,605 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 17.548 seconds (JVM running for 20.993)
+2022-03-07 09:43:01,104 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 11320 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 09:43:01,107 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 09:43:01,108 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 09:43:15,330 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 14.828 seconds (JVM running for 17.286)
+2022-03-07 10:19:18,005 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 1468 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 10:19:18,010 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 10:19:18,010 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 10:19:28,404 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 10.931 seconds (JVM running for 14.095)
+2022-03-07 11:45:46,567 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 10528 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 11:45:46,573 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 11:45:46,574 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 11:46:00,907 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 15.668 seconds (JVM running for 18.806)
+2022-03-07 12:04:31,842 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 12892 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 12:04:31,846 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 12:04:31,847 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 12:04:44,113 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 13.3 seconds (JVM running for 16.43)
+2022-03-07 12:14:27,999 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 1448 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 12:14:28,003 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 12:14:28,005 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 12:14:38,202 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 11.446 seconds (JVM running for 14.347)
+2022-03-07 12:20:11,163 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 17532 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 12:20:11,165 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 12:20:11,167 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 12:20:20,813 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 10.671 seconds (JVM running for 14.1)
+2022-03-07 12:20:21,470 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
+2022-03-07 12:20:21,530 INFO com.practice.test1.services.implementation.VideoServiceImplementation [main] Category 1 added to video 1.
+2022-03-07 12:22:01,996 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7764 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 12:22:01,996 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 12:22:02,005 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 12:22:13,431 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 12.283 seconds (JVM running for 16.191)
+2022-03-07 12:22:14,058 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
+2022-03-07 12:22:14,157 INFO com.practice.test1.services.implementation.VideoServiceImplementation [main] Category 1 added to video 1.
+2022-03-07 12:24:05,237 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 9212 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 12:24:05,241 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 12:24:05,242 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 12:24:16,296 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 11.582 seconds (JVM running for 14.691)
+2022-03-07 12:24:17,012 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
+2022-03-07 12:24:17,064 INFO com.practice.test1.services.implementation.VideoServiceImplementation [main] Category 1 added to video 1.
+2022-03-07 12:28:25,738 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 1648 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 12:28:25,743 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 12:28:25,744 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 12:28:35,236 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 10.414 seconds (JVM running for 12.969)
+2022-03-07 12:28:35,921 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
+2022-03-07 12:28:35,995 INFO com.practice.test1.services.implementation.VideoServiceImplementation [main] Category 1 added to video 1.
+2022-03-07 12:30:03,607 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 12028 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 12:30:03,612 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 12:30:03,613 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 12:30:15,235 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 12.516 seconds (JVM running for 15.064)
+2022-03-07 12:30:15,862 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
+2022-03-07 12:30:15,925 INFO com.practice.test1.services.implementation.VideoServiceImplementation [main] Category 1 added to video 1.
+2022-03-07 12:33:16,030 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 6308 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 12:33:16,033 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 12:33:16,033 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 12:33:33,462 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 18.141 seconds (JVM running for 21.341)
+2022-03-07 12:33:34,676 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
+2022-03-07 12:33:34,692 INFO com.practice.test1.services.implementation.VideoServiceImplementation [main] Category 1 added to video 1.
+2022-03-07 12:34:38,058 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 9396 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 12:34:38,062 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 12:34:38,066 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 12:34:47,205 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 10.049 seconds (JVM running for 14.013)
+2022-03-07 12:34:47,908 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
+2022-03-07 12:34:47,922 INFO com.practice.test1.services.implementation.VideoServiceImplementation [main] Category 1 added to video 1.
+2022-03-07 12:43:36,727 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 16916 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 12:43:36,729 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 12:43:36,729 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 12:43:53,398 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 18.159 seconds (JVM running for 22.667)
+2022-03-07 12:43:54,650 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
+2022-03-07 12:43:54,689 INFO com.practice.test1.services.implementation.VideoServiceImplementation [main] Category 1 added to video 1.
+2022-03-07 13:13:08,992 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7052 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 13:13:08,993 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 13:13:08,993 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 13:13:22,859 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 14.435 seconds (JVM running for 18.054)
+2022-03-07 13:13:23,500 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
+2022-03-07 13:13:23,520 INFO com.practice.test1.services.implementation.VideoServiceImplementation [main] Category 1 added to video 1.
+2022-03-07 13:16:01,239 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 8596 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 13:16:01,240 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 13:16:01,241 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 13:16:06,155 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 5.275 seconds (JVM running for 6.933)
+2022-03-07 13:16:06,531 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
+2022-03-07 13:19:21,449 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 14412 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 13:19:21,450 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 13:19:21,451 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 13:19:26,350 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 5.232 seconds (JVM running for 6.817)
+2022-03-07 13:19:26,725 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
+2022-03-07 13:19:44,329 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 1676 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 13:19:44,330 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 13:19:44,331 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 13:19:49,928 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 5.969 seconds (JVM running for 7.523)
+2022-03-07 13:19:50,391 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
+2022-03-07 13:22:38,321 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 5164 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 13:22:38,321 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 13:22:38,321 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 13:22:43,750 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 5.766 seconds (JVM running for 7.406)
+2022-03-07 13:24:03,565 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 5492 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 13:24:03,565 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 13:24:03,566 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 13:24:08,557 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 5.345 seconds (JVM running for 6.91)
+2022-03-07 13:24:08,913 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
+2022-03-07 13:26:21,080 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 19964 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 13:26:21,081 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 13:26:21,082 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 13:26:26,134 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 5.402 seconds (JVM running for 6.97)
+2022-03-07 13:26:26,514 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
+2022-03-07 13:28:37,865 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 20460 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-07 13:28:37,868 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-07 13:28:37,869 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-07 13:28:42,807 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 5.288 seconds (JVM running for 6.756)
+2022-03-07 13:28:43,161 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.

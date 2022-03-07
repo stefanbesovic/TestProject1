@@ -40,11 +40,10 @@ class CategoryServiceImplementationTest {
 
         //when
         categoryService.saveCategory(c);
-        //Category expected = categoryService.getCategoryById(c.getId());
+
+        //then
         assertNotNull(c);
         verify(categoryRepository).save(c);
-        //then
-        //assertEquals(expected, c);
     }
 
     @Test
