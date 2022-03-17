@@ -34,7 +34,7 @@ public class VideoController {
 	public List<VideoDto> getAllVideos() {
 		return videoService.getAllVideos()
 				.stream()
-				.map(video -> VideoMapper.INSTANCE.toDto(video))
+				.map(VideoMapper.INSTANCE::toDto)
 				.collect(Collectors.toList());
 	}
 	

@@ -7,8 +7,6 @@ import com.practice.test1.services.PlaylistService;
 import com.practice.test1.services.PlaylistVideoService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.NoSuchElementException;
 
@@ -17,8 +15,6 @@ import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-@AutoConfigureTestDatabase
-@Transactional
 class PlaylistVideoServiceImplementationTest {
 
     private PlaylistService playlistService;

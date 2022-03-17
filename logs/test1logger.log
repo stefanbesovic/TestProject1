@@ -1,120 +1,92 @@
-2022-03-07 09:33:04,390 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 3580 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 09:33:04,399 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 09:33:04,399 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 09:33:25,810 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 23.072 seconds (JVM running for 28.044)
-2022-03-07 09:34:09,404 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 5932 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 09:34:09,408 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 09:34:09,410 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 09:34:26,695 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 18.746 seconds (JVM running for 23.691)
-2022-03-07 09:40:51,267 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 18308 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 09:40:51,275 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 09:40:51,275 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 09:41:07,605 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 17.548 seconds (JVM running for 20.993)
-2022-03-07 09:43:01,104 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 11320 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 09:43:01,107 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 09:43:01,108 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 09:43:15,330 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 14.828 seconds (JVM running for 17.286)
-2022-03-07 10:19:18,005 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 1468 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 10:19:18,010 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 10:19:18,010 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 10:19:28,404 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 10.931 seconds (JVM running for 14.095)
-2022-03-07 11:45:46,567 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 10528 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 11:45:46,573 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 11:45:46,574 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 11:46:00,907 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 15.668 seconds (JVM running for 18.806)
-2022-03-07 12:04:31,842 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 12892 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 12:04:31,846 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 12:04:31,847 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 12:04:44,113 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 13.3 seconds (JVM running for 16.43)
-2022-03-07 12:14:27,999 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 1448 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 12:14:28,003 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 12:14:28,005 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 12:14:38,202 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 11.446 seconds (JVM running for 14.347)
-2022-03-07 12:20:11,163 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 17532 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 12:20:11,165 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 12:20:11,167 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 12:20:20,813 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 10.671 seconds (JVM running for 14.1)
-2022-03-07 12:20:21,470 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
-2022-03-07 12:20:21,530 INFO com.practice.test1.services.implementation.VideoServiceImplementation [main] Category 1 added to video 1.
-2022-03-07 12:22:01,996 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7764 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 12:22:01,996 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 12:22:02,005 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 12:22:13,431 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 12.283 seconds (JVM running for 16.191)
-2022-03-07 12:22:14,058 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
-2022-03-07 12:22:14,157 INFO com.practice.test1.services.implementation.VideoServiceImplementation [main] Category 1 added to video 1.
-2022-03-07 12:24:05,237 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 9212 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 12:24:05,241 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 12:24:05,242 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 12:24:16,296 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 11.582 seconds (JVM running for 14.691)
-2022-03-07 12:24:17,012 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
-2022-03-07 12:24:17,064 INFO com.practice.test1.services.implementation.VideoServiceImplementation [main] Category 1 added to video 1.
-2022-03-07 12:28:25,738 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 1648 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 12:28:25,743 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 12:28:25,744 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 12:28:35,236 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 10.414 seconds (JVM running for 12.969)
-2022-03-07 12:28:35,921 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
-2022-03-07 12:28:35,995 INFO com.practice.test1.services.implementation.VideoServiceImplementation [main] Category 1 added to video 1.
-2022-03-07 12:30:03,607 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 12028 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 12:30:03,612 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 12:30:03,613 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 12:30:15,235 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 12.516 seconds (JVM running for 15.064)
-2022-03-07 12:30:15,862 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
-2022-03-07 12:30:15,925 INFO com.practice.test1.services.implementation.VideoServiceImplementation [main] Category 1 added to video 1.
-2022-03-07 12:33:16,030 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 6308 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 12:33:16,033 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 12:33:16,033 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 12:33:33,462 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 18.141 seconds (JVM running for 21.341)
-2022-03-07 12:33:34,676 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
-2022-03-07 12:33:34,692 INFO com.practice.test1.services.implementation.VideoServiceImplementation [main] Category 1 added to video 1.
-2022-03-07 12:34:38,058 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 9396 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 12:34:38,062 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 12:34:38,066 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 12:34:47,205 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 10.049 seconds (JVM running for 14.013)
-2022-03-07 12:34:47,908 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
-2022-03-07 12:34:47,922 INFO com.practice.test1.services.implementation.VideoServiceImplementation [main] Category 1 added to video 1.
-2022-03-07 12:43:36,727 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 16916 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 12:43:36,729 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 12:43:36,729 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 12:43:53,398 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 18.159 seconds (JVM running for 22.667)
-2022-03-07 12:43:54,650 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
-2022-03-07 12:43:54,689 INFO com.practice.test1.services.implementation.VideoServiceImplementation [main] Category 1 added to video 1.
-2022-03-07 13:13:08,992 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7052 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 13:13:08,993 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 13:13:08,993 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 13:13:22,859 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 14.435 seconds (JVM running for 18.054)
-2022-03-07 13:13:23,500 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
-2022-03-07 13:13:23,520 INFO com.practice.test1.services.implementation.VideoServiceImplementation [main] Category 1 added to video 1.
-2022-03-07 13:16:01,239 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 8596 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 13:16:01,240 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 13:16:01,241 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 13:16:06,155 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 5.275 seconds (JVM running for 6.933)
-2022-03-07 13:16:06,531 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
-2022-03-07 13:19:21,449 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 14412 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 13:19:21,450 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 13:19:21,451 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 13:19:26,350 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 5.232 seconds (JVM running for 6.817)
-2022-03-07 13:19:26,725 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
-2022-03-07 13:19:44,329 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 1676 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 13:19:44,330 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 13:19:44,331 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 13:19:49,928 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 5.969 seconds (JVM running for 7.523)
-2022-03-07 13:19:50,391 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
-2022-03-07 13:22:38,321 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 5164 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 13:22:38,321 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 13:22:38,321 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 13:22:43,750 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 5.766 seconds (JVM running for 7.406)
-2022-03-07 13:24:03,565 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 5492 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 13:24:03,565 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 13:24:03,566 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 13:24:08,557 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 5.345 seconds (JVM running for 6.91)
-2022-03-07 13:24:08,913 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
-2022-03-07 13:26:21,080 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 19964 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 13:26:21,081 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 13:26:21,082 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 13:26:26,134 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 5.402 seconds (JVM running for 6.97)
-2022-03-07 13:26:26,514 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
-2022-03-07 13:28:37,865 INFO org.springframework.boot.StartupInfoLogger [main] Starting VideoControllerIntegrationTest using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 20460 (started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-07 13:28:37,868 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-07 13:28:37,869 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-03-07 13:28:42,807 INFO org.springframework.boot.StartupInfoLogger [main] Started VideoControllerIntegrationTest in 5.288 seconds (JVM running for 6.756)
-2022-03-07 13:28:43,161 DEBUG com.practice.test1.services.implementation.VideoServiceImplementation [main] Adding category 1 to video 1.
+2022-03-17 09:15:18,340 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 13616 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-17 09:15:18,355 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-17 09:15:18,356 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-17 09:15:27,443 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 9.81 seconds (JVM running for 12.243)
+2022-03-17 09:22:38,994 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-7] Getting all categories.
+2022-03-17 09:22:43,035 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-8] Getting all categories.
+2022-03-17 09:22:43,591 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-9] Getting all categories.
+2022-03-17 09:22:43,822 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-10] Getting all categories.
+2022-03-17 10:01:35,331 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 20472 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-17 10:01:35,334 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-17 10:01:35,334 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-17 10:01:38,713 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 3.728 seconds (JVM running for 4.663)
+2022-03-17 10:02:00,667 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-1] Getting all categories.
+2022-03-17 10:04:13,087 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-1] Getting all categories.
+2022-03-17 10:04:26,034 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7588 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-17 10:04:26,037 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-17 10:04:26,037 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-17 10:04:29,185 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 3.458 seconds (JVM running for 4.281)
+2022-03-17 10:04:45,897 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-2] Getting all categories.
+2022-03-17 11:58:33,256 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 21924 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-17 11:58:33,262 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-17 11:58:33,262 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-17 11:58:39,620 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 6.939 seconds (JVM running for 9.594)
+2022-03-17 11:58:46,419 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-1] Getting all categories.
+2022-03-17 11:59:22,317 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 11872 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-17 11:59:22,322 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-17 11:59:22,323 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-17 11:59:27,783 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 6.008 seconds (JVM running for 7.564)
+2022-03-17 11:59:35,984 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-3] Getting all categories.
+2022-03-17 12:00:57,650 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 4072 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-17 12:00:57,656 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-17 12:00:57,656 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-17 12:01:03,483 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 6.362 seconds (JVM running for 7.835)
+2022-03-17 12:01:05,503 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-2] Getting all categories.
+2022-03-17 12:03:52,537 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 18040 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-17 12:03:52,541 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-17 12:03:52,544 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-17 12:03:57,838 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 5.797 seconds (JVM running for 7.328)
+2022-03-17 12:08:49,587 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-5] Getting all categories.
+2022-03-17 12:08:52,090 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-6] Getting all categories.
+2022-03-17 12:08:52,605 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-7] Getting all categories.
+2022-03-17 12:08:52,764 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-8] Getting all categories.
+2022-03-17 12:08:52,919 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-9] Getting all categories.
+2022-03-17 12:08:58,510 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-10] Getting all categories.
+2022-03-17 12:20:02,708 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7952 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-17 12:20:02,713 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-17 12:20:02,713 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-17 12:20:10,767 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 8.611 seconds (JVM running for 10.23)
+2022-03-17 12:21:05,646 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7076 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-17 12:21:05,650 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-17 12:21:05,650 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-17 12:21:12,860 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 7.719 seconds (JVM running for 9.26)
+2022-03-17 12:26:32,038 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 9732 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-17 12:26:32,043 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-17 12:26:32,044 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-17 12:26:37,655 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 6.128 seconds (JVM running for 7.565)
+2022-03-17 12:33:53,553 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 13944 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-17 12:33:53,555 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-17 12:33:53,555 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-17 12:33:56,580 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 3.327 seconds (JVM running for 4.226)
+2022-03-17 12:46:12,758 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 20944 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-17 12:46:12,760 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-17 12:46:12,761 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-17 12:46:15,805 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 3.341 seconds (JVM running for 4.137)
+2022-03-17 12:49:23,651 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 13136 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-17 12:49:23,653 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-17 12:49:23,653 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-17 12:49:27,069 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 3.746 seconds (JVM running for 4.65)
+2022-03-17 12:54:39,131 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-4] Getting all categories.
+2022-03-17 12:54:42,461 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-5] Getting all categories.
+2022-03-17 12:54:43,118 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-6] Getting all categories.
+2022-03-17 12:55:25,041 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 19608 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-17 12:55:25,043 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-17 12:55:25,043 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-17 12:55:28,933 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 4.217 seconds (JVM running for 5.134)
+2022-03-17 12:55:49,997 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-8] Getting all categories.
+2022-03-17 12:55:51,795 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-9] Getting all categories.
+2022-03-17 12:55:52,232 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-10] Getting all categories.
+2022-03-17 12:55:52,391 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-1] Getting all categories.
+2022-03-17 13:00:50,571 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 15476 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-17 13:00:50,618 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-17 13:00:50,636 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-17 13:00:54,815 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 4.661 seconds (JVM running for 5.611)
+2022-03-17 13:04:31,871 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 17320 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-17 13:04:31,874 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-17 13:04:31,874 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-17 13:04:36,108 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 4.587 seconds (JVM running for 5.465)
+2022-03-17 13:04:59,435 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-6] Getting all categories.
+2022-03-17 13:15:35,010 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 13504 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-17 13:15:35,013 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-17 13:15:35,013 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-17 13:15:38,786 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 4.219 seconds (JVM running for 5.954)

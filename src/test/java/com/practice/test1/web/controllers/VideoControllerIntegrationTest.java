@@ -5,20 +5,15 @@ import com.practice.test1.entities.Category;
 import com.practice.test1.entities.Video;
 import com.practice.test1.repositories.CategoryRepository;
 import com.practice.test1.repositories.VideoRepository;
-import com.practice.test1.services.VideoService;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.NoSuchElementException;
 
 import static org.hamcrest.Matchers.hasSize;
 import static org.junit.jupiter.api.Assertions.*;
@@ -28,6 +23,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
+@Transactional
 class VideoControllerIntegrationTest {
 
     @Autowired
@@ -107,7 +103,6 @@ class VideoControllerIntegrationTest {
     }
 
     @Test
-    @Transactional
     void givenVideoAndCategory_whenPerformAddCategoryToVideo_thenReturnOk() throws Exception {
         //given
         Video v1 = new Video();
@@ -125,7 +120,7 @@ class VideoControllerIntegrationTest {
                 .andReturn();
 
         //then
-        Video v = videoRepository.getById(1L);
+        Video v = videoRepository.getById(v1.getId());
 
         assertNotNull(v.getCategories());
         assertFalse(v.getCategories().isEmpty());
@@ -133,6 +128,31 @@ class VideoControllerIntegrationTest {
         assertTrue(v.getCategories().contains(c));
     }
 
+    @Test
+    void givenVideoAndCategory_whenPerformRemoveCategoryFromVideo_thenReturnOk() throws Exception {
+        //given
+        Video v1 = new Video();
+        v1.setName("v1");
+        Category c = new Category();
+        c.setName("c1");
+
+        categoryRepository.save(c);
+        videoRepository.save(v1);
+        v1.addCategory(c);
+        videoRepository.save(v1);
+
+        //when
+        mockMvc.perform(delete("/api/videos/{videoId}/categories/{categoryId}", v1.getId(), c.getId()).contentType(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isOk());
+
+        //then
+        Video v = videoRepository.getById(v1.getId());
+
+        assertFalse(v.getCategories().contains(c));
+        assertTrue(v.getCategories().isEmpty());
+    }
+/*
     @Test
     void givenVideoAndNoCategory_whenPerformAddCategoryToVideo_thenReturnBadRequest() throws Exception {
         //given
@@ -145,16 +165,14 @@ class VideoControllerIntegrationTest {
         videoRepository.save(v1);
 
         //when
-        mockMvc.perform(put("/api/videos/{videoId}/categories/1", v1.getId()).contentType(MediaType.APPLICATION_JSON))
-                .andDo(print())
-                .andExpect(result -> assertTrue(result.getResolvedException() instanceof NoSuchElementException))
-                .andExpect(result -> assertEquals("Category not found: 1", result.getResolvedException().getMessage()));
-
-
+        mockMvc.perform(put("/api/videos/{videoId}/categories/1", v1.getId())
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andDo(print());
         //then
         Video v = videoRepository.getById(v1.getId());
 
         assertNull(v.getCategories());
         assertTrue(v.getCategories().isEmpty());
     }
+*/
 }

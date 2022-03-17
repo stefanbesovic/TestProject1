@@ -7,6 +7,9 @@ import com.practice.test1.services.ChannelPlaylistService;
 import com.practice.test1.services.ChannelService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.NoSuchElementException;
 
@@ -15,13 +18,14 @@ import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+@ExtendWith(MockitoExtension.class)
 class ChannelPlaylistServiceImplementationTest {
+    @Mock
     private ChannelService channelService;
     private ChannelPlaylistService testService;
 
     @BeforeEach
     void setUp() {
-        channelService = mock(ChannelService.class);
         testService = new ChannelPlaylistServiceImplementation(channelService);
     }
 
@@ -37,9 +41,9 @@ class ChannelPlaylistServiceImplementationTest {
         v1.setName("Playlist1");
         Playlist v2 = new Playlist();
         v2.setName("Playlist2");
+        channel.getPlaylists().add(new ChannelPlaylist(channel, v2, 3));
         channel.getPlaylists().add(new ChannelPlaylist(channel, v, 1));
         channel.getPlaylists().add(new ChannelPlaylist(channel, v1, 2));
-        channel.getPlaylists().add(new ChannelPlaylist(channel, v2, 3));
 
         //when
         when(channelService.getChannelById(anyLong())).thenReturn(channel);
@@ -124,6 +128,7 @@ class ChannelPlaylistServiceImplementationTest {
         v1.setName("Playlist1");
         Playlist v2 = new Playlist();
         v2.setName("Playlist2");
+
         channel.getPlaylists().add(new ChannelPlaylist(channel, v, 1));
         channel.getPlaylists().add(new ChannelPlaylist(channel, v1, 2));
         channel.getPlaylists().add(new ChannelPlaylist(channel, v2, 3));
@@ -152,6 +157,7 @@ class ChannelPlaylistServiceImplementationTest {
         v1.setName("Playlist1");
         Playlist v2 = new Playlist();
         v2.setName("Playlist2");
+
         channel.getPlaylists().add(new ChannelPlaylist(channel, v, 1));
         channel.getPlaylists().add(new ChannelPlaylist(channel, v1, 2));
         channel.getPlaylists().add(new ChannelPlaylist(channel, v2, 3));
