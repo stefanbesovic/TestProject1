@@ -26,7 +26,7 @@ public class UserController {
 		return userService.saveUser(UserMapper.INSTANCE.fromDto(userDto));
 	}
 
-	@GetMapping(path = "/")
+	@GetMapping()
 	public List<UserDto> getAllUsers() {
 		return userService.getAllUsers()
 				.stream()

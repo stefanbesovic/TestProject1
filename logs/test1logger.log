@@ -1,92 +1,23 @@
-2022-03-17 09:15:18,340 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 13616 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-17 09:15:18,355 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-17 09:15:18,356 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2022-03-17 09:15:27,443 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 9.81 seconds (JVM running for 12.243)
-2022-03-17 09:22:38,994 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-7] Getting all categories.
-2022-03-17 09:22:43,035 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-8] Getting all categories.
-2022-03-17 09:22:43,591 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-9] Getting all categories.
-2022-03-17 09:22:43,822 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-10] Getting all categories.
-2022-03-17 10:01:35,331 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 20472 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-17 10:01:35,334 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-17 10:01:35,334 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2022-03-17 10:01:38,713 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 3.728 seconds (JVM running for 4.663)
-2022-03-17 10:02:00,667 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-1] Getting all categories.
-2022-03-17 10:04:13,087 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-1] Getting all categories.
-2022-03-17 10:04:26,034 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7588 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-17 10:04:26,037 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-17 10:04:26,037 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2022-03-17 10:04:29,185 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 3.458 seconds (JVM running for 4.281)
-2022-03-17 10:04:45,897 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-2] Getting all categories.
-2022-03-17 11:58:33,256 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 21924 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-17 11:58:33,262 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-17 11:58:33,262 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2022-03-17 11:58:39,620 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 6.939 seconds (JVM running for 9.594)
-2022-03-17 11:58:46,419 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-1] Getting all categories.
-2022-03-17 11:59:22,317 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 11872 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-17 11:59:22,322 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-17 11:59:22,323 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2022-03-17 11:59:27,783 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 6.008 seconds (JVM running for 7.564)
-2022-03-17 11:59:35,984 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-3] Getting all categories.
-2022-03-17 12:00:57,650 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 4072 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-17 12:00:57,656 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-17 12:00:57,656 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2022-03-17 12:01:03,483 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 6.362 seconds (JVM running for 7.835)
-2022-03-17 12:01:05,503 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-2] Getting all categories.
-2022-03-17 12:03:52,537 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 18040 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-17 12:03:52,541 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-17 12:03:52,544 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2022-03-17 12:03:57,838 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 5.797 seconds (JVM running for 7.328)
-2022-03-17 12:08:49,587 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-5] Getting all categories.
-2022-03-17 12:08:52,090 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-6] Getting all categories.
-2022-03-17 12:08:52,605 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-7] Getting all categories.
-2022-03-17 12:08:52,764 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-8] Getting all categories.
-2022-03-17 12:08:52,919 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-9] Getting all categories.
-2022-03-17 12:08:58,510 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-10] Getting all categories.
-2022-03-17 12:20:02,708 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7952 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-17 12:20:02,713 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-17 12:20:02,713 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2022-03-17 12:20:10,767 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 8.611 seconds (JVM running for 10.23)
-2022-03-17 12:21:05,646 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7076 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-17 12:21:05,650 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-17 12:21:05,650 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2022-03-17 12:21:12,860 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 7.719 seconds (JVM running for 9.26)
-2022-03-17 12:26:32,038 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 9732 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-17 12:26:32,043 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-17 12:26:32,044 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2022-03-17 12:26:37,655 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 6.128 seconds (JVM running for 7.565)
-2022-03-17 12:33:53,553 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 13944 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-17 12:33:53,555 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-17 12:33:53,555 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2022-03-17 12:33:56,580 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 3.327 seconds (JVM running for 4.226)
-2022-03-17 12:46:12,758 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 20944 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-17 12:46:12,760 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-17 12:46:12,761 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2022-03-17 12:46:15,805 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 3.341 seconds (JVM running for 4.137)
-2022-03-17 12:49:23,651 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 13136 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-17 12:49:23,653 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-17 12:49:23,653 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2022-03-17 12:49:27,069 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 3.746 seconds (JVM running for 4.65)
-2022-03-17 12:54:39,131 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-4] Getting all categories.
-2022-03-17 12:54:42,461 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-5] Getting all categories.
-2022-03-17 12:54:43,118 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-6] Getting all categories.
-2022-03-17 12:55:25,041 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 19608 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-17 12:55:25,043 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-17 12:55:25,043 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2022-03-17 12:55:28,933 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 4.217 seconds (JVM running for 5.134)
-2022-03-17 12:55:49,997 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-8] Getting all categories.
-2022-03-17 12:55:51,795 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-9] Getting all categories.
-2022-03-17 12:55:52,232 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-10] Getting all categories.
-2022-03-17 12:55:52,391 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-1] Getting all categories.
-2022-03-17 13:00:50,571 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 15476 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-17 13:00:50,618 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-17 13:00:50,636 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2022-03-17 13:00:54,815 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 4.661 seconds (JVM running for 5.611)
-2022-03-17 13:04:31,871 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 17320 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-17 13:04:31,874 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-17 13:04:31,874 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2022-03-17 13:04:36,108 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 4.587 seconds (JVM running for 5.465)
-2022-03-17 13:04:59,435 INFO com.practice.test1.services.implementation.CategoryServiceImplementation [http-nio-8080-exec-6] Getting all categories.
-2022-03-17 13:15:35,010 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 13504 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
-2022-03-17 13:15:35,013 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-03-17 13:15:35,013 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2022-03-17 13:15:38,786 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 4.219 seconds (JVM running for 5.954)
+2022-03-18 09:16:51,902 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 7464 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-18 09:16:51,911 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-18 09:16:51,911 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-18 09:16:58,749 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 7.417 seconds (JVM running for 9.989)
+2022-03-18 09:17:14,770 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8080-exec-2] Did not match request to Ant [pattern='/login', POST]
+2022-03-18 09:17:31,742 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8080-exec-3] Did not match request to Ant [pattern='/login', POST]
+2022-03-18 09:19:37,288 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8080-exec-9] Did not match request to Ant [pattern='/login', POST]
+2022-03-18 09:19:37,310 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8080-exec-9] Did not match request to Ant [pattern='/login', POST]
+2022-03-18 09:19:53,091 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8080-exec-10] Did not match request to Ant [pattern='/login', POST]
+2022-03-18 09:19:53,108 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8080-exec-10] Did not match request to Ant [pattern='/login', POST]
+2022-03-18 09:19:58,891 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8080-exec-1] Did not match request to Ant [pattern='/login', POST]
+2022-03-18 09:19:58,900 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8080-exec-1] Did not match request to Ant [pattern='/login', POST]
+2022-03-18 09:20:03,549 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8080-exec-2] Did not match request to Ant [pattern='/login', POST]
+2022-03-18 09:20:03,556 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8080-exec-2] Did not match request to Ant [pattern='/login', POST]
+2022-03-18 09:20:20,835 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8080-exec-3] Did not match request to Ant [pattern='/login', POST]
+2022-03-18 09:20:22,828 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8080-exec-4] Did not match request to Ant [pattern='/login', POST]
+2022-03-18 09:20:25,017 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8080-exec-5] Did not match request to Ant [pattern='/login', POST]
+2022-03-18 09:20:25,050 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8080-exec-5] Did not match request to Ant [pattern='/login', POST]
+2022-03-18 12:01:48,138 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringTest1Application using Java 17.0.2 on DESKTOP-SPC6LC0 with PID 25304 (C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1\target\classes started by Stefan in C:\Users\Stefan\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\spring-test1)
+2022-03-18 12:01:48,144 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-18 12:01:48,145 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-18 12:01:56,543 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringTest1Application in 8.99 seconds (JVM running for 11.028)
+2022-03-18 12:02:27,228 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8080-exec-3] Did not match request to Ant [pattern='/login', POST]
