@@ -5,8 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.practice.test1.entities.UserRole;
 import com.practice.test1.web.dto.user.UserDto;
 import com.practice.test1.web.dto.user.UserMapper;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +26,16 @@ public class UserController {
 	@PostMapping()
 	public User saveUser(@RequestBody UserDto userDto) {
 		return userService.saveUser(UserMapper.INSTANCE.fromDto(userDto));
+	}
+
+	@PostMapping("/roles")
+	public UserRole saveRole(@RequestBody UserRole role) {
+		return userService.saveRole(role);
+	}
+
+	@PostMapping("/add-role")
+	public void addRoleToUser(@RequestBody RoleToUserForm form) {
+		userService.addRoleToUser(form.getUsername(), form.getName());
 	}
 
 	@GetMapping()
@@ -48,4 +60,10 @@ public class UserController {
 	public void deleteUser(@PathVariable("id") long id) {
 		userService.deleteUser(id);
 	}
+}
+
+@Data
+class RoleToUserForm {
+	private String username;
+	private String name;
 }
