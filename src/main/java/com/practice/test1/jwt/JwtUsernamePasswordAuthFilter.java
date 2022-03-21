@@ -2,7 +2,6 @@ package com.practice.test1.jwt;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.security.Keys;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -37,8 +36,11 @@ public class JwtUsernamePasswordAuthFilter extends UsernamePasswordAuthenticatio
     public Authentication attemptAuthentication(HttpServletRequest request,
                                                 HttpServletResponse response) throws AuthenticationException {
         try {
-            UsernameAndPasswordAuthRequest authenticationRequest = new ObjectMapper()
-                    .readValue(request.getInputStream(), UsernameAndPasswordAuthRequest.class);
+            /*UsernameAndPasswordAuthRequest authenticationRequest = new ObjectMapper()
+                    .readValue(request.getInputStream(), UsernameAndPasswordAuthRequest.class);*/
+            UsernameAndPasswordAuthRequest authenticationRequest = new UsernameAndPasswordAuthRequest();
+            authenticationRequest.setUsername(request.getParameter("username"));
+            authenticationRequest.setPassword(request.getParameter("password"));
             Authentication auth = new UsernamePasswordAuthenticationToken(
                     authenticationRequest.getUsername(),
                     authenticationRequest.getPassword()
@@ -47,7 +49,7 @@ public class JwtUsernamePasswordAuthFilter extends UsernamePasswordAuthenticatio
             Authentication authenticate = authenticationManager.authenticate(auth);
             return authenticate;
 
-        } catch (IOException e){
+        } catch (Exception e){
             throw new RuntimeException(e);
         }
     }
