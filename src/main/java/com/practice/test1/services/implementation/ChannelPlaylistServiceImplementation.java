@@ -1,12 +1,13 @@
 package com.practice.test1.services.implementation;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.stream.Collectors;
 
 import lombok.RequiredArgsConstructor;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -25,18 +26,16 @@ public class ChannelPlaylistServiceImplementation implements ChannelPlaylistServ
 	private static final Logger log = LoggerFactory.getLogger(ChannelPlaylistServiceImplementation.class);
 
 	@Override
-	public List<Playlist> sortPlaylists(Channel channel) {
+	public List<ChannelPlaylist> sortPlaylists(Channel channel) {
 		log.info("Sorting playlists in channel with id {}.", channel.getId());
 
 		channel.getPlaylists().sort(Comparator.comparingInt(ChannelPlaylist::getPosition));
 
-		return channel.getPlaylists().stream()
-				.map(ChannelPlaylist::getPlaylist)
-				.collect(Collectors.toList());
+		return new ArrayList<>(channel.getPlaylists());
 	}
 
 	@Override
-	public Channel addPlaylistToChannel(long channelId, Playlist playlist) {
+	public ChannelPlaylist addPlaylistToChannel(long channelId, Playlist playlist) {
 		Channel channel = channelService.getChannelById(channelId);
 
 		ChannelPlaylist channelPlaylist = new ChannelPlaylist(channel, playlist, channel.getPlaylists().size() + 1);
@@ -44,11 +43,12 @@ public class ChannelPlaylistServiceImplementation implements ChannelPlaylistServ
 
 		log.info("Adding video {} to playlist {}.", playlist.getId(), channel.getId());
 
-		return channelService.updateChannel(channel, channelId);
+		channelService.updateChannel(channel, channelId);
+		return channelPlaylist;
 	}
 
 	@Override
-	public void removePlaylistFromChannel(long channelId, Playlist playlist) {
+	public List<ChannelPlaylist> removePlaylistFromChannel(long channelId, Playlist playlist) {
 		log.info("Removing video {} from playlist {}", playlist.getId(), channelId);
 
 		int index = 0;
@@ -70,10 +70,12 @@ public class ChannelPlaylistServiceImplementation implements ChannelPlaylistServ
 				.forEach(x -> x.setPosition(x.getPosition() - 1));
 
 		channelService.updateChannel(channel, channelId);
+
+		return new ArrayList<>(channel.getPlaylists());
 	}
 
 	@Override
-	public void changeIndexOfPlaylistInChannel(long channelId, Playlist playlist, int newPosition) {
+	public List<ChannelPlaylist> changeIndexOfPlaylistInChannel(long channelId, Playlist playlist, int newPosition) {
 		log.info("Changing position of playlist {} in channel {}.", playlist.getId(), channelId);
 
 		int rangeFrom ;
@@ -91,7 +93,7 @@ public class ChannelPlaylistServiceImplementation implements ChannelPlaylistServ
 
 		if(currentPosition == newPosition) {
 			log.debug("Current position of playlist is same as the new position.");
-			return;
+			return new ArrayList<>();
 		}
 
 		if(currentPosition > newPosition) {
@@ -119,5 +121,7 @@ public class ChannelPlaylistServiceImplementation implements ChannelPlaylistServ
 		log.info("Position of playlist {} has changed from {} to {}.", playlist.getId(), currentPosition, newPosition);
 
 		channelService.updateChannel(channel, channelId);
+
+		return new ArrayList<>(channel.getPlaylists());
 	}
 }

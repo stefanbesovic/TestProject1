@@ -14,7 +14,6 @@ import com.practice.test1.entities.Video;
 import com.practice.test1.repositories.VideoRepository;
 import com.practice.test1.services.CategoryService;
 import com.practice.test1.services.VideoService;
-import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor
 @Service

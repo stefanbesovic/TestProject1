@@ -15,6 +15,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Builder
 public class UserDto {
+    private long id;
     private String name;
     private String username;
     private Set<UserRoleDto> userRolesDto;

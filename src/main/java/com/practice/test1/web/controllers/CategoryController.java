@@ -5,7 +5,6 @@ import java.util.stream.Collectors;
 
 import com.practice.test1.web.dto.category.CategoryDto;
 import com.practice.test1.web.dto.category.CategoryMapper;
-import com.sun.istack.NotNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,7 +34,7 @@ public class CategoryController {
 	public List<CategoryDto> getAllCategories() {
 		return categoryService.getAllCategories()
 				.stream()
-				.map(category -> CategoryMapper.INSTANCE.toDto(category))
+				.map(CategoryMapper.INSTANCE::toDto)
 				.collect(Collectors.toList());
 	}
 	

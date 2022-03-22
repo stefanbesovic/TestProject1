@@ -1,10 +1,10 @@
 package com.practice.test1.services.implementation;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.stream.Collectors;
 
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -25,29 +25,28 @@ public class PlaylistVideoServiceImplementation implements PlaylistVideoService 
 	private static final Logger log = LoggerFactory.getLogger(PlaylistVideoServiceImplementation.class);
 
 	@Override
-	public List<Video> sortVideos(Playlist playlist) {
+	public List<PlaylistVideo> sortVideos(Playlist playlist) {
 		log.info("Sorting videos in playlist with id {}.", playlist.getId());
 
 		playlist.getVideos().sort(Comparator.comparingInt(PlaylistVideo::getPosition));
 
-		return playlist.getVideos().stream()
-				.map(PlaylistVideo::getVideo)
-				.collect(Collectors.toList());
+		return new ArrayList<>(playlist.getVideos());
 	}
 
 	@Override
-	public Playlist addVideoToPlaylist(long playlistId, Video video) {
+	public PlaylistVideo addVideoToPlaylist(long playlistId, Video video) {
 		Playlist playlist = playlistService.getPlaylistById(playlistId);
 		PlaylistVideo playlistVideo = new PlaylistVideo(playlist, video, playlist.getVideos().size() + 1);
 		playlist.getVideos().add(playlistVideo);
 
 		log.info("Adding video {} to playlist {}.", video.getId(), playlist.getId());
 
-		return playlistService.updatePlaylist(playlist, playlistId);
+		playlistService.updatePlaylist(playlist, playlistId);
+		return playlistVideo;
 	}
 
 	@Override
-	public void removeVideoFromPlaylist(long playlistId, Video video) {
+	public List<PlaylistVideo> removeVideoFromPlaylist(long playlistId, Video video) {
 		log.info("Removing video {} from playlist {}", video.getId(), playlistId);
 
 		int index = 0;
@@ -69,10 +68,11 @@ public class PlaylistVideoServiceImplementation implements PlaylistVideoService 
 				.forEach(x -> x.setPosition(x.getPosition() - 1));
 
 		playlistService.updatePlaylist(playlist, playlistId);
+		return new ArrayList<>(playlist.getVideos());
 	}
 
 	@Override
-	public void changeIndexOfVideoInPlaylist(long playlistId, Video video, int newPosition) {
+	public List<PlaylistVideo> changeIndexOfVideoInPlaylist(long playlistId, Video video, int newPosition) {
 		log.info("Changing position of video {} in playlist {}.", video.getId(), playlistId);
 
 		int rangeFrom;
@@ -89,7 +89,7 @@ public class PlaylistVideoServiceImplementation implements PlaylistVideoService 
 
 		if(currentPosition == newPosition) {
 			log.debug("Current position of video is same as the new position.");
-			return;
+			return new ArrayList<>();
 		}
 
 		if(currentPosition > newPosition) {
@@ -117,5 +117,7 @@ public class PlaylistVideoServiceImplementation implements PlaylistVideoService 
 		log.info("Position of video {} has changed from {} to {}.", video.getId(), currentPosition, newPosition);
 
         playlistService.updatePlaylist(playlist, playlistId);
+
+		return new ArrayList<>(playlistService.getPlaylistById(playlistId).getVideos());
 	}
 }

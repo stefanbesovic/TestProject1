@@ -7,8 +7,8 @@ import java.util.stream.Collectors;
 import com.practice.test1.services.PlaylistVideoService;
 import com.practice.test1.web.dto.playlist.PlaylistDto;
 import com.practice.test1.web.dto.playlist.PlaylistMapper;
-import com.practice.test1.web.dto.video.VideoDto;
-import com.practice.test1.web.dto.video.VideoMapper;
+import com.practice.test1.web.dto.playlistvideo.PlaylistVideoGetDto;
+import com.practice.test1.web.dto.playlistvideo.PlaylistVideoGetMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.practice.test1.entities.Playlist;
-import com.practice.test1.entities.Video;
 import com.practice.test1.services.PlaylistService;
 import com.practice.test1.services.VideoService;
 
@@ -74,28 +73,34 @@ public class PlaylistController {
 	}
 	
 	@PutMapping("/{playlistId}/videos/{videoId}")
-	public PlaylistDto addVideoToPlaylist(@PathVariable("playlistId") long playlistId, @PathVariable("videoId") long videoId){
-		return PlaylistMapper.INSTANCE.toDto(playlistVideoService.addVideoToPlaylist(playlistId, videoService.getVideoById(videoId)));
+	public PlaylistVideoGetDto addVideoToPlaylist(@PathVariable("playlistId") long playlistId, @PathVariable("videoId") long videoId){
+		return PlaylistVideoGetMapper.INSTANCE.toDto(playlistVideoService.addVideoToPlaylist(playlistId, videoService.getVideoById(videoId)));
 	}
 	
 	@DeleteMapping("/{playlistId}/videos/{videoId}")
-	public void removeVideoFromPlaylist(@PathVariable("playlistId") long playlistId, @PathVariable("videoId") long videoId){
-		playlistVideoService.removeVideoFromPlaylist(playlistId, videoService.getVideoById(videoId));
+	public List<PlaylistVideoGetDto> removeVideoFromPlaylist(@PathVariable("playlistId") long playlistId, @PathVariable("videoId") long videoId){
+		return playlistVideoService.removeVideoFromPlaylist(playlistId, videoService.getVideoById(videoId))
+				.stream()
+				.map(PlaylistVideoGetMapper.INSTANCE::toDto)
+				.collect(Collectors.toList());
 	}
 	
 	@GetMapping("/{playlistId}/sort")
-	public List<VideoDto> sortVideosInPlaylist(@PathVariable("playlistId") long playlistId) {
+	public List<PlaylistVideoGetDto> sortVideosInPlaylist(@PathVariable("playlistId") long playlistId) {
 		return playlistVideoService.sortVideos(playlistService.getPlaylistById(playlistId))
 				.stream()
-				.map(VideoMapper.INSTANCE::toDto)
+				.map(PlaylistVideoGetMapper.INSTANCE::toDto)
 				.collect(Collectors.toList());
 	}
 	
 	@PutMapping("/{playlistId}/videos/{videoId}/{newPosition}")
-	public void changePositionOfVideoInPlaylist(@PathVariable("playlistId") long playlistId,
-															@PathVariable("videoId") long videoId, 
-															@PathVariable("newPosition") int newPosition) {
-		playlistVideoService.changeIndexOfVideoInPlaylist(playlistId, videoService.getVideoById(videoId), newPosition);
+	public List<PlaylistVideoGetDto> changePositionOfVideoInPlaylist(@PathVariable("playlistId") long playlistId,
+																	 @PathVariable("videoId") long videoId,
+																	 @PathVariable("newPosition") int newPosition) {
+		return playlistVideoService.changeIndexOfVideoInPlaylist(playlistId, videoService.getVideoById(videoId), newPosition)
+				.stream()
+				.map(PlaylistVideoGetMapper.INSTANCE::toDto)
+				.collect(Collectors.toList());
 	}
 	
 	@PutMapping("/{playlistId}/user/{userId}")

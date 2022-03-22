@@ -1,18 +1,15 @@
 package com.practice.test1.web.controllers;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import com.practice.test1.entities.UserRole;
+import com.practice.test1.web.dto.role.RoleToUserForm;
 import com.practice.test1.web.dto.role.UserRoleDto;
 import com.practice.test1.web.dto.role.UserRoleMapper;
 import com.practice.test1.web.dto.user.UserDto;
 import com.practice.test1.web.dto.user.UserMapper;
-import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.web.bind.annotation.*;
 
 import com.practice.test1.entities.User;
@@ -66,8 +63,3 @@ public class UserController {
 	}
 }
 
-@Data
-class RoleToUserForm {
-	private String username;
-	private String name;
-}

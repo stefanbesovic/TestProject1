@@ -25,6 +25,8 @@ import lombok.*;
 @Entity
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Playlist {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

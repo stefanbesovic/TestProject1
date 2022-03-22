@@ -1,7 +1,7 @@
 package com.practice.test1.web.dto.playlist;
 
-import com.practice.test1.web.dto.playlistvideo.PlaylistVideoDto;
 import com.practice.test1.web.dto.category.CategoryDto;
+import com.practice.test1.web.dto.playlistvideo.PlaylistVideoGetDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,7 +15,8 @@ import java.util.Set;
 @NoArgsConstructor
 @Builder
 public class PlaylistDto {
+    private long id;
     private String name;
-    private Set<CategoryDto> categoriesDto;
-    private List<PlaylistVideoDto> videosDto;
+    private Set<CategoryDto> categories;
+    private List<PlaylistVideoGetDto> videos;
 }

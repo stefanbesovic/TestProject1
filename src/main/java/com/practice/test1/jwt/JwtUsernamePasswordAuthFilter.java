@@ -19,7 +19,6 @@ import java.util.Date;
 
 public class JwtUsernamePasswordAuthFilter extends UsernamePasswordAuthenticationFilter {
 
-
     private final AuthenticationManager authenticationManager;
     private final JwtConfig jwtConfig;
     private final SecretKey secretKey;
@@ -36,11 +35,8 @@ public class JwtUsernamePasswordAuthFilter extends UsernamePasswordAuthenticatio
     public Authentication attemptAuthentication(HttpServletRequest request,
                                                 HttpServletResponse response) throws AuthenticationException {
         try {
-            /*UsernameAndPasswordAuthRequest authenticationRequest = new ObjectMapper()
-                    .readValue(request.getInputStream(), UsernameAndPasswordAuthRequest.class);*/
-            UsernameAndPasswordAuthRequest authenticationRequest = new UsernameAndPasswordAuthRequest();
-            authenticationRequest.setUsername(request.getParameter("username"));
-            authenticationRequest.setPassword(request.getParameter("password"));
+            UsernameAndPasswordAuthRequest authenticationRequest = new ObjectMapper()
+                    .readValue(request.getInputStream(), UsernameAndPasswordAuthRequest.class);
             Authentication auth = new UsernamePasswordAuthenticationToken(
                     authenticationRequest.getUsername(),
                     authenticationRequest.getPassword()
@@ -49,7 +45,7 @@ public class JwtUsernamePasswordAuthFilter extends UsernamePasswordAuthenticatio
             Authentication authenticate = authenticationManager.authenticate(auth);
             return authenticate;
 
-        } catch (Exception e){
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
@@ -67,7 +63,7 @@ public class JwtUsernamePasswordAuthFilter extends UsernamePasswordAuthenticatio
                 .setExpiration(java.sql.Date.valueOf(LocalDate.now().plusDays(jwtConfig.getTokenExpirationAfterDays())))
                 .signWith(secretKey)
                 .compact();
-        response.addHeader(jwtConfig.getAuthorizationHeader(),jwtConfig.getTokenPrefix() + token);
+        response.addHeader(jwtConfig.getAuthorizationHeader(), jwtConfig.getTokenPrefix() + token);
 
     }
 }

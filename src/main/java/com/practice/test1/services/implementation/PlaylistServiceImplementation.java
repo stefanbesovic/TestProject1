@@ -73,7 +73,7 @@ public class PlaylistServiceImplementation implements PlaylistService {
 		if(!playlist.getCategories().contains(category)) {
 			playlist.addCategory(category);
 		}else {
-			log.debug("Can't add category {} because it doesn't exist.");
+			log.debug("Can't add category {} because it doesn't exist.", categoryId);
 			return playlist;
 		}
 
