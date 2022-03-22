@@ -16,12 +16,13 @@ import lombok.*;
 public class User {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
 	private String name;
 	private String username;
 	private String password;
+
 	@ManyToMany(fetch = FetchType.EAGER)
 	private Set<UserRole> userRoles = new HashSet<>();
 

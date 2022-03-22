@@ -26,8 +26,9 @@ public class CategoryController {
 	private final CategoryService categoryService;
 
 	@PostMapping()
-	public Category saveCategory(@RequestBody CategoryDto categoryDto) {
-		return categoryService.saveCategory(CategoryMapper.INSTANCE.fromDto(categoryDto));
+	public CategoryDto saveCategory(@RequestBody Category category) {
+		categoryService.saveCategory(category);
+		return CategoryMapper.INSTANCE.toDto(category);
 	}
 	
 	@GetMapping()
@@ -44,8 +45,9 @@ public class CategoryController {
 	}
 	
 	@PutMapping("{id}")
-	public Category updateCategory(@RequestBody CategoryDto categoryDto, @PathVariable("id") long id) {
-		return categoryService.updateCategory(CategoryMapper.INSTANCE.fromDto(categoryDto), id);
+	public CategoryDto updateCategory(@RequestBody CategoryDto categoryDto, @PathVariable("id") long id) {
+		categoryService.updateCategory(CategoryMapper.INSTANCE.fromDto(categoryDto), id);
+		return categoryDto;
 	}
 	
 	@DeleteMapping("{id}")

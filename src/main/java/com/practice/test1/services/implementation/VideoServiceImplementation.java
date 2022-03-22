@@ -70,7 +70,7 @@ public class VideoServiceImplementation implements VideoService {
 		if(!video.getCategories().contains(category)) {
 			video.addCategory(category);
 		}else {
-			log.debug("Can't add category {} because it doesn't exist.");
+			log.debug("Can't add category {} because it doesn't exist.", categoryId);
 			return video;
 		}
 

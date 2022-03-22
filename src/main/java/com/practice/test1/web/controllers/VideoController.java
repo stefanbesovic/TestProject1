@@ -26,8 +26,9 @@ public class VideoController {
 	private final VideoService videoService;
 
 	@PostMapping()
-	public Video saveVideo(@RequestBody VideoDto videoDto) {
-		return videoService.saveVideo(VideoMapper.INSTANCE.fromDto(videoDto));
+	public VideoDto saveVideo(@RequestBody Video video) {
+		videoService.saveVideo(video);
+		return VideoMapper.INSTANCE.toDto(video);
 	}
 	
 	@GetMapping()
@@ -44,8 +45,9 @@ public class VideoController {
 	}
 	
 	@PutMapping("{id}")
-	public Video updateVideo(@RequestBody VideoDto videoDto, @PathVariable("id") long id) {
-		return videoService.updateVideo(VideoMapper.INSTANCE.fromDto(videoDto), id);
+	public VideoDto updateVideo(@RequestBody VideoDto videoDto, @PathVariable("id") long id) {
+		videoService.updateVideo(VideoMapper.INSTANCE.fromDto(videoDto), id);
+		return videoDto;
 	}
 	
 	@DeleteMapping("{id}")
@@ -54,12 +56,13 @@ public class VideoController {
 	}
 	
 	@PutMapping("/{videoId}/categories/{categoryId}")
-	public Video addCategory(@PathVariable("videoId") long videoId, @PathVariable("categoryId") long categoryId) {
-		return videoService.addCategory(videoId, categoryId);
+	public VideoDto addCategory(@PathVariable("videoId") long videoId, @PathVariable("categoryId") long categoryId) {
+		return VideoMapper.INSTANCE.toDto(videoService.addCategory(videoId, categoryId));
 	}
 	
 	@DeleteMapping("/{videoId}/categories/{categoryId}")
-	public void removeCategory(@PathVariable("videoId") long videoId, @PathVariable("categoryId") long categoryId) {
+	public VideoDto removeCategory(@PathVariable("videoId") long videoId, @PathVariable("categoryId") long categoryId) {
 		videoService.RemoveCategory(videoId, categoryId);
+		return VideoMapper.INSTANCE.toDto(videoService.getVideoById(videoId));
 	}
 }

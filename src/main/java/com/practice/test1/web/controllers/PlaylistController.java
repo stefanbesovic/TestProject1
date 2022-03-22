@@ -7,6 +7,8 @@ import java.util.stream.Collectors;
 import com.practice.test1.services.PlaylistVideoService;
 import com.practice.test1.web.dto.playlist.PlaylistDto;
 import com.practice.test1.web.dto.playlist.PlaylistMapper;
+import com.practice.test1.web.dto.video.VideoDto;
+import com.practice.test1.web.dto.video.VideoMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,15 +34,16 @@ public class PlaylistController {
 	private final VideoService videoService;
 	
 	@PostMapping()
-	public Playlist savePlaylist(@RequestBody PlaylistDto playlistDto) {
-		return playlistService.savePlaylist(PlaylistMapper.INSTANCE.fromDto(playlistDto));
+	public PlaylistDto savePlaylist(@RequestBody Playlist playlist) {
+		playlistService.savePlaylist(playlist);
+		return PlaylistMapper.INSTANCE.toDto(playlist);
 	}
 	
 	@GetMapping()
 	public List<PlaylistDto> getAllPlaylists() {
 		return playlistService.getAllPlaylists()
 				.stream()
-				.map(playlist -> PlaylistMapper.INSTANCE.toDto(playlist))
+				.map(PlaylistMapper.INSTANCE::toDto)
 				.collect(Collectors.toList());
 	}
 	
@@ -50,8 +53,9 @@ public class PlaylistController {
 	}
 	
 	@PutMapping("{id}")
-	public Playlist updatePlaylist(@RequestBody PlaylistDto playlistDto, @PathVariable("id") long id) {
-		return playlistService.updatePlaylist(PlaylistMapper.INSTANCE.fromDto(playlistDto), id);
+	public PlaylistDto updatePlaylist(@RequestBody PlaylistDto playlistDto, @PathVariable("id") long id) {
+		playlistService.updatePlaylist(PlaylistMapper.INSTANCE.fromDto(playlistDto), id);
+		return playlistDto;
 	}
 	
 	@DeleteMapping("{id}")
@@ -60,8 +64,8 @@ public class PlaylistController {
 	}
 	
 	@PutMapping("/{playlistId}/categories/{categoryId}")
-	public Playlist addCategory(@PathVariable("playlistId") long playlistId, @PathVariable("categoryId") long categoryId) {
-		return playlistService.addCategory(playlistId, categoryId);
+	public PlaylistDto addCategory(@PathVariable("playlistId") long playlistId, @PathVariable("categoryId") long categoryId) {
+		return PlaylistMapper.INSTANCE.toDto(playlistService.addCategory(playlistId, categoryId));
 	}
 	
 	@DeleteMapping("/{playlistId}/categories/{categoryId}")
@@ -70,8 +74,8 @@ public class PlaylistController {
 	}
 	
 	@PutMapping("/{playlistId}/videos/{videoId}")
-	public Playlist addVideoToPlaylist(@PathVariable("playlistId") long playlistId, @PathVariable("videoId") long videoId){
-		return playlistVideoService.addVideoToPlaylist(playlistId, videoService.getVideoById(videoId));
+	public PlaylistDto addVideoToPlaylist(@PathVariable("playlistId") long playlistId, @PathVariable("videoId") long videoId){
+		return PlaylistMapper.INSTANCE.toDto(playlistVideoService.addVideoToPlaylist(playlistId, videoService.getVideoById(videoId)));
 	}
 	
 	@DeleteMapping("/{playlistId}/videos/{videoId}")
@@ -80,8 +84,11 @@ public class PlaylistController {
 	}
 	
 	@GetMapping("/{playlistId}/sort")
-	public List<Video> sortVideosInPlaylist(@PathVariable("playlistId") long playlistId) {
-		return playlistVideoService.sortVideos(playlistService.getPlaylistById(playlistId));
+	public List<VideoDto> sortVideosInPlaylist(@PathVariable("playlistId") long playlistId) {
+		return playlistVideoService.sortVideos(playlistService.getPlaylistById(playlistId))
+				.stream()
+				.map(VideoMapper.INSTANCE::toDto)
+				.collect(Collectors.toList());
 	}
 	
 	@PutMapping("/{playlistId}/videos/{videoId}/{newPosition}")
@@ -92,8 +99,11 @@ public class PlaylistController {
 	}
 	
 	@PutMapping("/{playlistId}/user/{userId}")
-	public Set<Playlist> addPlaylistToUser(@PathVariable("playlistId") long playlistId, @PathVariable("userId") long userId){
-		return playlistService.addPlaylistToUser(playlistId, userId);
+	public Set<PlaylistDto> addPlaylistToUser(@PathVariable("playlistId") long playlistId, @PathVariable("userId") long userId){
+		return playlistService.addPlaylistToUser(playlistId, userId)
+				.stream()
+				.map(PlaylistMapper.INSTANCE::toDto)
+				.collect(Collectors.toSet());
 	}
 	
 	@DeleteMapping("/{playlistId}/user")

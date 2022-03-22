@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.practice.test1.entities.UserRole;
+import com.practice.test1.web.dto.role.UserRoleDto;
+import com.practice.test1.web.dto.role.UserRoleMapper;
 import com.practice.test1.web.dto.user.UserDto;
 import com.practice.test1.web.dto.user.UserMapper;
 import lombok.Data;
@@ -24,13 +26,14 @@ public class UserController {
 	private final UserService userService;
 
 	@PostMapping()
-	public User saveUser(@RequestBody UserDto userDto) {
-		return userService.saveUser(UserMapper.INSTANCE.fromDto(userDto));
+	public UserDto saveUser(@RequestBody User user) {
+		userService.saveUser(user);
+		return UserMapper.INSTANCE.toDto(user);
 	}
 
 	@PostMapping("/roles")
-	public UserRole saveRole(@RequestBody UserRole role) {
-		return userService.saveRole(role);
+	public UserRoleDto saveRole(@RequestBody UserRole role) {
+		return UserRoleMapper.INSTANCE.toDto(userService.saveRole(role));
 	}
 
 	@PostMapping("/add-role")
@@ -42,7 +45,7 @@ public class UserController {
 	public List<UserDto> getAllUsers() {
 		return userService.getAllUsers()
 				.stream()
-				.map(user -> UserMapper.INSTANCE.toDto(user))
+				.map(UserMapper.INSTANCE::toDto)
 				.collect(Collectors.toList());
 	}
 	
@@ -52,8 +55,9 @@ public class UserController {
 	}
 	
 	@PutMapping("{id}")
-	public User updateUser(@PathVariable("id") long id, @RequestBody UserDto userDto) {
-		return userService.updateUser(UserMapper.INSTANCE.fromDto(userDto), id);
+	public UserDto updateUser(@PathVariable("id") long id, @RequestBody UserDto userDto) {
+		userService.updateUser(UserMapper.INSTANCE.fromDto(userDto), id);
+		return userDto;
 	}
 	
 	@DeleteMapping("{id}")

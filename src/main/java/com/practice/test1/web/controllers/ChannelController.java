@@ -5,6 +5,8 @@ import java.util.stream.Collectors;
 
 import com.practice.test1.web.dto.channel.ChannelDto;
 import com.practice.test1.web.dto.channel.ChannelMapper;
+import com.practice.test1.web.dto.playlist.PlaylistDto;
+import com.practice.test1.web.dto.playlist.PlaylistMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,14 +33,15 @@ public class ChannelController {
 	private final ChannelPlaylistService channelPlaylistService;
 
 	@PostMapping()
-	public Channel saveChannel(@RequestBody ChannelDto channelDto) {
-		return channelService.saveChannel(ChannelMapper.INSTANCE.fromDto(channelDto));
+	public ChannelDto saveChannel(@RequestBody ChannelDto channelDto) {
+		channelService.saveChannel(ChannelMapper.INSTANCE.fromDto(channelDto));
+		return channelDto;
 	}
 	
 	@GetMapping()
 	public List<ChannelDto> getAllChannels() {
 		return channelService.getAllChannels()
-				.stream().map(channel -> ChannelMapper.INSTANCE.toDto(channel))
+				.stream().map(ChannelMapper.INSTANCE::toDto)
 				.collect(Collectors.toList());
 	}
 	
@@ -48,8 +51,9 @@ public class ChannelController {
 	}
 	
 	@PutMapping("{id}")
-	public Channel updateChannel(@PathVariable("id") long id, @RequestBody ChannelDto channelDto) {
-		return channelService.updateChannel(ChannelMapper.INSTANCE.fromDto(channelDto), id);
+	public ChannelDto updateChannel(@PathVariable("id") long id, @RequestBody ChannelDto channelDto) {
+		channelService.updateChannel(ChannelMapper.INSTANCE.fromDto(channelDto), id);
+		return channelDto;
 	}
 	
 	@DeleteMapping("{id}")
@@ -58,8 +62,8 @@ public class ChannelController {
 	}
 	
 	@PutMapping("/{channelId}/playlists/{playlistId}")
-	public Channel addPlaylistToChannel(@PathVariable("channelId") long channelId, @PathVariable("playlistId") long playlistId){
-		return channelPlaylistService.addPlaylistToChannel(channelId, playlistService.getPlaylistById(playlistId));
+	public ChannelDto addPlaylistToChannel(@PathVariable("channelId") long channelId, @PathVariable("playlistId") long playlistId){
+		return ChannelMapper.INSTANCE.toDto(channelPlaylistService.addPlaylistToChannel(channelId, playlistService.getPlaylistById(playlistId)));
 	}
 	
 	@DeleteMapping("/{channelId}/playlists/{playlistId}")
@@ -68,8 +72,11 @@ public class ChannelController {
 	}
 	
 	@GetMapping("/{channelId}/sort")
-	public List<Playlist> sortPlaylistsInChannel(@PathVariable("channelId") long channelId) {
-		return channelPlaylistService.sortPlaylists(channelService.getChannelById(channelId));
+	public List<PlaylistDto> sortPlaylistsInChannel(@PathVariable("channelId") long channelId) {
+		return channelPlaylistService.sortPlaylists(channelService.getChannelById(channelId))
+				.stream()
+				.map(PlaylistMapper.INSTANCE::toDto)
+				.collect(Collectors.toList());
 	}
 	
 	@PutMapping("/{channelId}/playlists/{playlistId}/{newPosition}")
