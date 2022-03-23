@@ -11,6 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -26,7 +28,10 @@ public class Video {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
+	@NotEmpty
+	@Size(min = 3, max = 20, message = "Name of video should be between 3 and 20 characters.")
 	private String name;
+
 	@JsonIgnore
 	@ManyToMany
 	@JoinTable(

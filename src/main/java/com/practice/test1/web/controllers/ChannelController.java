@@ -21,6 +21,8 @@ import com.practice.test1.services.ChannelService;
 import com.practice.test1.services.ChannelPlaylistService;
 import com.practice.test1.services.PlaylistService;
 
+import javax.validation.Valid;
+
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("api/channels")
@@ -31,7 +33,7 @@ public class ChannelController {
 	private final ChannelPlaylistService channelPlaylistService;
 
 	@PostMapping()
-	public ChannelDto saveChannel(@RequestBody ChannelDto channelDto) {
+	public ChannelDto saveChannel(@Valid @RequestBody ChannelDto channelDto) {
 		channelService.saveChannel(ChannelMapper.INSTANCE.fromDto(channelDto));
 		return channelDto;
 	}
@@ -49,7 +51,7 @@ public class ChannelController {
 	}
 	
 	@PutMapping("{id}")
-	public ChannelDto updateChannel(@PathVariable("id") long id, @RequestBody ChannelDto channelDto) {
+	public ChannelDto updateChannel(@PathVariable("id") long id, @Valid @RequestBody ChannelDto channelDto) {
 		channelService.updateChannel(ChannelMapper.INSTANCE.fromDto(channelDto), id);
 		return channelDto;
 	}

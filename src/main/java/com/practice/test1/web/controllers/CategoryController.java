@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.practice.test1.entities.Category;
 import com.practice.test1.services.CategoryService;
 
+import javax.validation.Valid;
+
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("api/categories")
@@ -25,7 +27,7 @@ public class CategoryController {
 	private final CategoryService categoryService;
 
 	@PostMapping()
-	public CategoryDto saveCategory(@RequestBody Category category) {
+	public CategoryDto saveCategory(@Valid @RequestBody Category category) {
 		categoryService.saveCategory(category);
 		return CategoryMapper.INSTANCE.toDto(category);
 	}

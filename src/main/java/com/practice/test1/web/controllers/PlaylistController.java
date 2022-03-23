@@ -23,6 +23,8 @@ import com.practice.test1.entities.Playlist;
 import com.practice.test1.services.PlaylistService;
 import com.practice.test1.services.VideoService;
 
+import javax.validation.Valid;
+
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("api/playlists")
@@ -33,7 +35,7 @@ public class PlaylistController {
 	private final VideoService videoService;
 	
 	@PostMapping()
-	public PlaylistDto savePlaylist(@RequestBody Playlist playlist) {
+	public PlaylistDto savePlaylist(@Valid @RequestBody Playlist playlist) {
 		playlistService.savePlaylist(playlist);
 		return PlaylistMapper.INSTANCE.toDto(playlist);
 	}
@@ -52,7 +54,7 @@ public class PlaylistController {
 	}
 	
 	@PutMapping("{id}")
-	public PlaylistDto updatePlaylist(@RequestBody PlaylistDto playlistDto, @PathVariable("id") long id) {
+	public PlaylistDto updatePlaylist(@Valid @RequestBody PlaylistDto playlistDto, @PathVariable("id") long id) {
 		playlistService.updatePlaylist(PlaylistMapper.INSTANCE.fromDto(playlistDto), id);
 		return playlistDto;
 	}

@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.*;
 import com.practice.test1.entities.User;
 import com.practice.test1.services.UserService;
 
+import javax.validation.Valid;
+
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("api/users")
@@ -23,18 +25,18 @@ public class UserController {
 	private final UserService userService;
 
 	@PostMapping()
-	public UserDto saveUser(@RequestBody User user) {
+	public UserDto saveUser(@Valid @RequestBody User user) {
 		userService.saveUser(user);
 		return UserMapper.INSTANCE.toDto(user);
 	}
 
 	@PostMapping("/roles")
-	public UserRoleDto saveRole(@RequestBody UserRole role) {
+	public UserRoleDto saveRole(@Valid @RequestBody UserRole role) {
 		return UserRoleMapper.INSTANCE.toDto(userService.saveRole(role));
 	}
 
 	@PostMapping("/add-role")
-	public void addRoleToUser(@RequestBody RoleToUserForm form) {
+	public void addRoleToUser(@Valid @RequestBody RoleToUserForm form) {
 		userService.addRoleToUser(form.getUsername(), form.getName());
 	}
 
@@ -52,7 +54,7 @@ public class UserController {
 	}
 	
 	@PutMapping("{id}")
-	public UserDto updateUser(@PathVariable("id") long id, @RequestBody UserDto userDto) {
+	public UserDto updateUser(@PathVariable("id") long id, @Valid @RequestBody UserDto userDto) {
 		userService.updateUser(UserMapper.INSTANCE.fromDto(userDto), id);
 		return userDto;
 	}

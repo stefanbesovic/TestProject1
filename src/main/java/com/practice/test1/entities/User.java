@@ -3,6 +3,8 @@ package com.practice.test1.entities;
 import java.util.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -19,8 +21,14 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
+	@NotEmpty
+	@Size(min = 3, max = 20, message = "Name of user should be between 3 and 20 characters.")
 	private String name;
+	@NotEmpty
+	@Size(min = 4, max = 8, message = "Username should be between 4 and 8 characters.")
 	private String username;
+	@NotEmpty
+	@Size(min = 4, max = 12, message = "Password should be between 4 and 12 characters.")
 	private String password;
 
 	@ManyToMany(fetch = FetchType.EAGER)

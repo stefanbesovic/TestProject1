@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.practice.test1.entities.Video;
 import com.practice.test1.services.VideoService;
 
+import javax.validation.Valid;
+
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("api/videos")
@@ -26,7 +28,7 @@ public class VideoController {
 	private final VideoService videoService;
 
 	@PostMapping()
-	public VideoDto saveVideo(@RequestBody Video video) {
+	public VideoDto saveVideo(@Valid @RequestBody Video video) {
 		videoService.saveVideo(video);
 		return VideoMapper.INSTANCE.toDto(video);
 	}
@@ -45,7 +47,7 @@ public class VideoController {
 	}
 	
 	@PutMapping("{id}")
-	public VideoDto updateVideo(@RequestBody VideoDto videoDto, @PathVariable("id") long id) {
+	public VideoDto updateVideo(@Valid @RequestBody VideoDto videoDto, @PathVariable("id") long id) {
 		videoService.updateVideo(VideoMapper.INSTANCE.fromDto(videoDto), id);
 		return videoDto;
 	}
