@@ -1,6 +1,6 @@
 package com.practice.test1.web.dto.video;
 
-import com.practice.test1.web.dto.category.CategoryDto;
+import com.practice.test1.web.dto.category.CategoryGetDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,5 +22,5 @@ public class VideoDto {
     @Size(min = 3, max = 20, message = "Name of video should be between 3 and 20 characters.")
     private String name;
 
-    private Set<CategoryDto> categoriesDto;
+    private Set<CategoryGetDto> categories;
 }

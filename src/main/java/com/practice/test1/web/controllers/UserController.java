@@ -3,12 +3,11 @@ package com.practice.test1.web.controllers;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.practice.test1.entities.UserRole;
-import com.practice.test1.web.dto.role.RoleToUserForm;
-import com.practice.test1.web.dto.role.UserRoleDto;
-import com.practice.test1.web.dto.role.UserRoleMapper;
+import com.practice.test1.web.dto.role.RoleUserGet;
 import com.practice.test1.web.dto.user.UserDto;
 import com.practice.test1.web.dto.user.UserMapper;
+import com.practice.test1.web.dto.user.UserRegisterDto;
+import com.practice.test1.web.dto.user.UserRegisterMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,28 +18,24 @@ import javax.validation.Valid;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("api/users")
+@RequestMapping("api/user")
 public class UserController {
 	
 	private final UserService userService;
 
 	@PostMapping()
-	public UserDto saveUser(@Valid @RequestBody User user) {
-		userService.saveUser(user);
+	public UserDto saveUser(@Valid @RequestBody UserRegisterDto userRegisterDto) {
+		User user = userService.saveUser(UserRegisterMapper.INSTANCE.fromDto(userRegisterDto));
 		return UserMapper.INSTANCE.toDto(user);
 	}
 
-	@PostMapping("/roles")
-	public UserRoleDto saveRole(@Valid @RequestBody UserRole role) {
-		return UserRoleMapper.INSTANCE.toDto(userService.saveRole(role));
-	}
-
 	@PostMapping("/add-role")
-	public void addRoleToUser(@Valid @RequestBody RoleToUserForm form) {
-		userService.addRoleToUser(form.getUsername(), form.getName());
+	public UserDto addRoleToUser(@Valid @RequestBody RoleUserGet form) {
+		User user = userService.addRoleToUser(form.getUsername(), form.getName());
+		return UserMapper.INSTANCE.toDto(user);
 	}
 
-	@GetMapping()
+	@GetMapping("/all")
 	public List<UserDto> getAllUsers() {
 		return userService.getAllUsers()
 				.stream()
@@ -54,7 +49,8 @@ public class UserController {
 	}
 	
 	@PutMapping("{id}")
-	public UserDto updateUser(@PathVariable("id") long id, @Valid @RequestBody UserDto userDto) {
+	public UserDto updateUser(@PathVariable("id") long id,
+							  @Valid @RequestBody UserDto userDto) {
 		userService.updateUser(UserMapper.INSTANCE.fromDto(userDto), id);
 		return userDto;
 	}

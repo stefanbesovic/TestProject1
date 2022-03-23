@@ -22,17 +22,17 @@ import javax.validation.Valid;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("api/categories")
+@RequestMapping("api/category")
 public class CategoryController {
 	private final CategoryService categoryService;
 
 	@PostMapping()
-	public CategoryDto saveCategory(@Valid @RequestBody Category category) {
-		categoryService.saveCategory(category);
+	public CategoryDto saveCategory(@Valid @RequestBody CategoryDto categoryDto) {
+		Category category = categoryService.saveCategory(CategoryMapper.INSTANCE.fromDto(categoryDto));
 		return CategoryMapper.INSTANCE.toDto(category);
 	}
 	
-	@GetMapping()
+	@GetMapping("/all")
 	public List<CategoryDto> getAllCategories() {
 		return categoryService.getAllCategories()
 				.stream()
@@ -46,9 +46,10 @@ public class CategoryController {
 	}
 	
 	@PutMapping("{id}")
-	public CategoryDto updateCategory(@RequestBody CategoryDto categoryDto, @PathVariable("id") long id) {
-		categoryService.updateCategory(CategoryMapper.INSTANCE.fromDto(categoryDto), id);
-		return categoryDto;
+	public CategoryDto updateCategory(@Valid @RequestBody CategoryDto categoryDto,
+									  @PathVariable("id") long id) {
+		Category category = categoryService.updateCategory(CategoryMapper.INSTANCE.fromDto(categoryDto), id);
+		return CategoryMapper.INSTANCE.toDto(category);
 	}
 	
 	@DeleteMapping("{id}")

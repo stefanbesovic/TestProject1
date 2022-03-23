@@ -12,11 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -34,11 +29,8 @@ public class Category {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
-	@NotEmpty
-	@Size(min = 3, message = "Name of category should have at least 3 characters")
 	private String name;
 
-	@JsonIgnore
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(
 			name = "video_categories",
@@ -46,8 +38,7 @@ public class Category {
 			inverseJoinColumns = @JoinColumn(name = "video_id")
 	)
 	private Set<Video> videos = new HashSet<>();
-	
-	@JsonIgnore
+
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(
 			name = "playlist_categories",

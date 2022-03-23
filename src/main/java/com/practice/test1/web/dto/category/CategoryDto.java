@@ -1,14 +1,14 @@
 package com.practice.test1.web.dto.category;
 
-import com.practice.test1.web.dto.playlist.PlaylistDto;
 import com.practice.test1.web.dto.playlist.PlaylistGetDto;
-import com.practice.test1.web.dto.video.VideoDto;
+import com.practice.test1.web.dto.video.VideoGetDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 import java.util.Set;
 
 @Data
@@ -16,6 +16,13 @@ import java.util.Set;
 @NoArgsConstructor
 @Builder
 public class CategoryDto {
-    private Long id;
+
+    private long id;
+
+    @NotEmpty
+    @Size(min = 3, max = 15, message = "Category name should be between 3 and 15 characters")
     private String name;
+
+    private Set<PlaylistGetDto> playlists;
+    private Set<VideoGetDto> videos;
 }

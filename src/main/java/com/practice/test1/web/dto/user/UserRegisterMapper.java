@@ -4,14 +4,13 @@ import com.practice.test1.entities.User;
 import com.practice.test1.web.dto.playlist.PlaylistMapper;
 import com.practice.test1.web.dto.role.UserRoleMapper;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 import org.mapstruct.ReportingPolicy;
 import org.mapstruct.factory.Mappers;
 
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE)
-public interface UserMapper {
-    UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
+public interface UserRegisterMapper {
+    UserRegisterMapper INSTANCE = Mappers.getMapper(UserRegisterMapper.class);
 
-    UserDto toDto(User user);
-    User fromDto(UserDto userDto);
+    UserRegisterDto toDto(User user);
+    User fromDto(UserRegisterDto userDto);
 }

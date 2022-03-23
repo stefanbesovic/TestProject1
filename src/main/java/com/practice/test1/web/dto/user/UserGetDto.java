@@ -1,4 +1,4 @@
-package com.practice.test1.web.dto.role;
+package com.practice.test1.web.dto.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UserRoleDto {
-    private Long id;
-    private String name;
+public class UserGetDto {
+    private long id;
+    private String username;
 }

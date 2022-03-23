@@ -12,7 +12,6 @@ import lombok.Data;
 public class ChannelPlaylistId implements Serializable{
 	
 	private long playlistId;
-
 	private long channelId;
 	
 	@Override

@@ -30,74 +30,70 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class Playlist {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
 
-	@NotEmpty
-	@Size(min = 4, max = 20, message = "Name of playlist should be between 3 and 20 characters.")
-	private String name;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
-	@JsonIgnore
-	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(
-			name = "playlist_categories",
-			joinColumns = @JoinColumn(name = "playlist_id"),
-			inverseJoinColumns = @JoinColumn(name = "category_id")
-	)
-	private Set<Category> categories = new HashSet<>();
+    private String name;
 
-	@OneToMany(mappedBy = "playlist", cascade = CascadeType.ALL, orphanRemoval = true)
-	@JsonIgnore
-	private List<PlaylistVideo> videos = new ArrayList<>();
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "playlist_categories",
+            joinColumns = @JoinColumn(name = "playlist_id"),
+            inverseJoinColumns = @JoinColumn(name = "category_id")
+    )
+    private Set<Category> categories = new HashSet<>();
 
-	@OneToMany(mappedBy = "playlist", cascade = CascadeType.ALL, orphanRemoval = true)
-	@JsonIgnore
-	private List<ChannelPlaylist> channelPlaylists = new ArrayList<>();
+    @OneToMany(mappedBy = "playlist", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<PlaylistVideo> videos = new ArrayList<>();
 
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "user_id", referencedColumnName = "id")
-	private User user;
+    @OneToMany(mappedBy = "playlist", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<ChannelPlaylist> channelPlaylists = new ArrayList<>();
 
-	public Playlist(long id, String name) {
-		this.id = id;
-		this.name = name;
-		categories = new HashSet<>();
-		videos = new ArrayList<>();
-		channelPlaylists = new ArrayList<>();
-		user = null;
-	}
-	
-	public void addCategory(Category category) {
-		categories.add(category);
-	}
-	
-	public void removeCategory(Category category) {
-		categories.remove(category);
-	}
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private User user;
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Playlist other = (Playlist) obj;
-		return id == other.id && Objects.equals(name, other.name);
-	}
+    public Playlist(long id, String name) {
+        this.id = id;
+        this.name = name;
+        categories = new HashSet<>();
+        videos = new ArrayList<>();
+        channelPlaylists = new ArrayList<>();
+        user = null;
+    }
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(id, name);
-	}
+    public void addCategory(Category category) {
+        categories.add(category);
+    }
 
-	@Override
-	public String toString() {
-		return "Playlist{" +
-				"id=" + id +
-				", name='" + name + '\'' +
-				'}';
-	}
+    public void removeCategory(Category category) {
+        categories.remove(category);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Playlist other = (Playlist) obj;
+        return id == other.id && Objects.equals(name, other.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name);
+    }
+
+    @Override
+    public String toString() {
+        return "Playlist{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

@@ -7,11 +7,10 @@ import org.mapstruct.Mapping;
 import org.mapstruct.ReportingPolicy;
 import org.mapstruct.factory.Mappers;
 
-@Mapper(uses = {CategoryMapper.class}, unmappedTargetPolicy = ReportingPolicy.IGNORE)
+@Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface VideoMapper {
     VideoMapper INSTANCE = Mappers.getMapper(VideoMapper.class);
 
-    @Mapping(source = "video.categories", target = "categoriesDto")
     VideoDto toDto(Video video);
     Video fromDto(VideoDto videoDto);
 }

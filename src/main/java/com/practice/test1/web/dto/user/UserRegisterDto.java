@@ -1,8 +1,5 @@
 package com.practice.test1.web.dto.user;
 
-import com.practice.test1.web.dto.playlist.PlaylistDto;
-import com.practice.test1.web.dto.playlist.PlaylistGetDto;
-import com.practice.test1.web.dto.role.UserRoleDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,13 +7,12 @@ import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
-import java.util.Set;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UserDto {
+public class UserRegisterDto {
 
     private long id;
 
@@ -28,6 +24,7 @@ public class UserDto {
     @Size(min = 4, max = 8, message = "Username should be between 4 and 8 characters.")
     private String username;
 
-    private Set<UserRoleDto> userRoles;
-    private Set<PlaylistGetDto> playlists;
+    @NotEmpty
+    @Size(min = 4, max = 12, message = "Password should be between 4 and 12 characters.")
+    private String password;
 }

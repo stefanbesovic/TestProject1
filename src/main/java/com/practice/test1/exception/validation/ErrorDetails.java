@@ -1,4 +1,4 @@
-package com.practice.test1.exception;
+package com.practice.test1.exception.validation;
 
 import lombok.Builder;
 import lombok.Data;

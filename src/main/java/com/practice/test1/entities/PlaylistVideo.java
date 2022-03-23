@@ -16,6 +16,7 @@ import java.util.Objects;
 @AllArgsConstructor
 @Builder
 public class PlaylistVideo {
+
 	@EmbeddedId
 	private PlaylistVideoId playlistVideoId = new PlaylistVideoId();
 	 
