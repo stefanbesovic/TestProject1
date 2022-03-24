@@ -24,7 +24,7 @@ import com.practice.test1.services.UserService;
 @RequiredArgsConstructor
 @Service
 @Slf4j
-public class UserServiceImplementation implements UserService, UserDetailsService {
+public class UserServiceImplementation implements UserService {
 
 	private final UserRepository userRepository;
 	private final UserRoleRepository userRoleRepository;
@@ -80,17 +80,5 @@ public class UserServiceImplementation implements UserService, UserDetailsServic
 	public void deleteUser(long id) {
 		getUserById(id);
 		userRepository.deleteById(id);
-	}
-
-	@Override
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		User user = userRepository.findByUsername(username);
-		if(user == null)
-			return null;
-		Collection<SimpleGrantedAuthority> authorities = new ArrayList<>();
-		user.getUserRoles().forEach(userRole -> {
-			authorities.add(new SimpleGrantedAuthority("ROLE_" + userRole.getName()));
-		});
-		return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), authorities);
 	}
 }

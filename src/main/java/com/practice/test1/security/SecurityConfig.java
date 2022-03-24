@@ -1,5 +1,6 @@
 package com.practice.test1.security;
 
+import com.practice.test1.auth.UserDetailsServiceImplementation;
 import com.practice.test1.jwt.JwtConfig;
 import com.practice.test1.jwt.JwtTokenVerifier;
 import com.practice.test1.jwt.JwtUsernamePasswordAuthFilter;
@@ -24,14 +25,14 @@ import org.springframework.web.filter.CorsFilter;
 
 import javax.crypto.SecretKey;
 
-import static com.practice.test1.security.UserRole.ADMIN;
+import static com.practice.test1.entities.enums.UserRole.ADMIN;
 
 @Configuration
 @EnableWebSecurity
 @RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private final UserServiceImplementation userServiceImplementation;
+    private final UserDetailsServiceImplementation userDetailsServiceImplementation;
     private final PasswordEncoder passwordEncoder;
     private final SecretKey secretKey;
     private final JwtConfig jwtConfig;
@@ -68,7 +69,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public DaoAuthenticationProvider daoAuthenticationProvider() {
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
         provider.setPasswordEncoder(passwordEncoder);
-        provider.setUserDetailsService(userServiceImplementation);
+        provider.setUserDetailsService(userDetailsServiceImplementation);
         return provider;
     }
 
