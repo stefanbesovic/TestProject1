@@ -1,6 +1,5 @@
 package com.practice.test1.web.dto.user;
 
-import com.practice.test1.web.dto.playlist.PlaylistDto;
 import com.practice.test1.web.dto.playlist.PlaylistGetDto;
 import com.practice.test1.web.dto.role.UserRoleDto;
 import lombok.AllArgsConstructor;

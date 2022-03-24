@@ -49,7 +49,7 @@ public class ChannelServiceImplementation implements ChannelService{
 
 	@Override
 	public void deleteChannel(long id) {
-		getChannelById(id);
-		channelRepository.deleteById(id);
+		Channel channelById = getChannelById(id);
+		channelRepository.deleteById(channelById.getId());
 	}
 }

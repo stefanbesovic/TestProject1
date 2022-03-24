@@ -4,8 +4,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import lombok.RequiredArgsConstructor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 
@@ -17,11 +16,11 @@ import com.practice.test1.services.VideoService;
 
 @RequiredArgsConstructor
 @Service
+@Slf4j
 public class VideoServiceImplementation implements VideoService {
 
 	private final VideoRepository videoRepository;
 	private final CategoryService categoryService;
-	private static final Logger log = LoggerFactory.getLogger(VideoServiceImplementation.class);
 
 	@Override
 	public Video saveVideo(Video video) {
@@ -55,8 +54,8 @@ public class VideoServiceImplementation implements VideoService {
 
 	@Override
 	public void deleteVideo(long id) {
-		getVideoById(id);
-		videoRepository.deleteById(id);
+		Video videoById = getVideoById(id);
+		videoRepository.deleteById(videoById.getId());
 	}
 	
 	@Override

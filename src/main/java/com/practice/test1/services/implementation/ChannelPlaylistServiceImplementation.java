@@ -8,8 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import lombok.RequiredArgsConstructor;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import com.practice.test1.entities.Channel;
@@ -20,10 +19,10 @@ import com.practice.test1.services.ChannelPlaylistService;
 
 @RequiredArgsConstructor
 @Service
+@Slf4j
 public class ChannelPlaylistServiceImplementation implements ChannelPlaylistService {
 	
 	private final ChannelService channelService;
-	private static final Logger log = LoggerFactory.getLogger(ChannelPlaylistServiceImplementation.class);
 
 	@Override
 	public List<ChannelPlaylist> sortPlaylists(Channel channel) {

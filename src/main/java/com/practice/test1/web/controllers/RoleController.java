@@ -2,12 +2,12 @@ package com.practice.test1.web.controllers;
 
 import com.practice.test1.entities.RolePrivilege;
 import com.practice.test1.entities.UserRole;
-import com.practice.test1.services.UserRoleService;
-import com.practice.test1.web.dto.privilege.RolePrivilegeDto;
-import com.practice.test1.web.dto.privilege.RolePrivilegeMapper;
 import com.practice.test1.web.dto.privilege.RolePrivilegeRequest;
 import com.practice.test1.web.dto.role.UserRoleDto;
 import com.practice.test1.web.dto.role.UserRoleMapper;
+import com.practice.test1.services.UserRoleService;
+import com.practice.test1.web.dto.privilege.RolePrivilegeDto;
+import com.practice.test1.web.dto.privilege.RolePrivilegeMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

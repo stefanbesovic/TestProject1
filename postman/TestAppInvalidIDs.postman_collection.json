@@ -1,0 +1,398 @@
+{
+	"info": {
+		"_postman_id": "ba94dc60-8da3-4296-a426-8fad6aea63a8",
+		"name": "TestAppInvalidIDs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetUserById Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/user/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangeUser Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Mirko\",\r\n    \"username\": \"simpa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/user/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/user/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCategoryById Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/category/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"category",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangeCategory Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"klasika\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/category/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"category",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCategory Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/category/200",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"category",
+						"200"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetVideoById Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/video/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"video",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangeVideo Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"novi video\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/video/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"video",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteVideo Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/video/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"video",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPlaylistById Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/playlist/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"playlist",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangePlaylist Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"promenjenaPlaylista\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/playlist/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"playlist",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePlaylist Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/playlist/700",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"playlist",
+						"700"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetChannelById Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/channel/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"channel",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateChannel Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"drugi kanal\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/channel/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"channel",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteChannel Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/channel/600",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"channel",
+						"600"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddCategoryToVideo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/video/100/category/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"video",
+						"100",
+						"category",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCategoryFromVideo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/video/100/category/100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"video",
+						"100",
+						"category",
+						"100"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -2,6 +2,7 @@ package com.practice.test1.jwt;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.Jwts;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -17,19 +18,12 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.Date;
 
+@RequiredArgsConstructor
 public class JwtUsernamePasswordAuthFilter extends UsernamePasswordAuthenticationFilter {
 
     private final AuthenticationManager authenticationManager;
     private final JwtConfig jwtConfig;
     private final SecretKey secretKey;
-
-    public JwtUsernamePasswordAuthFilter(AuthenticationManager authenticationManager,
-                                         JwtConfig jwtConfig,
-                                         SecretKey secretKey) {
-        this.authenticationManager = authenticationManager;
-        this.jwtConfig = jwtConfig;
-        this.secretKey = secretKey;
-    }
 
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request,
@@ -62,7 +56,7 @@ public class JwtUsernamePasswordAuthFilter extends UsernamePasswordAuthenticatio
                 .setExpiration(java.sql.Date.valueOf(LocalDate.now().plusDays(jwtConfig.getTokenExpirationAfterDays())))
                 .signWith(secretKey)
                 .compact();
-        response.addHeader(jwtConfig.getAuthorizationHeader(), jwtConfig.getTokenPrefix() + token);
 
+        response.addHeader(jwtConfig.getAuthorizationHeader(), jwtConfig.getTokenPrefix() + token);
     }
 }

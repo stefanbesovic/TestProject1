@@ -11,5 +11,4 @@ public enum UserPrivilege {
     PLAYLIST_WRITE,
     CHANNEL_READ,
     CHANNEL_WRITE;
-
 }

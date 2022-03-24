@@ -2,7 +2,6 @@ package com.practice.test1.web.dto.channel;
 
 import com.practice.test1.entities.Channel;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 import org.mapstruct.ReportingPolicy;
 import org.mapstruct.factory.Mappers;
 

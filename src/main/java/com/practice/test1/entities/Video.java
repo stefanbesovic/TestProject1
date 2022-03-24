@@ -43,8 +43,7 @@ public class Video {
 	private List<PlaylistVideo> playlistVideos = new ArrayList<>();
 	
 	public void addCategory(Category category) {
-		if(!categories.contains(category))
-			categories.add(category);
+		categories.add(category);
 	}
 
 	public void removeCategory(Category category) {

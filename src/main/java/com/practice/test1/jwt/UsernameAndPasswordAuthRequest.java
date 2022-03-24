@@ -1,13 +1,12 @@
 package com.practice.test1.jwt;
 
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
 public class UsernameAndPasswordAuthRequest {
 
     private String username;
     private String password;
-
-    public UsernameAndPasswordAuthRequest() {
-
-    }
 
     public String getUsername() {
         return username;

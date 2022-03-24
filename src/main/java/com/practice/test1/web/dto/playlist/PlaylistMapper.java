@@ -1,10 +1,9 @@
 package com.practice.test1.web.dto.playlist;
 
 import com.practice.test1.entities.Playlist;
-import com.practice.test1.web.dto.category.CategoryMapper;
 import com.practice.test1.web.dto.playlistvideo.PlaylistVideoGetMapper;
+import com.practice.test1.web.dto.category.CategoryMapper;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 import org.mapstruct.ReportingPolicy;
 import org.mapstruct.factory.Mappers;
 

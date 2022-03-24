@@ -1,7 +1,7 @@
 package com.practice.test1.web.dto.playlist;
 
-import com.practice.test1.web.dto.category.CategoryGetDto;
 import com.practice.test1.web.dto.playlistvideo.PlaylistVideoGetDto;
+import com.practice.test1.web.dto.category.CategoryGetDto;
 import com.practice.test1.web.dto.user.UserGetDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,7 +1,6 @@
 package com.practice.test1.security;
 
 import com.practice.test1.auth.UserDetailsServiceImplementation;
-import com.practice.test1.enums.UserPrivilege;
 import com.practice.test1.jwt.JwtConfig;
 import com.practice.test1.jwt.JwtTokenVerifier;
 import com.practice.test1.jwt.JwtUsernamePasswordAuthFilter;
@@ -51,8 +50,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers("/login").permitAll()
+                .antMatchers("/api/**").hasRole(ADMIN.name())
                 .antMatchers("/api/user/**").hasAnyAuthority(USER_READ.name(), USER_WRITE.name())
-                .antMatchers("/api/role/**").hasRole(ADMIN.name())
                 .antMatchers("/api/playlist/**").hasAnyAuthority(PLAYLIST_READ.name(), PLAYLIST_WRITE.name())
                 .anyRequest()
                 .authenticated()

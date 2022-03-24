@@ -24,6 +24,7 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping("api/category")
 public class CategoryController {
+
 	private final CategoryService categoryService;
 
 	@PostMapping()

@@ -4,12 +4,10 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import com.practice.test1.entities.UserRole;
-import com.practice.test1.repositories.UserRoleRepository;
 import com.practice.test1.services.UserRoleService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DuplicateKeyException;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -75,7 +73,7 @@ public class UserServiceImplementation implements UserService {
 
 	@Override
 	public void deleteUser(long id) {
-		getUserById(id);
-		userRepository.deleteById(id);
+		User userById = getUserById(id);
+		userRepository.deleteById(userById.getId());
 	}
 }

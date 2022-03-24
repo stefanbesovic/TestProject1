@@ -7,8 +7,7 @@ import java.util.NoSuchElementException;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import lombok.RequiredArgsConstructor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import com.practice.test1.entities.Playlist;
@@ -19,10 +18,10 @@ import com.practice.test1.services.PlaylistVideoService;
 
 @RequiredArgsConstructor
 @Service
+@Slf4j
 public class PlaylistVideoServiceImplementation implements PlaylistVideoService {
 
 	private final PlaylistService playlistService;
-	private static final Logger log = LoggerFactory.getLogger(PlaylistVideoServiceImplementation.class);
 
 	@Override
 	public List<PlaylistVideo> sortVideos(Playlist playlist) {

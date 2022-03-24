@@ -5,8 +5,7 @@ import java.util.NoSuchElementException;
 import java.util.Set;
 
 import lombok.RequiredArgsConstructor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 
@@ -20,12 +19,12 @@ import com.practice.test1.services.UserService;
 
 @RequiredArgsConstructor
 @Service
+@Slf4j
 public class PlaylistServiceImplementation implements PlaylistService {
 	
 	private final PlaylistRepository playlistRepository;
 	private final CategoryService categoryService;
 	private final UserService userService;
-	private static final Logger log = LoggerFactory.getLogger(PlaylistServiceImplementation.class);
 
 	@Override
 	public Playlist savePlaylist(Playlist playlist) {
@@ -59,8 +58,8 @@ public class PlaylistServiceImplementation implements PlaylistService {
 
 	@Override
 	public void deletePlaylist(long id) {
-		getPlaylistById(id);
-		playlistRepository.deleteById(id);
+		Playlist playlistById = getPlaylistById(id);
+		playlistRepository.deleteById(playlistById.getId());
 	}
 	
 	@Override
