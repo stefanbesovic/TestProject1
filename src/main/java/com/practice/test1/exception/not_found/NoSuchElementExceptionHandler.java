@@ -1,6 +1,5 @@
 package com.practice.test1.exception.not_found;
 
-import com.practice.test1.exception.not_found.ElementNotFoundDetails;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;

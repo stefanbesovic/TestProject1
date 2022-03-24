@@ -1,11 +1,11 @@
 package com.practice.test1.security;
 
 import com.practice.test1.auth.UserDetailsServiceImplementation;
+import com.practice.test1.enums.UserPrivilege;
 import com.practice.test1.jwt.JwtConfig;
 import com.practice.test1.jwt.JwtTokenVerifier;
 import com.practice.test1.jwt.JwtUsernamePasswordAuthFilter;
 
-import com.practice.test1.services.implementation.UserServiceImplementation;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.context.annotation.Bean;
@@ -25,7 +25,8 @@ import org.springframework.web.filter.CorsFilter;
 
 import javax.crypto.SecretKey;
 
-import static com.practice.test1.entities.enums.UserRole.ADMIN;
+import static com.practice.test1.enums.UserPrivilege.*;
+import static com.practice.test1.enums.UserRole.ADMIN;
 
 @Configuration
 @EnableWebSecurity
@@ -49,10 +50,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 .and()
                 .authorizeRequests()
-                .antMatchers("/api/**").permitAll()
                 .antMatchers("/login").permitAll()
-                .antMatchers("/api/user*").hasRole(ADMIN.name())
-                .antMatchers("api/role*").hasRole(ADMIN.name())
+                .antMatchers("/api/user/**").hasAnyAuthority(USER_READ.name(), USER_WRITE.name())
+                .antMatchers("/api/role/**").hasRole(ADMIN.name())
+                .antMatchers("/api/playlist/**").hasAnyAuthority(PLAYLIST_READ.name(), PLAYLIST_WRITE.name())
                 .anyRequest()
                 .authenticated()
                 .and()

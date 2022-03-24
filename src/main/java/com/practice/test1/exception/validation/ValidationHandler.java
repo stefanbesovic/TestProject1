@@ -1,6 +1,5 @@
 package com.practice.test1.exception.validation;
 
-import com.practice.test1.exception.validation.ErrorDetails;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;

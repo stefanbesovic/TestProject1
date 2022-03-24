@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -21,13 +22,6 @@ public class UserRole {
 
     private String name;
 
-//    @ManyToMany
-//    @JoinTable(
-//            name = "role_privilege",
-//            joinColumns = @JoinColumn(
-//                    name = "role_id", referencedColumnName = "id"),
-//            inverseJoinColumns = @JoinColumn(
-//                    name = "privilege_id", referencedColumnName = "id")
-//            )
-//    private Set<RolePrivilege> privileges;
+    @ManyToMany(fetch = FetchType.EAGER)
+    private Set<RolePrivilege> privileges = new HashSet<>();
 }

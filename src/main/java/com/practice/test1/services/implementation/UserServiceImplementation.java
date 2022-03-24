@@ -1,18 +1,14 @@
 package com.practice.test1.services.implementation;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.NoSuchElementException;
 
 import com.practice.test1.entities.UserRole;
 import com.practice.test1.repositories.UserRoleRepository;
+import com.practice.test1.services.UserRoleService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DuplicateKeyException;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -27,7 +23,7 @@ import com.practice.test1.services.UserService;
 public class UserServiceImplementation implements UserService {
 
 	private final UserRepository userRepository;
-	private final UserRoleRepository userRoleRepository;
+	private final UserRoleService userRoleService;
 	private final PasswordEncoder passwordEncoder;
 
 	@Override
@@ -41,18 +37,19 @@ public class UserServiceImplementation implements UserService {
 	}
 
 	@Override
-	public UserRole saveRole(UserRole role) {
-		log.info("Saving role: id={} & name={}", role.getId(), role.getName());
-		return userRoleRepository.save(role);
+	public User addRoleToUser(String username, String name) {
+		log.info("Adding role '{}' to user '{}'", name, username);
+		User user = findByUsername(username);
+		UserRole role = userRoleService.findRoleByName(name);
+		user.getUserRoles().add(role);
+		return userRepository.save(user);
 	}
 
 	@Override
-	public User addRoleToUser(String username, String name) {
-		log.info("Adding role '{}' to user '{}'", name, username);
-		User user = userRepository.findByUsername(username);
-		UserRole role = userRoleRepository.findByName(name);
-		user.getUserRoles().add(role);
-		return userRepository.save(user);
+	public User findByUsername(String username) {
+		return userRepository.findByUsername(username).orElseThrow( () ->
+				new NoSuchElementException(String.format("User with username %s does not exist.", username))
+		);
 	}
 
 	@Override

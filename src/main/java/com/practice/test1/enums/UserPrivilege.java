@@ -1,4 +1,4 @@
-package com.practice.test1.entities.enums;
+package com.practice.test1.enums;
 
 public enum UserPrivilege {
     USER_READ,
@@ -10,5 +10,6 @@ public enum UserPrivilege {
     PLAYLIST_READ,
     PLAYLIST_WRITE,
     CHANNEL_READ,
-    CHANNEL_WRITE
+    CHANNEL_WRITE;
+
 }
