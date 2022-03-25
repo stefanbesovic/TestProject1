@@ -6,8 +6,8 @@ import org.mapstruct.ReportingPolicy;
 import org.mapstruct.factory.Mappers;
 
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE)
-public interface PlaylistVideoGetMapper {
-    PlaylistVideoGetMapper INSTANCE = Mappers.getMapper(PlaylistVideoGetMapper.class);
+public interface PlaylistVideoMapper {
+    PlaylistVideoMapper INSTANCE = Mappers.getMapper(PlaylistVideoMapper.class);
 
     PlaylistVideoGetDto toDto(PlaylistVideo playlistVideo);
     PlaylistVideo fromDto(PlaylistVideoGetDto playlistVideoDto);

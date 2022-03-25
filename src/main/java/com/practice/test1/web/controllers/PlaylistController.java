@@ -6,10 +6,9 @@ import java.util.stream.Collectors;
 
 import com.practice.test1.web.dto.playlist.PlaylistDto;
 import com.practice.test1.web.dto.playlist.PlaylistGetDto;
-import com.practice.test1.web.dto.playlist.PlaylistGetMapper;
 import com.practice.test1.web.dto.playlist.PlaylistMapper;
 import com.practice.test1.web.dto.playlistvideo.PlaylistVideoGetDto;
-import com.practice.test1.web.dto.playlistvideo.PlaylistVideoGetMapper;
+import com.practice.test1.web.dto.playlistvideo.PlaylistVideoMapper;
 import com.practice.test1.services.PlaylistVideoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -38,7 +37,7 @@ public class PlaylistController {
 
     @PostMapping()
     public PlaylistDto savePlaylist(@Valid @RequestBody PlaylistGetDto playlistGetDto) {
-        Playlist playlist = playlistService.savePlaylist(PlaylistGetMapper.INSTANCE.fromDto(playlistGetDto));
+        Playlist playlist = playlistService.savePlaylist(PlaylistMapper.INSTANCE.fromGetDto(playlistGetDto));
         return PlaylistMapper.INSTANCE.toDto(playlist);
     }
 
@@ -58,7 +57,7 @@ public class PlaylistController {
     @PutMapping("{id}")
     public PlaylistDto updatePlaylist(@Valid @RequestBody PlaylistGetDto playlistGetDto,
                                       @PathVariable("id") long id) {
-        Playlist playlist = playlistService.updatePlaylist(PlaylistGetMapper.INSTANCE.fromDto(playlistGetDto), id);
+        Playlist playlist = playlistService.updatePlaylist(PlaylistMapper.INSTANCE.fromGetDto(playlistGetDto), id);
         return PlaylistMapper.INSTANCE.toDto(playlist);
     }
 
@@ -82,7 +81,7 @@ public class PlaylistController {
     @PutMapping("/{playlistId}/video/{videoId}")
     public PlaylistVideoGetDto addVideoToPlaylist(@PathVariable("playlistId") long playlistId,
                                                   @PathVariable("videoId") long videoId) {
-        return PlaylistVideoGetMapper.INSTANCE.toDto(playlistVideoService.addVideoToPlaylist(playlistId, videoService.getVideoById(videoId)));
+        return PlaylistVideoMapper.INSTANCE.toDto(playlistVideoService.addVideoToPlaylist(playlistId, videoService.getVideoById(videoId)));
     }
 
     @DeleteMapping("/{playlistId}/video/{videoId}")
@@ -90,7 +89,7 @@ public class PlaylistController {
                                                              @PathVariable("videoId") long videoId) {
         return playlistVideoService.removeVideoFromPlaylist(playlistId, videoService.getVideoById(videoId))
                 .stream()
-                .map(PlaylistVideoGetMapper.INSTANCE::toDto)
+                .map(PlaylistVideoMapper.INSTANCE::toDto)
                 .collect(Collectors.toList());
     }
 
@@ -98,7 +97,7 @@ public class PlaylistController {
     public List<PlaylistVideoGetDto> sortVideosInPlaylist(@PathVariable("playlistId") long playlistId) {
         return playlistVideoService.sortVideos(playlistService.getPlaylistById(playlistId))
                 .stream()
-                .map(PlaylistVideoGetMapper.INSTANCE::toDto)
+                .map(PlaylistVideoMapper.INSTANCE::toDto)
                 .collect(Collectors.toList());
     }
 
@@ -108,7 +107,7 @@ public class PlaylistController {
                                                                      @PathVariable("newPosition") int newPosition) {
         return playlistVideoService.changeIndexOfVideoInPlaylist(playlistId, videoService.getVideoById(videoId), newPosition)
                 .stream()
-                .map(PlaylistVideoGetMapper.INSTANCE::toDto)
+                .map(PlaylistVideoMapper.INSTANCE::toDto)
                 .collect(Collectors.toList());
     }
 

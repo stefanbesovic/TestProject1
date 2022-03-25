@@ -17,8 +17,6 @@ import java.util.Set;
 @Builder
 public class CategoryDto {
 
-    private long id;
-
     @NotEmpty
     @Size(min = 3, max = 15, message = "Category name should be between 3 and 15 characters")
     private String name;

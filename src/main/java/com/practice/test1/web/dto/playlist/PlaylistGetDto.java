@@ -13,7 +13,6 @@ import javax.validation.constraints.Size;
 @NoArgsConstructor
 @Builder
 public class PlaylistGetDto {
-    private Long id;
 
     @NotEmpty
     @Size(min = 4, max = 20, message = "Name of playlist should be between 3 and 20 characters.")

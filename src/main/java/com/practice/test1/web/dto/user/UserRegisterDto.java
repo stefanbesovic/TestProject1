@@ -14,8 +14,6 @@ import javax.validation.constraints.Size;
 @Builder
 public class UserRegisterDto {
 
-    private long id;
-
     @NotEmpty
     @Size(min = 3, max = 20, message = "Name of user should be between 3 and 20 characters.")
     private String name;

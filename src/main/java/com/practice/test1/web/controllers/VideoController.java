@@ -49,8 +49,8 @@ public class VideoController {
     @PutMapping("{id}")
     public VideoDto updateVideo(@Valid @RequestBody VideoDto videoDto,
                                 @PathVariable("id") long id) {
-        videoService.updateVideo(VideoMapper.INSTANCE.fromDto(videoDto), id);
-        return videoDto;
+        Video video = videoService.updateVideo(VideoMapper.INSTANCE.fromDto(videoDto), id);
+        return VideoMapper.INSTANCE.toDto(video);
     }
 
     @DeleteMapping("{id}")
@@ -65,9 +65,8 @@ public class VideoController {
     }
 
     @DeleteMapping("/{videoId}/category/{categoryId}")
-    public VideoDto removeCategory(@PathVariable("videoId") long videoId,
+    public void removeCategory(@PathVariable("videoId") long videoId,
                                    @PathVariable("categoryId") long categoryId) {
         videoService.RemoveCategory(videoId, categoryId);
-        return VideoMapper.INSTANCE.toDto(videoService.getVideoById(videoId));
     }
 }

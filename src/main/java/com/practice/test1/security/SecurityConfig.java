@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -49,10 +50,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 .and()
                 .authorizeRequests()
+                .antMatchers("/swagger-ui/**").permitAll()
                 .antMatchers("/login").permitAll()
                 .antMatchers("/api/**").hasRole(ADMIN.name())
                 .antMatchers("/api/user/**").hasAnyAuthority(USER_READ.name(), USER_WRITE.name())
                 .antMatchers("/api/playlist/**").hasAnyAuthority(PLAYLIST_READ.name(), PLAYLIST_WRITE.name())
+
+                .antMatchers("/swagger-ui.html").permitAll()
+                .antMatchers("/swagger-ui/**").permitAll()
+                .antMatchers("/v3/api-docs/**").permitAll()
+                .antMatchers("/v3/api-docs.yaml").permitAll()
+                .antMatchers("/api/v3/api-docs/**").permitAll()
+
                 .anyRequest()
                 .authenticated()
                 .and()

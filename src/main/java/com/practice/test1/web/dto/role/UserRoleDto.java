@@ -16,8 +16,6 @@ import java.util.Set;
 @Builder
 public class UserRoleDto {
 
-    private long id;
-
     @NotEmpty
     @Size(min = 4, max = 15, message = "Role name should be between 4 and 15 characters.")
     private String name;

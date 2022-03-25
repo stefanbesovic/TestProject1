@@ -7,7 +7,6 @@ import com.practice.test1.web.dto.role.RoleUserGet;
 import com.practice.test1.web.dto.user.UserDto;
 import com.practice.test1.web.dto.user.UserMapper;
 import com.practice.test1.web.dto.user.UserRegisterDto;
-import com.practice.test1.web.dto.user.UserRegisterMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,7 +24,7 @@ public class UserController {
 
 	@PostMapping()
 	public UserDto saveUser(@Valid @RequestBody UserRegisterDto userRegisterDto) {
-		User user = userService.saveUser(UserRegisterMapper.INSTANCE.fromDto(userRegisterDto));
+		User user = userService.saveUser(UserMapper.INSTANCE.fromRegDto(userRegisterDto));
 		return UserMapper.INSTANCE.toDto(user);
 	}
 
@@ -51,8 +50,8 @@ public class UserController {
 	@PutMapping("{id}")
 	public UserDto updateUser(@PathVariable("id") long id,
 							  @Valid @RequestBody UserDto userDto) {
-		userService.updateUser(UserMapper.INSTANCE.fromDto(userDto), id);
-		return userDto;
+		User user = userService.updateUser(UserMapper.INSTANCE.fromDto(userDto), id);
+		return UserMapper.INSTANCE.toDto(user);
 	}
 	
 	@DeleteMapping("{id}")

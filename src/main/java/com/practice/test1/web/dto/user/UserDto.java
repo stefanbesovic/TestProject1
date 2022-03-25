@@ -17,13 +17,9 @@ import java.util.Set;
 @Builder
 public class UserDto {
 
-    private long id;
-
-    @NotEmpty
     @Size(min = 3, max = 20, message = "Name of user should be between 3 and 20 characters.")
     private String name;
 
-    @NotEmpty
     @Size(min = 4, max = 8, message = "Username should be between 4 and 8 characters.")
     private String username;
 

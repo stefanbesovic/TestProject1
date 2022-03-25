@@ -54,8 +54,8 @@ public class ChannelController {
 	@PutMapping("{id}")
 	public ChannelDto updateChannel(@PathVariable("id") long id,
 									@Valid @RequestBody ChannelDto channelDto) {
-		channelService.updateChannel(ChannelMapper.INSTANCE.fromDto(channelDto), id);
-		return channelDto;
+		Channel channel = channelService.updateChannel(ChannelMapper.INSTANCE.fromDto(channelDto), id);
+		return ChannelMapper.INSTANCE.toDto(channel);
 	}
 	
 	@DeleteMapping("{id}")
