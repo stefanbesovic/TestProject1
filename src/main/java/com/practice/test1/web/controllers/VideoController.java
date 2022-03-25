@@ -28,7 +28,7 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping("api/video")
 @Tag(name = "Video Controller", description = "Set of endpoints for Creating, Retrieving, Updating and Deleting of Video" +
-        " as well ass Adding and Removing of Categories from Video.")
+        " as well as Adding and Removing of Categories from Video.")
 public class VideoController {
 
     private final VideoService videoService;

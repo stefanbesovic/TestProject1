@@ -33,7 +33,7 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping("api/channel")
 @Tag(name = "Channel Controller", description = "Set of endpoints for Creating, Retrieving, Updating and Deleting of Channel" +
-												"as well as Adding, Deleting, Sorting, Moving of Playlists.")
+												" as well as Adding, Deleting, Sorting, Moving of Playlists.")
 public class ChannelController {
 	
 	private final ChannelService channelService;

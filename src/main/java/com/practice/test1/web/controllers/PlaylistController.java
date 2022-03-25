@@ -34,8 +34,8 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping("api/playlist")
 @Tag(name = "Playlist Controller", description = "Set of endpoints for Creating, Retrieving, Updating and Deleting of Playlist" +
-        "as well as Adding, Deleting, Sorting, Moving of Videos" +
-        "and Adding and Removing of Categories from Playlist.")
+        " as well as Adding, Deleting, Sorting, Moving of Videos" +
+        " and Adding and Removing of Categories from Playlist.")
 public class PlaylistController {
 
     private final PlaylistService playlistService;
