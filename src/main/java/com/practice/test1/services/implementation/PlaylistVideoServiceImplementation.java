@@ -33,7 +33,7 @@ public class PlaylistVideoServiceImplementation implements PlaylistVideoService 
 	}
 
 	@Override
-	public PlaylistVideo addVideoToPlaylist(long playlistId, Video video) {
+	public PlaylistVideo addVideoToPlaylist(Long playlistId, Video video) {
 		Playlist playlist = playlistService.getPlaylistById(playlistId);
 		PlaylistVideo playlistVideo = new PlaylistVideo(playlist, video, playlist.getVideos().size() + 1);
 		playlist.getVideos().add(playlistVideo);
@@ -45,7 +45,7 @@ public class PlaylistVideoServiceImplementation implements PlaylistVideoService 
 	}
 
 	@Override
-	public List<PlaylistVideo> removeVideoFromPlaylist(long playlistId, Video video) {
+	public List<PlaylistVideo> removeVideoFromPlaylist(Long playlistId, Video video) {
 		log.info("Removing video {} from playlist {}", video.getId(), playlistId);
 
 		int index = 0;
@@ -71,7 +71,7 @@ public class PlaylistVideoServiceImplementation implements PlaylistVideoService 
 	}
 
 	@Override
-	public List<PlaylistVideo> changeIndexOfVideoInPlaylist(long playlistId, Video video, int newPosition) {
+	public List<PlaylistVideo> changeIndexOfVideoInPlaylist(Long playlistId, Video video, int newPosition) {
 		log.info("Changing position of video {} in playlist {}.", video.getId(), playlistId);
 
 		int rangeFrom;

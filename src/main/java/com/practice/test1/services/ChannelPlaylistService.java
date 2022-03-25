@@ -8,7 +8,7 @@ import com.practice.test1.entities.Playlist;
 
 public interface ChannelPlaylistService {
 	List<ChannelPlaylist> sortPlaylists(Channel channel);
-	ChannelPlaylist addPlaylistToChannel(long channelId, Playlist playlist);
-	List<ChannelPlaylist> removePlaylistFromChannel(long channelId, Playlist playlist);
-	List<ChannelPlaylist> changeIndexOfPlaylistInChannel(long channelId, Playlist playlist, int newPosition);
+	ChannelPlaylist addPlaylistToChannel(Long channelId, Playlist playlist);
+	List<ChannelPlaylist> removePlaylistFromChannel(Long channelId, Playlist playlist);
+	List<ChannelPlaylist> changeIndexOfPlaylistInChannel(Long channelId, Playlist playlist, int newPosition);
 }

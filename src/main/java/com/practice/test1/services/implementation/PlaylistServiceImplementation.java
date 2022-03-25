@@ -36,7 +36,7 @@ public class PlaylistServiceImplementation implements PlaylistService {
 	}
 
 	@Override
-	public Playlist getPlaylistById(long id) {
+	public Playlist getPlaylistById(Long id) {
 		return playlistRepository.findById(id)
 				.orElseThrow(() -> new NoSuchElementException(String.format("Playlist not found: %d", id)));
 	}
@@ -47,7 +47,7 @@ public class PlaylistServiceImplementation implements PlaylistService {
 	}
 
 	@Override
-	public Playlist updatePlaylist(Playlist playlist, long id) {
+	public Playlist updatePlaylist(Playlist playlist, Long id) {
 		Playlist existing = getPlaylistById(id);
 		existing.setName(playlist.getName());
 
@@ -57,13 +57,13 @@ public class PlaylistServiceImplementation implements PlaylistService {
 	}
 
 	@Override
-	public void deletePlaylist(long id) {
+	public void deletePlaylist(Long id) {
 		Playlist playlistById = getPlaylistById(id);
 		playlistRepository.deleteById(playlistById.getId());
 	}
 	
 	@Override
-	public Playlist addCategory(long playlistId, long categoryId) {
+	public Playlist addCategory(Long playlistId, Long categoryId) {
 		log.debug("Adding category {} to playlist {}.", categoryId, playlistId);
 
 		Playlist playlist = getPlaylistById(playlistId);
@@ -82,7 +82,7 @@ public class PlaylistServiceImplementation implements PlaylistService {
 	}
 	
 	@Override
-	public void RemoveCategory(long playlistId, long categoryId) {
+	public void RemoveCategory(Long playlistId, Long categoryId) {
 		log.debug("Removing category {} from playlist {}.", categoryId, playlistId);
 
 		Playlist playlist = getPlaylistById(playlistId);
@@ -98,7 +98,7 @@ public class PlaylistServiceImplementation implements PlaylistService {
 	}
 	
 	@Override
-	public Set<Playlist> addPlaylistToUser(long playlistId, long userId) {
+	public Set<Playlist> addPlaylistToUser(Long playlistId, Long userId) {
 		log.debug("Adding playlist {} to user {}.", playlistId, userId);
 
 		User user = userService.getUserById(userId);
@@ -113,7 +113,7 @@ public class PlaylistServiceImplementation implements PlaylistService {
 	}
 
 	@Override
-	public Playlist removePlaylistFromUser(long playlistId) {
+	public Playlist removePlaylistFromUser(Long playlistId) {
 		log.debug("Removing playlist {} from user.", playlistId);
 
 		Playlist playlist = getPlaylistById(playlistId);

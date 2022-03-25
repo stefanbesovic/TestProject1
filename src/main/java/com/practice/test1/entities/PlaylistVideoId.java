@@ -11,8 +11,8 @@ import lombok.Data;
 @Data
 public class PlaylistVideoId implements Serializable {
 
-    private long playlistId;
-    private long videoId;
+    private Long playlistId;
+    private Long videoId;
 
     @Override
     public int hashCode() {

@@ -9,7 +9,9 @@ import org.mapstruct.factory.Mappers;
 public interface ChannelMapper {
     ChannelMapper INSTANCE = Mappers.getMapper(ChannelMapper.class);
 
-    //@Mapping(source = "channel.playlists", target = "playlists")
     ChannelDto toDto(Channel channel);
     Channel fromDto(ChannelDto channelDto);
+
+    ChannelResponseDto toResDto(Channel channel);
+    Channel fromResDto(ChannelResponseDto channelResponseDto);
 }

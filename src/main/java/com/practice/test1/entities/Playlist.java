@@ -29,7 +29,7 @@ public class Playlist {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     private String name;
 
@@ -51,7 +51,7 @@ public class Playlist {
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
 
-    public Playlist(long id, String name) {
+    public Playlist(Long id, String name) {
         this.id = id;
         this.name = name;
         categories = new HashSet<>();

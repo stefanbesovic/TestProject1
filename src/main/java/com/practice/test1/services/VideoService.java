@@ -6,10 +6,10 @@ import com.practice.test1.entities.Video;
 
 public interface VideoService {
 	Video saveVideo(Video video);
-	Video getVideoById(long id);
+	Video getVideoById(Long id);
 	List<Video> getAllVideos();
-	Video updateVideo(Video video, long id);
-	void deleteVideo(long id);
-	Video addCategory(long videoId, long categoryId);
-	void RemoveCategory(long videoId, long categoryId);
+	Video updateVideo(Video video, Long id);
+	void deleteVideo(Long id);
+	Video addCategory(Long videoId, Long categoryId);
+	void RemoveCategory(Long videoId, Long categoryId);
 }

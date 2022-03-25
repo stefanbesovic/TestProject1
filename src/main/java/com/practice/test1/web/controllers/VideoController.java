@@ -5,6 +5,10 @@ import java.util.stream.Collectors;
 
 import com.practice.test1.web.dto.video.VideoDto;
 import com.practice.test1.web.dto.video.VideoMapper;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,16 +27,29 @@ import javax.validation.Valid;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("api/video")
+@Tag(name = "Video Controller", description = "Set of endpoints for Creating, Retrieving, Updating and Deleting of Video" +
+        " as well ass Adding and Removing of Categories from Video.")
 public class VideoController {
 
     private final VideoService videoService;
 
+    @Operation(summary = "Creates new Video")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Video"),
+            @ApiResponse(responseCode = "400", description = "Validation error : invalid argument"),
+            @ApiResponse(responseCode = "500", description = "Internal Server Error")
+    })
     @PostMapping()
     public VideoDto saveVideo(@Valid @RequestBody VideoDto videoDto) {
         Video video = videoService.saveVideo(VideoMapper.INSTANCE.fromDto(videoDto));
         return VideoMapper.INSTANCE.toDto(video);
     }
 
+    @Operation(summary = "Retrieves list of all Videos")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "List of Videos"),
+            @ApiResponse(responseCode = "500", description = "Internal Server Error")
+    })
     @GetMapping("/all")
     public List<VideoDto> getAllVideos() {
         return videoService.getAllVideos()
@@ -41,32 +58,63 @@ public class VideoController {
                 .collect(Collectors.toList());
     }
 
+    @Operation(summary = "Retrieves details about Video")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Video"),
+            @ApiResponse(responseCode = "404", description = "Video not found"),
+            @ApiResponse(responseCode = "500", description = "Internal Server Error")
+    })
     @GetMapping("{id}")
-    public VideoDto getVideoById(@PathVariable("id") long id) {
+    public VideoDto getVideoById(@PathVariable("id") Long id) {
         return VideoMapper.INSTANCE.toDto(videoService.getVideoById(id));
     }
 
+    @Operation(summary = "Updates existing Video")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Video"),
+            @ApiResponse(responseCode = "400", description = "Validation error : invalid argument"),
+            @ApiResponse(responseCode = "404", description = "Video not found"),
+            @ApiResponse(responseCode = "500", description = "Internal Server Error")
+    })
     @PutMapping("{id}")
     public VideoDto updateVideo(@Valid @RequestBody VideoDto videoDto,
-                                @PathVariable("id") long id) {
+                                @PathVariable("id") Long id) {
         Video video = videoService.updateVideo(VideoMapper.INSTANCE.fromDto(videoDto), id);
         return VideoMapper.INSTANCE.toDto(video);
     }
 
+    @Operation(summary = "Deletes Video")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Video deleted"),
+            @ApiResponse(responseCode = "404", description = "Video not found"),
+            @ApiResponse(responseCode = "500", description = "Internal Server Error")
+    })
     @DeleteMapping("{id}")
-    public void deleteVideo(@PathVariable("id") long id) {
+    public void deleteVideo(@PathVariable("id") Long id) {
         videoService.deleteVideo(id);
     }
 
+    @Operation(summary = "Add Category to Video")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Video"),
+            @ApiResponse(responseCode = "404", description = "Video or Category not found"),
+            @ApiResponse(responseCode = "500", description = "Internal Server Error")
+    })
     @PutMapping("/{videoId}/category/{categoryId}")
-    public VideoDto addCategory(@PathVariable("videoId") long videoId,
-                                @PathVariable("categoryId") long categoryId) {
+    public VideoDto addCategory(@PathVariable("videoId") Long videoId,
+                                @PathVariable("categoryId") Long categoryId) {
         return VideoMapper.INSTANCE.toDto(videoService.addCategory(videoId, categoryId));
     }
 
+    @Operation(summary = "Delete Category from Video")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Category deleted"),
+            @ApiResponse(responseCode = "404", description = "Video or Category not found"),
+            @ApiResponse(responseCode = "500", description = "Internal Server Error")
+    })
     @DeleteMapping("/{videoId}/category/{categoryId}")
-    public void removeCategory(@PathVariable("videoId") long videoId,
-                                   @PathVariable("categoryId") long categoryId) {
+    public void removeCategory(@PathVariable("videoId") Long videoId,
+                                   @PathVariable("categoryId") Long categoryId) {
         videoService.RemoveCategory(videoId, categoryId);
     }
 }

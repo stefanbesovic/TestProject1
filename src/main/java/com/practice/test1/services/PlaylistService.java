@@ -7,12 +7,12 @@ import com.practice.test1.entities.Playlist;
 
 public interface PlaylistService {
 	Playlist savePlaylist(Playlist playlist);
-	Playlist getPlaylistById(long id);
+	Playlist getPlaylistById(Long id);
 	List<Playlist> getAllPlaylists();
-	Playlist updatePlaylist(Playlist playlist, long id);
-	void deletePlaylist(long id);
-	Playlist addCategory(long playlistId, long categoryId);
-	void RemoveCategory(long playlistId, long categoryId);
-	Set<Playlist> addPlaylistToUser(long playlistId, long userId);
-	Playlist removePlaylistFromUser(long playlistId);
+	Playlist updatePlaylist(Playlist playlist, Long id);
+	void deletePlaylist(Long id);
+	Playlist addCategory(Long playlistId, Long categoryId);
+	void RemoveCategory(Long playlistId, Long categoryId);
+	Set<Playlist> addPlaylistToUser(Long playlistId, Long userId);
+	Playlist removePlaylistFromUser(Long playlistId);
 }

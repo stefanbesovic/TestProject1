@@ -34,7 +34,7 @@ public class ChannelPlaylistServiceImplementation implements ChannelPlaylistServ
 	}
 
 	@Override
-	public ChannelPlaylist addPlaylistToChannel(long channelId, Playlist playlist) {
+	public ChannelPlaylist addPlaylistToChannel(Long channelId, Playlist playlist) {
 		Channel channel = channelService.getChannelById(channelId);
 
 		ChannelPlaylist channelPlaylist = new ChannelPlaylist(channel, playlist, channel.getPlaylists().size() + 1);
@@ -47,7 +47,7 @@ public class ChannelPlaylistServiceImplementation implements ChannelPlaylistServ
 	}
 
 	@Override
-	public List<ChannelPlaylist> removePlaylistFromChannel(long channelId, Playlist playlist) {
+	public List<ChannelPlaylist> removePlaylistFromChannel(Long channelId, Playlist playlist) {
 		log.info("Removing video {} from playlist {}", playlist.getId(), channelId);
 
 		int index = 0;
@@ -74,7 +74,7 @@ public class ChannelPlaylistServiceImplementation implements ChannelPlaylistServ
 	}
 
 	@Override
-	public List<ChannelPlaylist> changeIndexOfPlaylistInChannel(long channelId, Playlist playlist, int newPosition) {
+	public List<ChannelPlaylist> changeIndexOfPlaylistInChannel(Long channelId, Playlist playlist, int newPosition) {
 		log.info("Changing position of playlist {} in channel {}.", playlist.getId(), channelId);
 
 		int rangeFrom ;

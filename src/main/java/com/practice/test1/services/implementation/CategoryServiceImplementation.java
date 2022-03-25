@@ -41,13 +41,13 @@ public class CategoryServiceImplementation implements CategoryService {
 	}
 
 	@Override
-	public Category getCategoryById(long id) {
+	public Category getCategoryById(Long id) {
 		return categoryRepository.findById(id)
 				.orElseThrow(() -> new NoSuchElementException(String.format("Category not found: %d", id)));
 	}
 
 	@Override
-	public Category updateCategory(Category category, long id) {
+	public Category updateCategory(Category category, Long id) {
 		Category existing = getCategoryById(id);
 		existing.setName(category.getName());
 
@@ -59,7 +59,7 @@ public class CategoryServiceImplementation implements CategoryService {
 	}
 
 	@Override
-	public void deleteCategory(long id) {
+	public void deleteCategory(Long id) {
 		log.info("Deleting category with id {}.", id);
 		Category categoryById = getCategoryById(id);
 		categoryRepository.deleteById(categoryById.getId());

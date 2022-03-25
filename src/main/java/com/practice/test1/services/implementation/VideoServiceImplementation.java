@@ -32,7 +32,7 @@ public class VideoServiceImplementation implements VideoService {
 	}
 
 	@Override
-	public Video getVideoById(long id) {
+	public Video getVideoById(Long id) {
 		return videoRepository.findById(id)
 				.orElseThrow(() -> new NoSuchElementException(String.format("Video not found: %d", id)));
 	}
@@ -43,7 +43,7 @@ public class VideoServiceImplementation implements VideoService {
 	}
 
 	@Override
-	public Video updateVideo(Video video, long id) {
+	public Video updateVideo(Video video, Long id) {
 		Video existing = getVideoById(id);
 		existing.setName(video.getName());
 
@@ -53,13 +53,13 @@ public class VideoServiceImplementation implements VideoService {
 	}
 
 	@Override
-	public void deleteVideo(long id) {
+	public void deleteVideo(Long id) {
 		Video videoById = getVideoById(id);
 		videoRepository.deleteById(videoById.getId());
 	}
 	
 	@Override
-	public Video addCategory(long videoId, long categoryId) {
+	public Video addCategory(Long videoId, Long categoryId) {
 		log.debug("Adding category {} to video {}.", categoryId, videoId);
 
 		Video video = getVideoById(videoId);
@@ -78,7 +78,7 @@ public class VideoServiceImplementation implements VideoService {
 	}
 
 	@Override
-	public void RemoveCategory(long videoId, long categoryId) {
+	public void RemoveCategory(Long videoId, Long categoryId) {
 		log.debug("Removing category {} from video {}.", categoryId, videoId);
 
 		Video video = getVideoById(videoId);

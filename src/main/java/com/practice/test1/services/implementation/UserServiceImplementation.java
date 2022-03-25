@@ -56,13 +56,13 @@ public class UserServiceImplementation implements UserService {
 	}
 
 	@Override
-	public User getUserById(long id) {
+	public User getUserById(Long id) {
 		return userRepository.findById(id)
 				.orElseThrow(() -> new NoSuchElementException(String.format("User not found: %d", id)));
 	}
 
 	@Override
-	public User updateUser(User user, long id) {
+	public User updateUser(User user, Long id) {
 		User existing = getUserById(id);
 		existing.setName(user.getName());
 
@@ -72,7 +72,7 @@ public class UserServiceImplementation implements UserService {
 	}
 
 	@Override
-	public void deleteUser(long id) {
+	public void deleteUser(Long id) {
 		User userById = getUserById(id);
 		userRepository.deleteById(userById.getId());
 	}

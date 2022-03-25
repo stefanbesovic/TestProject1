@@ -9,8 +9,8 @@ public interface UserService {
 	User saveUser(User user);
 	User addRoleToUser(String username, String name);
 	List<User> getAllUsers();
-	User getUserById(long id);
-	User updateUser(User user, long id);
-	void deleteUser(long id);
+	User getUserById(Long id);
+	User updateUser(User user, Long id);
+	void deleteUser(Long id);
 	User findByUsername(String username);
 }

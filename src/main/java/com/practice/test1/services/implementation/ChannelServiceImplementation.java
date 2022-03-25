@@ -32,13 +32,13 @@ public class ChannelServiceImplementation implements ChannelService{
 	}
 
 	@Override
-	public Channel getChannelById(long id) {
+	public Channel getChannelById(Long id) {
 		return channelRepository.findById(id)
 				.orElseThrow(() -> new NoSuchElementException(String.format("Channel not found: %d", id)));
 	}
 
 	@Override
-	public Channel updateChannel(Channel channel, long id) {
+	public Channel updateChannel(Channel channel, Long id) {
 		Channel existing = getChannelById(id);
 		existing.setName(channel.getName());
 
@@ -48,7 +48,7 @@ public class ChannelServiceImplementation implements ChannelService{
 	}
 
 	@Override
-	public void deleteChannel(long id) {
+	public void deleteChannel(Long id) {
 		Channel channelById = getChannelById(id);
 		channelRepository.deleteById(channelById.getId());
 	}
